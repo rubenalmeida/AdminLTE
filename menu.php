@@ -7,31 +7,31 @@
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.6 -->
-    <link rel="stylesheet" href="http://localhost/adminlte-master/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://soundbeats.azurewebsites.net/bootstrap/css/bootstrap.min.css">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
     <!-- Ionicons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
     <!-- Theme style -->
-    <link rel="stylesheet" href="http://localhost/adminlte-master/dist/css/AdminLTE.min.css">
+    <link rel="stylesheet" href="http://soundbeats.azurewebsites.net/dist/css/AdminLTE.min.css">
     <!-- AdminLTE Skins. Choose a skin from the css/skins
          folder instead of downloading all of them to reduce the load. -->
-    <link rel="stylesheet" href="http://localhost/adminlte-master/dist/css/skins/_all-skins.min.css">
+    <link rel="stylesheet" href="http://soundbeats.azurewebsites.net/dist/css/skins/_all-skins.min.css">
     <!-- iCheck -->
-    <link rel="stylesheet" href="http://localhost/adminlte-master/plugins/iCheck/flat/blue.css">
+    <link rel="stylesheet" href="http://soundbeats.azurewebsites.net/plugins/iCheck/flat/blue.css">
     <!-- Morris chart -->
-    <link rel="stylesheet" href="http://localhost/adminlte-master/plugins/morris/morris.css">
+    <link rel="stylesheet" href="http://soundbeats.azurewebsites.net/plugins/morris/morris.css">
     <!-- jvectormap -->
-    <link rel="stylesheet" href="http://localhost/adminlte-master/plugins/jvectormap/jquery-jvectormap-1.2.2.css">
+    <link rel="stylesheet" href="http://soundbeats.azurewebsites.net/plugins/jvectormap/jquery-jvectormap-1.2.2.css">
     <!-- Date Picker -->
-    <link rel="stylesheet" href="http://localhost/adminlte-master/plugins/datepicker/datepicker3.css">
+    <link rel="stylesheet" href="http://soundbeats.azurewebsites.net/plugins/datepicker/datepicker3.css">
     <!-- Daterange picker -->
-    <link rel="stylesheet" href="http://localhost/adminlte-master/plugins/daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" href="http://soundbeats.azurewebsites.net/plugins/daterangepicker/daterangepicker.css">
     <!-- bootstrap wysihtml5 - text editor -->
-    <link rel="stylesheet" href="http://localhost/adminlte-master/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+    <link rel="stylesheet" href="http://soundbeats.azurewebsites.net/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
 
-    <link rel="stylesheet" href="http://localhost/adminlte-master/plugins/datatables/dataTables.bootstrap.css">
+    <link rel="stylesheet" href="http://soundbeats.azurewebsites.net/plugins/datatables/dataTables.bootstrap.css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -45,7 +45,7 @@
 
     <header class="main-header">
         <!-- Logo -->
-        <a href="http://localhost/adminlte-master/index.php" class="logo">
+        <a href="http://soundbeats.azurewebsites.net" class="logo">
             <!-- mini logo for sidebar mini 50x50 pixels -->
             <span class="logo-mini"><small><b>ADOA</b></small></span>
             <!-- logo for regular state and mobile devices -->
@@ -65,13 +65,13 @@
 
                     <li class="dropdown user user-menu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <img src="http://localhost/adminlte-master/dist/img/smile.png" class="user-image" alt="User Image">
+                            <img src="http://soundbeats.azurewebsites.net/dist/img/smile.png" class="user-image" alt="User Image">
                             <span class="hidden-xs">Funcionario logado</span>
                         </a>
                         <ul class="dropdown-menu">
                             <!-- User image -->
                             <li class="user-header">
-                                <img src="http://localhost/adminlte-master/dist/img/smile.png" class="img-circle" alt="User Image">
+                                <img src="http://soundbeats.azurewebsites.net/dist/img/smile.png" class="img-circle" alt="User Image">
 
                                 <p>
                                     Funcionario  Logado - Nome completo
@@ -104,7 +104,7 @@
             <!-- Sidebar user panel -->
             <div class="user-panel">
                 <div class="pull-left image">
-                    <img src="http://localhost/adminlte-master/dist/img/smile.png" class="img-circle" alt="User Image">
+                    <img src="dist/img/smile.png" class="img-circle" alt="User Image">
                 </div>
                 <div class="pull-left info">
                     <p>Usuario Logado</p>
@@ -140,8 +140,8 @@
                 </span>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="http://localhost/adminlte-master/pages/forms/formCliente.php"><i class="fa fa-circle-o"></i> Cadastrar novo Cliente</a></li>
-                                <li><a href="http://localhost/adminlte-master/pages/forms/listaClientes.php"><i class="fa fa-circle-o"></i> Lista de clientes</a></li>
+                                <li><a href="http://soundbeats.azurewebsites.net/pages/forms/formCliente.php"><i class="fa fa-circle-o"></i> Cadastrar novo Cliente</a></li>
+                                <li><a href="http://soundbeats.azurewebsites.net/pages/forms/listaClientes.php"><i class="fa fa-circle-o"></i> Lista de clientes</a></li>
                                 </li>
                             </ul>
                         </li>
@@ -152,8 +152,8 @@
                 </span>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="http://localhost/adminlte-master/pages/forms/livrosEmprestados.php"><i class="fa fa-circle-o"></i> Emprestados</a></li>
-                                <li><a href="http://localhost/adminlte-master/pages/forms/livrosDisponiveis.php"><i class="fa fa-circle-o"></i> Disponiveis</a></li>
+                                <li><a href="http://soundbeats.azurewebsites.net/pages/forms/livrosEmprestados.php"><i class="fa fa-circle-o"></i> Emprestados</a></li>
+                                <li><a href="http://soundbeats.azurewebsites.net/pages/forms/livrosDisponiveis.php"><i class="fa fa-circle-o"></i> Disponiveis</a></li>
                                 </li>
                             </ul>
                         </li>
@@ -169,14 +169,14 @@
             </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href="http://localhost/adminlte-master/pages/layout/top-nav.html"><i class="fa fa-circle-o"></i> Top Navigation</a></li>
-                        <li><a href="http://localhost/adminlte-master/pages/layout/boxed.html"><i class="fa fa-circle-o"></i> Boxed</a></li>
-                        <li><a href="http://localhost/adminlte-master/pages/layout/fixed.html"><i class="fa fa-circle-o"></i> Fixed</a></li>
-                        <li><a href="http://localhost/adminlte-master/pages/layout/collapsed-sidebar.html"><i class="fa fa-circle-o"></i> Collapsed Sidebar</a></li>
+                        <li><a href="http://soundbeats.azurewebsites.net/pages/layout/top-nav.html"><i class="fa fa-circle-o"></i> Top Navigation</a></li>
+                        <li><a href="http://soundbeats.azurewebsites.net/pages/layout/boxed.html"><i class="fa fa-circle-o"></i> Boxed</a></li>
+                        <li><a href="http://soundbeats.azurewebsites.net/pages/layout/fixed.html"><i class="fa fa-circle-o"></i> Fixed</a></li>
+                        <li><a href="http://soundbeats.azurewebsites.net/pages/layout/collapsed-sidebar.html"><i class="fa fa-circle-o"></i> Collapsed Sidebar</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="http://localhost/adminlte-master/pages/widgets.html">
+                    <a href="http://soundbeats.azurewebsites.net/pages/widgets.html">
                         <i class="fa fa-th"></i> <span>Widgets</span>
                         <span class="pull-right-container">
               <small class="label pull-right bg-green">new</small>
@@ -192,10 +192,10 @@
             </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href="http://localhost/adminlte-master/pages/charts/chartjs.html"><i class="fa fa-circle-o"></i> ChartJS</a></li>
-                        <li><a href="http://localhost/adminlte-master/pages/charts/morris.html"><i class="fa fa-circle-o"></i> Morris</a></li>
-                        <li><a href="http://localhost/adminlte-master/pages/charts/flot.html"><i class="fa fa-circle-o"></i> Flot</a></li>
-                        <li><a href="http://localhost/adminlte-master/pages/charts/inline.html"><i class="fa fa-circle-o"></i> Inline charts</a></li>
+                        <li><a href="http://soundbeats.azurewebsites.net/pages/charts/chartjs.html"><i class="fa fa-circle-o"></i> ChartJS</a></li>
+                        <li><a href="http://soundbeats.azurewebsites.net/pages/charts/morris.html"><i class="fa fa-circle-o"></i> Morris</a></li>
+                        <li><a href="http://soundbeats.azurewebsites.net/pages/charts/flot.html"><i class="fa fa-circle-o"></i> Flot</a></li>
+                        <li><a href="http://soundbeats.azurewebsites.net/pages/charts/inline.html"><i class="fa fa-circle-o"></i> Inline charts</a></li>
                     </ul>
                 </li>
                 <li class="treeview">
@@ -207,12 +207,12 @@
             </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href="http://localhost/adminlte-master/pages/UI/general.html"><i class="fa fa-circle-o"></i> General</a></li>
-                        <li><a href="http://localhost/adminlte-master/pages/UI/icons.html"><i class="fa fa-circle-o"></i> Icons</a></li>
-                        <li><a href="http://localhost/adminlte-master/pages/UI/buttons.html"><i class="fa fa-circle-o"></i> Buttons</a></li>
-                        <li><a href="http://localhost/adminlte-master/pages/UI/sliders.html"><i class="fa fa-circle-o"></i> Sliders</a></li>
-                        <li><a href="http://localhost/adminlte-master/pages/UI/timeline.html"><i class="fa fa-circle-o"></i> Timeline</a></li>
-                        <li><a href="http://localhost/adminlte-master/pages/UI/modals.html"><i class="fa fa-circle-o"></i> Modals</a></li>
+                        <li><a href="http://soundbeats.azurewebsites.net/pages/UI/general.html"><i class="fa fa-circle-o"></i> General</a></li>
+                        <li><a href="http://soundbeats.azurewebsites.net/pages/UI/icons.html"><i class="fa fa-circle-o"></i> Icons</a></li>
+                        <li><a href="http://soundbeats.azurewebsites.net/pages/UI/buttons.html"><i class="fa fa-circle-o"></i> Buttons</a></li>
+                        <li><a href="http://soundbeats.azurewebsites.net/pages/UI/sliders.html"><i class="fa fa-circle-o"></i> Sliders</a></li>
+                        <li><a href="http://soundbeats.azurewebsites.net/pages/UI/timeline.html"><i class="fa fa-circle-o"></i> Timeline</a></li>
+                        <li><a href="http://soundbeats.azurewebsites.net/pages/UI/modals.html"><i class="fa fa-circle-o"></i> Modals</a></li>
                     </ul>
                 </li>
 
