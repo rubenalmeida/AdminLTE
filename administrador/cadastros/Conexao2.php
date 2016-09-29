@@ -2,7 +2,7 @@
 
 class Conexao {
 
-    private $host 	  = 'localhost';
+    private $host 	  = 'http://177.41.104.138/';
     private $user 	  = 'root';
     private $password = '';
     private $banco    = 'biblioteca';
