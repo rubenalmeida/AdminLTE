@@ -1,5 +1,5 @@
 <?php
-include_once '../../conexao.php';
+include_once '../conexao.php';
 
 class Usuarios{
     protected $id_usuario;
@@ -96,16 +96,32 @@ class Usuarios{
 
     function inserir($dados){
         $nome = $dados['nome'];
-        $sobrenome = $dados['sobrenome'];
         $usuario = $dados['usuario'];
         $senha = $dados['senha'];
         $nivel = $dados['nivel'];
         $status = $dados['status'];
 
 
-        $sql = "INSERT INTO usuario (nome, sobrenome, usuario, senha, nivel, status) VALUES ('$nome','$sobrenome','$usuario','$senha', '$nivel', '$status')";
-        $conexao = new Conexao();
-        return $conexao->executar($sql);
+
+
+
+        if(!empty($_FILES) && $_FILES['foto']['error'] == 0){
+
+            $nomeFoto = $_FILES['foto']['name'];
+            $extensao = strrchr($nomeFoto, '.');
+
+            $sql = "INSERT INTO usuario (nome, usuario, senha, nivel, status, extensao) VALUES ('$nome','$usuario','$senha', '$nivel', '$status', '$extensao')";
+            $conexao = new Conexao();
+            $retorno =  $conexao->executar($sql);
+
+            $origem = $_FILES['foto']['tmp_name'];
+            $destino = '../fotos/usuario/' . $retorno . $extensao;
+
+
+            move_uploaded_file($origem, $destino);
+
+        }
+
     }
 
     function alterar($dados){

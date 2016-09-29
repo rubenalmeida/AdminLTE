@@ -9,6 +9,8 @@
     <!-- Bootstrap 3.3.6 -->
     <link rel="stylesheet" href="http://soundbeats.azurewebsites.net/bootstrap/css/bootstrap.min.css">
 
+    <link rel="stylesheet" href="http://soundbeats.azurewebsites.net/bootstrap/css/animate.css">
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
     <!-- Ionicons -->
@@ -63,20 +65,34 @@
                     <!-- Messages: style can be found in dropdown.less-->
                     <!-- Notifications: style can be found in dropdown.less -->
 
-                    <li class="dropdown user user-menu">
+                    <!-- USUARIO -->
+
+
+                    <?php
+
+                    if(!isset($_SESSION)){
+                        session_start();
+                    }
+
+                    if (isset($_SESSION['usuario'])){
+
+                        $usuario = $_SESSION['usuario'];
+                        $extensao = $_SESSION['extensao'];
+
+                        echo
+                        '<li class="dropdown user user-menu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <img src="http://soundbeats.azurewebsites.net/dist/img/smile.png" class="user-image" alt="User Image">
-                            <span class="hidden-xs">Funcionario logado</span>
+                            <img src="http://soundbeats.azurewebsites.net/administrador/cadastros/fotos/usuario/'. $_SESSION['id_usuario'] . $extensao .'" class="user-image" alt="User Image">
+                            <span class="hidden-xs">' . $usuario . '</span>
                         </a>
                         <ul class="dropdown-menu">
                             <!-- User image -->
                             <li class="user-header">
-                                <img src="http://soundbeats.azurewebsites.net/dist/img/smile.png" class="img-circle" alt="User Image">
+                               <img src="http://soundbeats.azurewebsites.net/administrador/cadastros/fotos/usuario/'. $_SESSION['id_usuario'] . $_SESSION['extensao'] .'" class="img-circle" alt="User Image">
 
-                                <p>
-                                    Funcionario  Logado - Nome completo
+                                <p>' . $_SESSION['nome']  .
 
-                                </p>
+                        '</p>
                             </li>
                             <!-- Menu Body -->
                             <li class="user-body">
@@ -84,11 +100,25 @@
                             <!-- Menu Footer-->
                             <li class="user-footer">
                                 <div class="">
-                                    <a href="#" class="btn btn-default">Sair</a>
+                                    <a href="http://soundbeats.azurewebsites.net/administrador/cadastros/usuarios/logout.php" class="btn btn-warning">Sair</a>
                                 </div>
                             </li>
                         </ul>
-                    </li>
+                    </li>';
+
+
+
+                    }else{
+
+                        header("Location: http://soundbeats.azurewebsites.net/login.php");
+
+                    }
+                    ?>
+
+
+
+
+
                     <!-- Control Sidebar Toggle Button -->
                     <li>
                         <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
@@ -104,10 +134,10 @@
             <!-- Sidebar user panel -->
             <div class="user-panel">
                 <div class="pull-left image">
-                    <img src="dist/img/smile.png" class="img-circle" alt="User Image">
+                    <?php echo '<img src="http://soundbeats.azurewebsites.net/administrador/cadastros/fotos/usuario/'. $_SESSION['id_usuario'] . $_SESSION['extensao'] . '" class="img-circle" alt="User Image">'; ?>
                 </div>
                 <div class="pull-left info">
-                    <p>Usuario Logado</p>
+                    <p><? echo  $usuario; ?></p>
                     <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
                 </div>
             </div>
@@ -160,6 +190,24 @@
 
                     </ul>
                 </li>
+
+
+                <?php if (isset($_SESSION['usuario']) && $_SESSION['nivel'] == 1 ) {
+
+
+                    echo '
+                        <li>
+                            <a href = "http://localhost/adminlte-master/administrador/cadastros/usuarios/registro.php" >
+                                <i class="fa fa-th" ></i > <span > Cadastrar usuário </span >
+                                <span class="pull-right-container" >
+                                    <small class="label pull-right bg-green" > novo</small >
+                                </span >
+                    </a >
+                </li >';
+
+               } ?>
+
+
                 <li class="treeview">
                     <a href="#">
                         <i class="fa fa-files-o"></i>

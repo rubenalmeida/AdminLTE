@@ -27,9 +27,13 @@ class Conexao {
 	{
 		$this->conectar();
 		$this->resultado = mysqli_query($this->conexao, $sql);
-		$this->desconectar();
-		
-		return $this->resultado;
+
+
+        $id = mysqli_insert_id($this->conexao);
+        $this->desconectar();
+
+        return $id;
+
 	}	
 	
 	public function recuperarTodos($sql)
