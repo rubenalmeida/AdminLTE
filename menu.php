@@ -82,13 +82,13 @@
                         echo
                         '<li class="dropdown user user-menu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <img src="http://soundbeats.azurewebsites.net/administrador/cadastros/fotos/usuario/'. $_SESSION['id_usuario'] . $extensao .'" class="user-image" alt="User Image">
+                            <img src="http://soundbeats.azurewebsites.net/fotos/usuarios/'. $_SESSION['id_usuario'] . $extensao .'" class="user-image" alt="User Image">
                             <span class="hidden-xs">' . $usuario . '</span>
                         </a>
                         <ul class="dropdown-menu">
                             <!-- User image -->
                             <li class="user-header">
-                               <img src="http://soundbeats.azurewebsites.net/administrador/cadastros/fotos/usuario/'. $_SESSION['id_usuario'] . $_SESSION['extensao'] .'" class="img-circle" alt="User Image">
+                               <img src="http://soundbeats.azurewebsites.net/fotos/usuarios/'. $_SESSION['id_usuario'] . $_SESSION['extensao'] .'" class="img-circle" alt="User Image">
 
                                 <p>' . $_SESSION['nome']  .
 
@@ -134,7 +134,7 @@
             <!-- Sidebar user panel -->
             <div class="user-panel">
                 <div class="pull-left image">
-                    <?php echo '<img src="http://soundbeats.azurewebsites.net/administrador/cadastros/fotos/usuario/'. $_SESSION['id_usuario'] . $_SESSION['extensao'] . '" class="img-circle" alt="User Image">'; ?>
+                    <?php echo '<img src="http://soundbeats.azurewebsites.net/fotos/usuarios/'. $_SESSION['id_usuario'] . $_SESSION['extensao'] . '" class="img-circle" alt="User Image">'; ?>
                 </div>
                 <div class="pull-left info">
                     <p><? echo  $usuario; ?></p>
@@ -197,7 +197,7 @@
 
                     echo '
                         <li>
-                            <a href = "http://localhost/adminlte-master/administrador/cadastros/usuarios/registro.php" >
+                            <a href = "http://soundbeats.azurewebsites.net/administrador/cadastros/usuarios/registro.php" >
                                 <i class="fa fa-th" ></i > <span > Cadastrar usuário </span >
                                 <span class="pull-right-container" >
                                     <small class="label pull-right bg-green" > novo</small >
@@ -272,8 +272,8 @@
             </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href="http://localhost/adminlte-master/pages/tables/simple.html"><i class="fa fa-circle-o"></i> Simple tables</a></li>
-                        <li><a href="http://localhost/adminlte-master/pages/tables/data.html"><i class="fa fa-circle-o"></i> Data tables</a></li>
+                        <li><a href="http://soundbeats.azurewebsites.net/pages/tables/simple.html"><i class="fa fa-circle-o"></i> Simple tables</a></li>
+                        <li><a href="http://soundbeats.azurewebsites.net/pages/tables/data.html"><i class="fa fa-circle-o"></i> Data tables</a></li>
                     </ul>
                 </li>
                 <li>
@@ -303,15 +303,15 @@
             </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href="http://localhost/adminlte-master/pages/examples/invoice.html"><i class="fa fa-circle-o"></i> Invoice</a></li>
-                        <li><a href="http://localhost/adminlte-master/pages/examples/profile.html"><i class="fa fa-circle-o"></i> Profile</a></li>
-                        <li><a href="http://localhost/adminlte-master/pages/examples/login.html"><i class="fa fa-circle-o"></i> Login</a></li>
-                        <li><a href="http://localhost/adminlte-master/pages/examples/register.html"><i class="fa fa-circle-o"></i> Register</a></li>
-                        <li><a href="http://localhost/adminlte-master/pages/examples/lockscreen.html"><i class="fa fa-circle-o"></i> Lockscreen</a></li>
-                        <li><a href="http://localhost/adminlte-master/pages/examples/404.html"><i class="fa fa-circle-o"></i> 404 Error</a></li>
-                        <li><a href="http://localhost/adminlte-master/pages/examples/500.html"><i class="fa fa-circle-o"></i> 500 Error</a></li>
-                        <li><a href="http://localhost/adminlte-master/pages/examples/blank.html"><i class="fa fa-circle-o"></i> Blank Page</a></li>
-                        <li><a href="http://localhost/adminlte-master/pages/examples/pace.html"><i class="fa fa-circle-o"></i> Pace Page</a></li>
+                        <li><a href="http://soundbeats.azurewebsites.net/pages/examples/invoice.html"><i class="fa fa-circle-o"></i> Invoice</a></li>
+                        <li><a href="http://soundbeats.azurewebsites.net/pages/examples/profile.html"><i class="fa fa-circle-o"></i> Profile</a></li>
+                        <li><a href="http://soundbeats.azurewebsites.net/pages/examples/login.html"><i class="fa fa-circle-o"></i> Login</a></li>
+                        <li><a href="http://soundbeats.azurewebsites.net/pages/examples/register.html"><i class="fa fa-circle-o"></i> Register</a></li>
+                        <li><a href="http://soundbeats.azurewebsites.net/pages/examples/lockscreen.html"><i class="fa fa-circle-o"></i> Lockscreen</a></li>
+                        <li><a href="http://soundbeats.azurewebsites.net/pages/examples/404.html"><i class="fa fa-circle-o"></i> 404 Error</a></li>
+                        <li><a href="http://soundbeats.azurewebsites.net/pages/examples/500.html"><i class="fa fa-circle-o"></i> 500 Error</a></li>
+                        <li><a href="http://soundbeats.azurewebsites.net/pages/examples/blank.html"><i class="fa fa-circle-o"></i> Blank Page</a></li>
+                        <li><a href="http://soundbeats.azurewebsites.net/pages/examples/pace.html"><i class="fa fa-circle-o"></i> Pace Page</a></li>
                     </ul>
                 </li>
                 <li class="treeview">
