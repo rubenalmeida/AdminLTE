@@ -2,10 +2,10 @@
 
 class Conexao {
 
-    private $host 	  = 'http://192.168.1.2/';
-    private $user 	  = 'root';
-    private $password = '';
-    private $banco    = 'biblioteca';
+    private $host 	  = '186.202.152.41:3306';
+    private $user 	  = 'enfol_ruben';
+    private $password = 'win010203';
+    private $banco    = 'enfold_biblioteca';
 
     protected $conexao;
     protected $resultado;
