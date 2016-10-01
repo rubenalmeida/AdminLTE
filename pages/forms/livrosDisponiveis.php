@@ -33,7 +33,7 @@ $livros = $livros->recuperarTodos();
                            <thead>
 				<tr>
 					<td>Ações</td>
-					<td>Id</td>
+					<td>Código</td>
 					<td>Nome</td>
 					<td>Autor</td>
 				</tr>
@@ -41,7 +41,7 @@ $livros = $livros->recuperarTodos();
 				<tfoot>
 				<tr>
 					<td>Ações</td>
-					<td>Id</td>
+					<td>Cóodigo</td>
 					<td>Nome</td>
 					<td>Autor</td>
 
