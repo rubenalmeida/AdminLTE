@@ -53,15 +53,15 @@ $livros = $livros->recuperarTodos();
 					if (isset($_SESSION['nivel']) && $_SESSION['nivel'] > 0){
 						echo  '<tr>
 						<td>
-							<a class="btn btn-danger" title="Excluir" href="processamento.php?acao=excluir&id_livros=' . $dado['id_livros'] . '">
+							<a class="btn btn-danger" title="Excluir" href="../../administrador/livros/processamento.php?acao=excluir&id_livros=' . $dado['id_livros'] . '">
 								<span class="glyphicon glyphicon-trash"></span>
 							</a>'.
 
-							'<a class="btn btn-success" title="Alterar" href="formulario.php?id_livros='  .$dado['id_livros'] . '">
+							'<a class="btn btn-success" title="Alterar" href="cadastroLivros.php?id_livros='  .$dado['id_livros'] . '">
 								<span class="glyphicon glyphicon-pencil"></span>
 							</a>'.
 
-							'<a class="btn btn-primary" title="Emprestar" href="FormEmprestimo.php?id_livros= ' . $dado['id_livros'] .'">
+							'<a class="btn btn-primary" title="Emprestar" href="../../administrador/livros/FormEmprestimo.php?id_livros= ' . $dado['id_livros'] .'">
 								<span class="glyphicon glyphicon-book"></span>
 							</a>' .
 						'</td>
