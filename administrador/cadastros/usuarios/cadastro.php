@@ -116,7 +116,7 @@ class Usuarios{
 
             $origem = $_FILES['foto']['tmp_name'];
             $destino = '../../../fotos/usuarios/' . $retorno . $extensao;
-
+            print_r($destino);die;
 
             move_uploaded_file($origem, $destino);
 

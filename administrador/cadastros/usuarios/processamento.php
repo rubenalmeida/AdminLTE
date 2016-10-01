@@ -36,5 +36,5 @@ if($resultado){
 
 <script>
     alert('<?php echo $mensagem; ?>');
-    window.location.href = 'http://localhost/adminlte-master/login.php';
+    window.location.href = 'http://soundbeats.azurewebsites.net/login.php';
 </script>
