@@ -116,7 +116,7 @@ class Usuarios{
             $origem = $_FILES['foto']['tmp_name'];
             $destino = 'http://soundbeats.azurewebsites.net/fotos/usuarios/' . $retorno . $extensao;
             
-            print_r($origem);die;
+
             move_uploaded_file($origem, $destino);
 
         }
