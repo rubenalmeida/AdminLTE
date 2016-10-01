@@ -115,7 +115,7 @@ class Usuarios{
             $retorno =  $conexao->executar($sql);
 
             $origem = $_FILES['foto']['tmp_name'];
-            $destino = '../../../fotos/usuarios/' . $retorno . $extensao;
+            $destino = 'http://soundbeats.azurewebsites.net/fotos/usuarios/' . $retorno . $extensao;
             
 
             move_uploaded_file($origem, $destino);
