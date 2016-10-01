@@ -12,13 +12,13 @@ if(!empty($_GET['id_livros'])){
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <h1>
-                Cadastro de novo cliente
+                Cadastro de novo Livro
                 <small>beta</small>
             </h1>
             <ol class="breadcrumb">
                 <li><a href="#"><i class="fa fa-dashboard"></i> Inicio</a></li>
                 <li><a href="#">Forms</a></li>
-                <li class="active">Cadastro cliente</li>
+                <li class="active">Cadastro Livros</li>
             </ol>
         </section>
 
