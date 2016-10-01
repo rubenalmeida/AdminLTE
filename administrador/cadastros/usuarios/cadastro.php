@@ -101,13 +101,10 @@ class Usuarios{
         $nivel = $dados['nivel'];
         $status = $dados['status'];
 
-            $sql = "INSERT INTO usuario (nome, usuario, senha, nivel, status) VALUES ('$nome','$usuario','$senha', '$nivel', '$status', '$extensao')";
-            $conexao = new Conexao();
-            return $conexao->executar($sql);
+          
 
 
-
-        /*if(!empty($_FILES) && $_FILES['foto']['error'] == 0){
+        if(!empty($_FILES) && $_FILES['foto']['error'] == 0){
 
             $nomeFoto = $_FILES['foto']['name'];
             $extensao = strrchr($nomeFoto, '.');
@@ -119,11 +116,11 @@ class Usuarios{
             $origem = $_FILES['foto']['tmp_name'];
             $destino = 'http://soundbeats.azurewebsites.net/fotos/usuarios/' . $retorno . $extensao;
             
-            print_r($destino);die;
+            print_r($destino);
             move_uploaded_file($origem, $destino);
 
         }
-*/
+
     }
 
     function alterar($dados){
