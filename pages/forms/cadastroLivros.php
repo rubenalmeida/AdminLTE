@@ -8,40 +8,70 @@ if(!empty($_GET['id_livros'])){
 	$livros->carregarPorId($_GET['id_livros']);
 }
 ?>
-<?php  include_once '../cabecalho.php'; ?>
-	
-	<div class="panel panel-primary">
-    	<div class="panel-heading">
-			Livros
-    	</div>
-    	<div class="panel-body">
-            <form action="../../administrador/livros/processamento.php?acao=salvar" method="post" name="formulario" class="form-horizontal">
-				<input type="hidden" name="id_livros" id="id_livros"  value="<?php echo $livros->getIdLivros();?>" />
-	    	
-				<div class="form-group">
-                	<label for="nome" class="col-sm-2 control-label">Nome: </label>
-                    <div class="col-sm-10">
-                    	<input type="text" class="form-control" name="nome" id="nome" value="<?php echo $livros->getNome(); ?>" />
-                    </div>
-				</div>
+<div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+            <h1>
+                Cadastro de novo cliente
+                <small>beta</small>
+            </h1>
+            <ol class="breadcrumb">
+                <li><a href="#"><i class="fa fa-dashboard"></i> Inicio</a></li>
+                <li><a href="#">Forms</a></li>
+                <li class="active">Cadastro cliente</li>
+            </ol>
+        </section>
 
-				<div class="form-group">
-                	<label for="nome" class="col-sm-2 control-label">Autor: </label>
-                    <div class="col-sm-10">
-                    	<input type="text" class="form-control" name="autor" id="autor" value="<?php echo $livros->getAutor(); ?>" />
+        <!-- Main content -->
+        <section class="content">
+            <div class="row">
+                <!-- left column -->
+                <div class="col-md-6">
+                    <!-- general form elements -->
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <h3 class="box-title">Dados do cliente</h3>
+                        </div>
+                        <!-- /.box-header -->
+                        <!-- form start -->
+                        <form action="../../administrador/livros/processamento.php?acao=salvar" method="post" role="form">
+                            <div class="box-body">
+                                <input type="hidden" name="id_livros" id="id_livros"  value="<?php echo $livros->getIdLivros();?>" />
+
+                                <div class="form-group">
+                                    <label for="nome">Titulo do livro</label>
+                                    <input type="text" class="form-control" name="nome" id="nome"  placeholder="Titulo do livro" value="<?php echo $livros->getNome(); ?>" />
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Email </label>
+                                    <input type="text" class="form-control" name="autor" id="autor" placeholder="Autor do livro" value="<?php echo $livros->getAutor(); ?>" />
+                                </div>
+
+                              
+                            <!-- /.box-body -->
+
+                            <div class="box-footer">
+                                <button type="submit" class="btn btn-primary">Cadastrar novo cliente</button>
+                            </div>
+                        </form>
                     </div>
-				</div>
-					
-                <div class="form-group">
-                    <div class="col-sm-offset-2 col-sm-10">
-                        <button type="submit" class="btn btn-success">Salvar</button>
-                    	<a href="index.php" class="btn btn-danger">Voltar</a>
-                	</div>
-				</div>				
-				
-	    	</form>
-    	</div>
-   	</div>
+                    <!-- /.box -->
+
+                            </form>
+                        </div>
+                        <!-- /.box-body -->
+                    </div>
+                    <!-- /.box -->
+                </div>
+                <!--/.col (right) -->
+            </div>
+            <!-- /.row -->
+        </section>
+        <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+	
 <footer class="main-footer">
         <div class="pull-right hidden-xs">
             <b>Versão</b> 1.0.0
