@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Biblioteca Adoa| Dashboard</title>
+    <title>Biblioteca Adoa| Area de trabalho</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.6 -->
@@ -154,11 +154,11 @@
             <!-- /.search form -->
             <!-- sidebar menu: : style can be found in sidebar.less -->
             <ul class="sidebar-menu">
-                <li class="header">NavegaÃ§Ã£o principal</li>
+                <li class="header">Navegaçãoo principal</li>
 
                 <li class="treeview">
                     <a href="#">
-                        <i class="fa fa-edit"></i> <span>FormulÃ¡rios</span>
+                        <i class="fa fa-edit"></i> <span>Formulários</span>
                         <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
@@ -198,7 +198,7 @@
                     echo '
                         <li>
                             <a href = "http://soundbeats.azurewebsites.net/administrador/cadastros/usuarios/registro.php" >
-                                <i class="fa fa-th" ></i > <span > Cadastrar usuÃ¡rio </span >
+                                <i class="fa fa-th" ></i > <span > Cadastrar usuario </span >
                                 <span class="pull-right-container" >
                                     <small class="label pull-right bg-green" > novo</small >
                                 </span >
