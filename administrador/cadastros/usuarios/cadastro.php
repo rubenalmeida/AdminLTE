@@ -1,5 +1,5 @@
 <?php
-include_once '../conexao2.php';
+include_once '../conexao.php';
 
 class Usuarios{
     protected $id_usuario;
@@ -101,7 +101,7 @@ class Usuarios{
         $nivel = $dados['nivel'];
         $status = $dados['status'];
 
-            $sql = "INSERT INTO usuario (nome, usuario, senha, nivel, status, extensao) VALUES ('$nome','$usuario','$senha', '$nivel', '$status', '$extensao')";
+            $sql = "INSERT INTO usuario (nome, usuario, senha, nivel, status) VALUES ('$nome','$usuario','$senha', '$nivel', '$status', '$extensao')";
             $conexao = new Conexao();
             return $conexao->executar($sql);
 

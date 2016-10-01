@@ -88,6 +88,11 @@ if(!empty($_GET['id_usuario'])){
         </div>
 
 
+      <div class="form-group has-feedback">
+        <input type="file" name="foto" id="foto" class="form-control" >
+        <span class="glyphicon glyphicon-camera form-control-feedback"></span>
+      </div>
+
 
 
 

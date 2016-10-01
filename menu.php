@@ -206,6 +206,15 @@
                 </li >';
 
                } ?>
+                
+                <li>
+                    <a href="http://soundbeats.azurewebsites.net/pages/cadasroLivros.php">
+                        <i class="fa fa-th"></i> <span>Cadastrar novo livro</span>
+                        <span class="pull-right-container">
+              <small class="label pull-right bg-green">novo</small>
+            </span>
+                    </a>
+                </li>
 
 
                 <li class="treeview">

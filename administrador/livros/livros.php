@@ -1,6 +1,6 @@
 <?php
 
-include_once '../../conexao.php';
+include_once 'conexao.php';
 
 class Livros{
 
@@ -127,9 +127,9 @@ class Livros{
 		$autor = $dados['autor'];
 
 		$sql = "insert into livros (nome, autor) values ('$nome', '$autor')";
-        print_r($nome);
+        
 
-        $conexao = new Conexao();
+                $conexao = new Conexao();
 		return $conexao->executar($sql);
 	}
 
@@ -142,7 +142,7 @@ class Livros{
 
 		$sql = "update livros set nome = '$nome', autor = '$autor' where id_livros = $id_livros";
 
-        print_r($autor);
+        
 		$conexao = new Conexao();
 		return $conexao->executar($sql);
 	}
@@ -174,6 +174,14 @@ class Livros{
 		$conexao = new Conexao();
 
 		$sql = "select * from livros WHERE emprestado = '0'";
+		return $conexao->recuperarTodos($sql);
+	}
+        
+        public function recuperarEmprestados()
+	{
+		$conexao = new Conexao();
+
+		$sql = "select * from livros WHERE emprestado = '1'";
 		return $conexao->recuperarTodos($sql);
 	}
 
