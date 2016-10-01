@@ -154,11 +154,11 @@
             <!-- /.search form -->
             <!-- sidebar menu: : style can be found in sidebar.less -->
             <ul class="sidebar-menu">
-                <li class="header">Navegação principal</li>
+                <li class="header">NavegaÃ§Ã£o principal</li>
 
                 <li class="treeview">
                     <a href="#">
-                        <i class="fa fa-edit"></i> <span>Formulários</span>
+                        <i class="fa fa-edit"></i> <span>FormulÃ¡rios</span>
                         <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
@@ -198,7 +198,7 @@
                     echo '
                         <li>
                             <a href = "http://soundbeats.azurewebsites.net/administrador/cadastros/usuarios/registro.php" >
-                                <i class="fa fa-th" ></i > <span > Cadastrar usuário </span >
+                                <i class="fa fa-th" ></i > <span > Cadastrar usuÃ¡rio </span >
                                 <span class="pull-right-container" >
                                     <small class="label pull-right bg-green" > novo</small >
                                 </span >
@@ -208,7 +208,7 @@
                } ?>
                 
                 <li>
-                    <a href="http://soundbeats.azurewebsites.net/pages/cadasroLivros.php">
+                    <a href="http://soundbeats.azurewebsites.net/pages/forms/cadastroLivros.php ">
                         <i class="fa fa-th"></i> <span>Cadastrar novo livro</span>
                         <span class="pull-right-container">
               <small class="label pull-right bg-green">novo</small>

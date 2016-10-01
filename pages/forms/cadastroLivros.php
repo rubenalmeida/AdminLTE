@@ -1,6 +1,7 @@
-<?php include_once"../../menu.php"; ?>
+<?php include_once"../../menu.php";
+?>
 <?php
-include_once 'http://soundbeats.azurewebsites.net/administrador/livros/livros.php';
+include_once '../../administrador/livros/livros.php';
 
 $livros = new Livros();
 
@@ -12,7 +13,7 @@ if(!empty($_GET['id_livros'])){
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <h1>
-                Cadastro de novo Livro
+                Cadastrar novo Livro
                 <small>beta</small>
             </h1>
             <ol class="breadcrumb">
@@ -30,7 +31,7 @@ if(!empty($_GET['id_livros'])){
                     <!-- general form elements -->
                     <div class="box box-primary">
                         <div class="box-header with-border">
-                            <h3 class="box-title">Dados do cliente</h3>
+                            <h3 class="box-title">Informações do Livro </h3>
                         </div>
                         <!-- /.box-header -->
                         <!-- form start -->
@@ -44,7 +45,7 @@ if(!empty($_GET['id_livros'])){
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">Email </label>
+                                    <label for="exampleInputEmail1">Autor </label>
                                     <input type="text" class="form-control" name="autor" id="autor" placeholder="Autor do livro" value="<?php echo $livros->getAutor(); ?>" />
                                 </div>
 
@@ -52,7 +53,7 @@ if(!empty($_GET['id_livros'])){
                             <!-- /.box-body -->
 
                             <div class="box-footer">
-                                <button type="submit" class="btn btn-primary">Cadastrar novo cliente</button>
+                                <button type="submit" class="btn btn-primary">Cadastrar Livro</button>
                             </div>
                         </form>
                     </div>
@@ -74,7 +75,7 @@ if(!empty($_GET['id_livros'])){
 	
 <footer class="main-footer">
         <div class="pull-right hidden-xs">
-            <b>Versão</b> 1.0.0
+            <b>VersÃ£o</b> 1.0.0
         </div>
         <strong>Copyright &copy; 2016 -  <a href="http://adoa.com.br">Adoa </a>.</strong> Todos os direitos reservados.
 
