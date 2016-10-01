@@ -115,7 +115,7 @@ class Usuarios{
             $retorno =  $conexao->executar($sql);
 
             $origem = $_FILES['foto']['tmp_name'];
-            $destino = '../fotos/usuario/' . $retorno . $extensao;
+            $destino = '../../../fotos/usuarios/' . $retorno . $extensao;
 
 
             move_uploaded_file($origem, $destino);
