@@ -65,7 +65,7 @@
                                     <div class="input-group-addon">
                                         <i class="fa fa-phone"></i>
                                     </div>
-                                    <input type="text" id="telefone" class="form-control" data-inputmask='"mask": "(999) 9999-9999"' data-mask>
+                                    <input type="text" id="telefone" name="telefone" class="form-control" data-inputmask='"mask": "(999) 9999-9999"' data-mask>
                                 </div>
                                 <!-- /.input group -->
                             </div>
