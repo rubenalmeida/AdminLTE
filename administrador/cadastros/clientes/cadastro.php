@@ -7,6 +7,8 @@ class Clientes{
     protected $id_cliente;
     protected $nome;
     protected $sexo;
+    protected $email;
+    protected $senha;
     protected $telefone;
     protected $endereco;
     protected $status;
@@ -35,6 +37,27 @@ class Clientes{
         $this->nome = $nome;
     }
 
+    public function getSenha()
+    {
+        return $this->senha;
+    }
+
+
+    public function setSenha($senha)
+    {
+        $this->senha = $senha;
+    }
+
+
+    public function getEmail()
+    {
+        return $this->email;
+    }
+
+    public function setEmail($email)
+    {
+        $this->email = $email;
+    }
 
     public function getSexo()
     {
@@ -93,11 +116,13 @@ class Clientes{
 
         $nome = $dados['nome'];
         $sexo = $dados['sexo'];
+        $email = $dados['email'];
+        $senha = $dados['senha'];
         $telefone = $dados['telefone'];
         $endereco = $dados['endereco'];
         $status = $dados['status'];
 
-        $sql  = "INSERT INTO cliente (nome , sexo, telefone, endereco, status) VALUES('$nome', '$sexo', '$telefone', '$endereco', '$status')";
+        $sql  = "INSERT INTO cliente (nome , email, senha, sexo, telefone, endereco, status) VALUES('$nome','$email','$senha', '$sexo', '$telefone', '$endereco', '$status')";
 
         $conexao = new Conexao();
         return $conexao->executar($sql);
@@ -110,11 +135,13 @@ class Clientes{
         $id_cliente = $dados['id_cliente'];
         $nome = $dados['nome'];
         $sexo = $dados['sexo'];
+        $email = $dados['email'];
+        $senha = $dados['senha'];
         $telefone = $dados['telefone'];
         $endereco = $dados['endereco'];
         $status = $dados['status'];
 
-        $sql  = "UPDATE cliente set nome = '$nome' , sexo = '$sexo', telefone = '$telefone', endereco = '$endereco', status = '$status' WHERE id_cliente = '$id_cliente'";
+        $sql  = "UPDATE cliente set nome = '$nome' , email ='$email', senha = '$senha', sexo = '$sexo', telefone = '$telefone', endereco = '$endereco', status = '$status' WHERE id_cliente = '$id_cliente'";
         print_r($sql);
 
         $conexao = new Conexao();
@@ -151,6 +178,8 @@ class Clientes{
 
         $this->id_cliente = $dados[0]['id_cliente'];
         $this->nome = $dados[0]['nome'];
+        $this->email = $dados[0]['email'];
+        $this->senha = $dados[0]['senha'];
         $this->sexo = $dados[0]['sexo'];
         $this->telefone = $dados[0]['telefone'];
         $this->endereco = $dados[0]['endereco'];
