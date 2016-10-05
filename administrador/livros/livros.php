@@ -6,10 +6,31 @@ class Livros{
 
 	protected $id_livros;
 	protected $nome;
-	protected $autor;
-	protected $pessoa;
-	protected $data1;
-	protected $data2;
+	protected $id_autor;
+	protected $id_editora;
+
+
+    public function getIdEditora()
+    {
+        return $this->id_editora;
+    }
+
+    public function setIdEditora($id_editora)
+    {
+        $this->id_editora = $id_editora;
+    }
+
+
+    public function getIdAutor()
+    {
+        return $this->id_autor;
+    }
+
+
+    public function setIdAutor($id_autor)
+    {
+        $this->id_autor = $id_autor;
+    }
 	protected $emprestado;
 
 
@@ -18,9 +39,7 @@ class Livros{
 		return $this->emprestado;
 	}
 
-	/**
-	 * @param mixed $emprestado
-	 */
+
 	public function setEmprestado($emprestado)
 	{
 		$this->emprestado = $emprestado;
@@ -32,41 +51,36 @@ class Livros{
 		return $this->pessoa;
 	}
 
-	/**
-	 * @param mixed $pessoa
-	 */
+
+
 	public function setPessoa($pessoa)
 	{
 		$this->pessoa = $pessoa;
 	}
 
-	/**
-	 * @return mixed
-	 */
+
+
 	public function getData1()
 	{
 		return $this->data1;
 	}
 
-	/**
-	 * @param mixed $data1
-	 */
+
+
 	public function setData1($data1)
 	{
 		$this->data1 = $data1;
 	}
 
-	/**
-	 * @return mixed
-	 */
+
+
 	public function getData2()
 	{
 		return $this->data2;
 	}
 
-	/**
-	 * @param mixed $data2
-	 */
+
+
 	public function setData2($data2)
 	{
 		$this->data2 = $data2;
@@ -78,41 +92,33 @@ class Livros{
 		return $this->id_livros;
 	}
 
-	/**
-	 * @param mixed $id_livros
-	 */
+
+
 	public function setIdLivros($id_livros)
 	{
 		$this->id_livros = $id_livros;
 	}
 
-	/**
-	 * @return mixed
-	 */
+
+
 	public function getNome()
 	{
 		return $this->nome;
 	}
 
-	/**
-	 * @param mixed $nome
-	 */
+
 	public function setNome($nome)
 	{
 		$this->nome = $nome;
 	}
 
-	/**
-	 * @return mixed
-	 */
+
 	public function getAutor()
 	{
 		return $this->autor;
 	}
 
-	/**
-	 * @param mixed $autor
-	 */
+
 	public function setAutor($autor)
 	{
 		$this->autor = $autor;
@@ -120,11 +126,15 @@ class Livros{
 
 
 
+
+
+
 	public function inserir($dados)
 	{
 
 		$nome = $dados['nome'];
-		$autor = $dados['autor'];
+		$id_autor = $dados['id_autor'];
+		$id_editora = $dados['id_editora'];
 
 		$sql = "insert into livros (nome, autor) values ('$nome', '$autor')";
         
@@ -173,7 +183,7 @@ class Livros{
 	{
 		$conexao = new Conexao();
 
-		$sql = "select * from livros WHERE emprestado = '0'";
+		$sql = "select * from vw_livros ORDER BY livro";
 		return $conexao->recuperarTodos($sql);
 	}
         
@@ -181,7 +191,7 @@ class Livros{
 	{
 		$conexao = new Conexao();
 
-		$sql = "select * from livros WHERE emprestado = '1'";
+		$sql = "select * from vw_livros ORDER BY livro";
 		return $conexao->recuperarTodos($sql);
 	}
 
