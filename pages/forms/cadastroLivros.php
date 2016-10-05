@@ -78,7 +78,7 @@ if(!empty($_GET['id_livros'])){
                                 </div>
                                 <!-- /.form-group -->
                                 <div class="box-footer">
-                                    <input type="submit" class=".btn primary" title="cadastrar">
+                                    <button type="submit" class="btn btn-primary">Cadastrar Livro</button>
                                 </div>
                             </form>
                         </div>
