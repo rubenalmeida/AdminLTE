@@ -43,12 +43,7 @@ if(!empty($_GET['id_livros'])){
                                     <label for="nome">Titulo do livro</label>
                                     <input type="text" class="form-control" name="nome" id="nome"  placeholder="Titulo do livro" value="<?php echo $livros->getNome(); ?>" />
                                 </div>
-
-                                <div class="form-group">
-                                    <label for="autor">Autor </label>
-                                    <input type="text" class="form-control" name="autor" id="autor" placeholder="Autor do livro" value="<?php echo $livros->getAutor(); ?>" />
-                                </div>
-
+                                <div class="col-md-6">
                                 <div class="form-group">
                                     <label>Autor</label>
                                     <select class="form-control select2" multiple="multiple" data-placeholder="Selecione um autor" style="width: 100%;">
@@ -61,6 +56,7 @@ if(!empty($_GET['id_livros'])){
                                         <option>Washington</option>
                                     </select>
                                 </div>
+                                    </div>
                               
                             <!-- /.box-body -->
 
