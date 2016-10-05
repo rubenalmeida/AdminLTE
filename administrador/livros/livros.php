@@ -6,6 +6,7 @@ class Livros{
 
 	protected $id_livros;
 	protected $nome;
+	protected $quantidade;
 	protected $id_autor;
 	protected $id_editora;
 
@@ -31,60 +32,7 @@ class Livros{
     {
         $this->id_autor = $id_autor;
     }
-	protected $emprestado;
 
-
-	public function getEmprestado()
-	{
-		return $this->emprestado;
-	}
-
-
-	public function setEmprestado($emprestado)
-	{
-		$this->emprestado = $emprestado;
-	}
-
-
-	public function getPessoa()
-	{
-		return $this->pessoa;
-	}
-
-
-
-	public function setPessoa($pessoa)
-	{
-		$this->pessoa = $pessoa;
-	}
-
-
-
-	public function getData1()
-	{
-		return $this->data1;
-	}
-
-
-
-	public function setData1($data1)
-	{
-		$this->data1 = $data1;
-	}
-
-
-
-	public function getData2()
-	{
-		return $this->data2;
-	}
-
-
-
-	public function setData2($data2)
-	{
-		$this->data2 = $data2;
-	}
 
 
 	public function getIdLivros()
@@ -113,18 +61,6 @@ class Livros{
 	}
 
 
-	public function getAutor()
-	{
-		return $this->autor;
-	}
-
-
-	public function setAutor($autor)
-	{
-		$this->autor = $autor;
-	}
-
-
 
 
 
@@ -135,22 +71,25 @@ class Livros{
 		$nome = $dados['nome'];
 		$id_autor = $dados['id_autor'];
 		$id_editora = $dados['id_editora'];
+		$quantidade = $dados['quantidade'];
 
-		$sql = "insert into livros (nome, autor) values ('$nome', '$autor')";
+		$sql = "insert into livros (nome, quant,  id_autor, id_editora) values ('$nome', '$quantidade', '$id_autor', '$id_editora')";
         
 
                 $conexao = new Conexao();
-		return $conexao->executar($sql);
+		        return $conexao->executar($sql);
 	}
 
 	public function alterar($dados)
 	{
 		$id_livros = $dados['id_livros'];
 		$nome = $dados['nome'];
-		$autor = $dados['autor'];
+        $id_autor = $dados['id_autor'];
+        $id_editora = $dados['id_editora'];
+        $quantidade = $dados['quantidade'];
 
 
-		$sql = "update livros set nome = '$nome', autor = '$autor' where id_livros = $id_livros";
+		$sql = "update livros set nome = '$nome', quant = '$quantidade' ,  id_autor = '$id_autor', id_editora = '$id_editora' where id_livros = $id_livros";
 
         
 		$conexao = new Conexao();
@@ -195,6 +134,14 @@ class Livros{
 		return $conexao->recuperarTodos($sql);
 	}
 
+    public function recuperarLivros()
+    {
+        $conexao = new Conexao();
+
+        $sql = "select * from livros";
+        return $conexao->recuperarTodos($sql);
+    }
+
 
 	public function carregarPorId($id_livros){
 
@@ -203,6 +150,8 @@ class Livros{
 		$dados = $conexao->recuperarTodos($sql);
 		$this->id_livros = $dados[0]['id_livros'];
 		$this->nome = $dados[0]['nome'];
+		$this->autor = $dados[0]['autor'];
+		$this->autor = $dados[0]['autor'];
 		$this->autor = $dados[0]['autor'];
 
 
