@@ -51,6 +51,36 @@ if(!empty($_GET['id_livros'])){
                                     <input type="text" class="form-control" name="nome" id="nome"  placeholder="Titulo do livro" value="<?php echo $livros->getNome(); ?>" />
                                 </div>
                                 <!-- /.form-group -->
+                                <div class="form-group">
+                                    <label>Multiple</label>
+                                    <select class="form-control select2" multiple="multiple" data-placeholder="Select a State" style="width: 100%;">
+                                        <option>Alabama</option>
+                                        <option>Alaska</option>
+                                        <option>California</option>
+                                        <option>Delaware</option>
+                                        <option>Tennessee</option>
+                                        <option>Texas</option>
+                                        <option>Washington</option>
+                                    </select>
+                                </div>
+                                <!-- /.form-group -->
+                                <div class="form-group">
+                                    <label>Disabled Result</label>
+                                    <select class="form-control select2" style="width: 100%;">
+                                        <option selected="selected">Alabama</option>
+                                        <option>Alaska</option>
+                                        <option disabled="disabled">California (disabled)</option>
+                                        <option>Delaware</option>
+                                        <option>Tennessee</option>
+                                        <option>Texas</option>
+                                        <option>Washington</option>
+                                    </select>
+                                </div>
+                                <!-- /.form-group -->
+                                <div class="box-footer">
+                                    <input type="submit" title="cadastrar">Cadastrar
+                                </div>
+                            </form>
                         </div>
                         <!-- /.col -->
 
@@ -58,36 +88,7 @@ if(!empty($_GET['id_livros'])){
                             <!-- /.form-group -->
                         </div>
                         <!-- /.col -->
-                            <div class="form-group">
-                                <label>Multiple</label>
-                                <select class="form-control select2" multiple="multiple" data-placeholder="Select a State" style="width: 100%;">
-                                    <option>Alabama</option>
-                                    <option>Alaska</option>
-                                    <option>California</option>
-                                    <option>Delaware</option>
-                                    <option>Tennessee</option>
-                                    <option>Texas</option>
-                                    <option>Washington</option>
-                                </select>
-                            </div>
-                            <!-- /.form-group -->
-                            <div class="form-group">
-                                <label>Disabled Result</label>
-                                <select class="form-control select2" style="width: 100%;">
-                                    <option selected="selected">Alabama</option>
-                                    <option>Alaska</option>
-                                    <option disabled="disabled">California (disabled)</option>
-                                    <option>Delaware</option>
-                                    <option>Tennessee</option>
-                                    <option>Texas</option>
-                                    <option>Washington</option>
-                                </select>
-                            </div>
-                            <!-- /.form-group -->
-                <div class="box-footer">
-                    <input type="submit" title="cadastrar">Cadastrar
-                </div>
-                </form>
+
                         <!-- /.col -->
                     </div>
                     <!-- /.row -->
@@ -295,7 +296,7 @@ if(!empty($_GET['id_livros'])){
                 <!-- /.box -->
             </div>
             <!-- /.col (right) -->
-
+</section>
             <!-- /.content-wrapper -->
             <footer class="main-footer">
                 <div class="pull-right hidden-xs">
