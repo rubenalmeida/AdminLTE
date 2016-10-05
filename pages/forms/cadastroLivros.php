@@ -10,7 +10,7 @@ if(!empty($_GET['id_livros'])){
 }
 ?>
 
-<div class="content-wrapper">
+<div class="content-wrapper" xmlns="http://www.w3.org/1999/html">
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
@@ -68,7 +68,7 @@ if(!empty($_GET['id_livros'])){
                         </div>
                         <!-- /.form-group -->
                         <div class="form-group">
-                            <label>Disabled Result</label>
+                            <label>Editora</label>
                             <select class="form-control select2" style="width: 100%;">
                                 <option selected="selected">Alabama</option>
                                 <option>Alaska</option>
@@ -81,6 +81,7 @@ if(!empty($_GET['id_livros'])){
                         </div>
                         <!-- /.form-group -->
                     </div>
+                    </form>
                     <!-- /.col -->
                 </div>
                 <!-- /.row -->
