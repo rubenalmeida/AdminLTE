@@ -45,10 +45,22 @@ if(!empty($_GET['id_livros'])){
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">Autor </label>
+                                    <label for="autor">Autor </label>
                                     <input type="text" class="form-control" name="autor" id="autor" placeholder="Autor do livro" value="<?php echo $livros->getAutor(); ?>" />
                                 </div>
 
+                                <div class="form-group">
+                                    <label>Autor</label>
+                                    <select class="form-control select2" multiple="multiple" data-placeholder="Selecione um autor" style="width: 100%;">
+                                        <option value="###" <?//=($livros->getAutor() == '1')?'selected':''?>>Alabama</option>
+                                        <option>Alaska</option>
+                                        <option>California</option>
+                                        <option>Delaware</option>
+                                        <option>Tennessee</option>
+                                        <option>Texas</option>
+                                        <option>Washington</option>
+                                    </select>
+                                </div>
                               
                             <!-- /.box-body -->
 

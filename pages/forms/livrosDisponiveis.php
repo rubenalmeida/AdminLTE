@@ -36,14 +36,18 @@ $livros = $livros->recuperarTodos();
 					<td>Código</td>
 					<td>Nome</td>
 					<td>Autor</td>
+                    <td>Quantidade</td>
+                    <td>Editora</td>
 				</tr>
 				</thead>
 				<tfoot>
 				<tr>
 					<td>Ações</td>
-					<td>Cóodigo</td>
-					<td>Nome</td>
+					<td>Código</td>
+					<td>Nome do livro</td>
 					<td>Autor</td>
+					<td>Quantidade</td>
+					<td>Editora</td>
 
 				</tr>
 				</tfoot>
@@ -53,21 +57,23 @@ $livros = $livros->recuperarTodos();
 					if (isset($_SESSION['nivel']) && $_SESSION['nivel'] > 0){
 						echo  '<tr>
 						<td>
-							<a class="btn btn-danger" title="Excluir" href="../../administrador/livros/processamento.php?acao=excluir&id_livros=' . $dado['id_livros'] . '">
+							<a class="btn btn-danger" title="Excluir" href="../../administrador/livros/processamento.php?acao=excluir&id_livros=' . $dado['codigo'] . '">
 								<span class="glyphicon glyphicon-trash"></span>
 							</a>'.
 
-							'<a class="btn btn-success" title="Alterar" href="cadastroLivros.php?id_livros='  .$dado['id_livros'] . '">
+							'<a class="btn btn-success" title="Alterar" href="cadastroLivros.php?id_livros='  .$dado['codigo'] . '">
 								<span class="glyphicon glyphicon-pencil"></span>
 							</a>'.
 
-							'<a class="btn btn-primary" title="Emprestar" href="../../administrador/livros/FormEmprestimo.php?id_livros= ' . $dado['id_livros'] .'">
+							'<a class="btn btn-primary" title="Emprestar" href="../../administrador/livros/FormEmprestimo.php?id_livros= ' . $dado['codigo'] .'">
 								<span class="glyphicon glyphicon-book"></span>
 							</a>' .
 						'</td>
-						<td>' . $dado['id_livros'] . '</td>
-						<td>' . $dado['nome'] . '</td>
+						<td>' . $dado['codigo'] . '</td>
+						<td>' . $dado['livro'] . '</td>
 						<td>' . $dado['autor'] . '</td>
+						<td>' . $dado['quantidade'] . '</td>
+						<td>' . $dado['editora'] . '</td>
 					</tr>';
 					}else{
 						echo
@@ -75,13 +81,15 @@ $livros = $livros->recuperarTodos();
 						'<tr>
 						<td>
 							
-							<a class="btn btn-primary" title="Emprestar" href="FormEmprestimo.php?id_livros=' . $dado['id_livros'] . '">
+							<a class="btn btn-primary" title="Emprestar" href="FormEmprestimo.php?id_livros=' . $dado['codigo'] . '">
 								Emprestar  <span class="glyphicon glyphicon-book"></span>
-							</a>
-						</td>' .
-						'<td>' . $dado['id_livros'] . '</td>
-						<td>' . $dado['nome'] . '</td>
-						<td>' . $dado['autor']. '</td>
+							</a>'.
+						'</td>
+						<td>' . $dado['codigo'] . '</td>
+						<td>' . $dado['livro'] . '</td>
+						<td>' . $dado['autor'] . '</td>
+						<td>' . $dado['quantidade'] . '</td>
+						<td>' . $dado['editora'] . '</td>
 						</tr>';
 					}
 
