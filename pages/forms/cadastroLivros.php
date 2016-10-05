@@ -9,6 +9,169 @@ if(!empty($_GET['id_livros'])){
 	$livros->carregarPorId($_GET['id_livros']);
 }
 ?>
+
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            Cadastrar novo Livro
+            <small>beta</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i> Inicio</a></li>
+            <li><a href="#">Forms</a></li>
+            <li class="active">Cadastro Livros</li>
+        </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+
+        <!-- SELECT2 EXAMPLE -->
+        <div class="box box-default">
+            <div class="box-header with-border">
+                <h3 class="box-title">Cadastrar Livro</h3>
+
+                <div class="box-tools pull-right">
+                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                    <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-remove"></i></button>
+                </div>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <form action="../../administrador/livros/processamento.php?acao=salvar" method="post" role="form">
+
+                        <input type="hidden" name="id_livros" id="id_livros"  value="<?php echo $livros->getIdLivros();?>" />
+
+                        <div class="form-group">
+                            <label for="nome">Titulo do livro</label>
+                            <input type="text" class="form-control" name="nome" id="nome"  placeholder="Titulo do livro" value="<?php echo $livros->getNome(); ?>" />
+                        </div>
+                        <!-- /.form-group -->
+                    </div>
+                    <!-- /.col -->
+
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Autor</label>
+                            <select class="form-control select2" multiple="multiple" data-placeholder="Selecione um autor" style="width: 100%;">
+                                <option>Alabama</option>
+                                <option>Alaska</option>
+                                <option>California</option>
+                                <option>Delaware</option>
+                                <option>Tennessee</option>
+                                <option>Texas</option>
+                                <option>Washington</option>
+                            </select>
+                        </div>
+                        <!-- /.form-group -->
+                        <div class="form-group">
+                            <label>Disabled Result</label>
+                            <select class="form-control select2" style="width: 100%;">
+                                <option selected="selected">Alabama</option>
+                                <option>Alaska</option>
+                                <option disabled="disabled">California</option>
+                                <option>Delaware</option>
+                                <option>Tennessee</option>
+                                <option>Texas</option>
+                                <option>Washington</option>
+                            </select>
+                        </div>
+                        <!-- /.form-group -->
+                    </div>
+                    <!-- /.col -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.box-body -->
+            <div class="box-footer">
+               Cadastre o autor e a editora abaixo para aparecerem nas opçoes!
+            </div>
+        </div>
+        <!-- /.box -->
+
+        <div class="row">
+            <div class="col-md-6">
+
+                <div class="box box-danger">
+                    <div class="box-header">
+                        <h3 class="box-title">Input masks</h3>
+                    </div>
+                    <div class="box-body">
+                        <!-- Date dd/mm/yyyy -->
+                        <div class="form-group">
+                            <label>Date masks:</label>
+
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-calendar"></i>
+                                </div>
+                                <input type="text" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask>
+                            </div>
+                            <!-- /.input group -->
+                        </div>
+                        <!-- /.form group -->
+
+                        <!-- Date mm/dd/yyyy -->
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-calendar"></i>
+                                </div>
+                                <input type="text" class="form-control" data-inputmask="'alias': 'mm/dd/yyyy'" data-mask>
+                            </div>
+                            <!-- /.input group -->
+                        </div>
+                        <!-- /.form group -->
+
+                        <!-- phone mask -->
+                        <div class="form-group">
+                            <label>US phone mask:</label>
+
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-phone"></i>
+                                </div>
+                                <input type="text" class="form-control" data-inputmask='"mask": "(999) 999-9999"' data-mask>
+                            </div>
+                            <!-- /.input group -->
+                        </div>
+                        <!-- /.form group -->
+
+                        <!-- phone mask -->
+                        <div class="form-group">
+                            <label>Intl US phone mask:</label>
+
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-phone"></i>
+                                </div>
+                                <input type="text" class="form-control" data-inputmask="'mask': ['999-999-9999 [x99999]', '+099 99 99 9999[9]-9999']" data-mask>
+                            </div>
+                            <!-- /.input group -->
+                        </div>
+                        <!-- /.form group -->
+
+                        <!-- IP mask -->
+                        <div class="form-group">
+                            <label>IP mask:</label>
+
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-laptop"></i>
+                                </div>
+                                <input type="text" class="form-control" data-inputmask="'alias': 'ip'" data-mask>
+                            </div>
+                            <!-- /.input group -->
+                        </div>
+                        <!-- /.form group -->
+
+                    </div>
+                    <!-- /.box-body -->
+                </div>
+                <!-- /.box -->
 <div class="content-wrapper">
         <!-- Content Header (Page header) -->
         <section class="content-header">
@@ -56,8 +219,8 @@ if(!empty($_GET['id_livros'])){
                                         <option>Washington</option>
                                     </select>
                                 </div>
-                                    </div>
-                              
+                                </div>
+
                             <!-- /.box-body -->
 
                             <div class="box-footer">
