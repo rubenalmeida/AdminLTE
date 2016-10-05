@@ -8,8 +8,8 @@ $livros = new Livros();
 if(!empty($_GET['id_livros'])){
 	$livros->carregarPorId($_GET['id_livros']);
 }
-
-$livros->recuperarTodos();
+$livros2 = new Livros();
+$livros2->recuperarTodos();
 ?>
 
     <!-- Content Wrapper. Contains page content -->
@@ -57,7 +57,7 @@ $livros->recuperarTodos();
                                     <label>Autor</label>
                                     <select class="form-control select2" multiple="multiple" data-placeholder="Selecione um ou mais autores" style="width: 100%;">
                                         <?php
-                                        foreach ($livros as $dados){ ?>
+                                        foreach ($livros2 as $dados){ ?>
                                            <option value="<?php echo $dados['id_autor'] ?>"><?php echo $dados['autor'] ?></option>;
 
                                        <?php } ?>
@@ -68,7 +68,7 @@ $livros->recuperarTodos();
                                     <label>Editora</label>
                                     <select class="form-control select2" style="width: 100%;">
                                         <?php
-                                        foreach ($livros as $dados){ ?>
+                                        foreach ($livros2 as $dados){ ?>
                                             <option value="<?php echo $dados['id_editora'] ?>"><?php echo $dados['editora'] ?></option>;
 
                                         <?php } ?>

@@ -134,13 +134,6 @@ class Livros{
 		return $conexao->recuperarTodos($sql);
 	}
 
-    public function recuperarLivros()
-    {
-        $conexao = new Conexao();
-
-        $sql = "select * from livros";
-        return $conexao->recuperarTodos($sql);
-    }
 
 
 	public function carregarPorId($id_livros){
