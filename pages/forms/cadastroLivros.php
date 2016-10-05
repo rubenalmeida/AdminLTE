@@ -9,7 +9,7 @@ if(!empty($_GET['id_livros'])){
 	$livros->carregarPorId($_GET['id_livros']);
 }
 
-$livros = $livros->recuperarTodos();
+$livros2 = $livros->recuperarTodos();
 ?>
 
     <!-- Content Wrapper. Contains page content -->
@@ -56,9 +56,9 @@ $livros = $livros->recuperarTodos();
                                 <div class="form-group">
                                     <label>Autor</label>
                                     <select class="form-control select2" multiple="multiple" data-placeholder="Selecione um ou mais autores" style="width: 100%;">
-                                        <?php
-                                        foreach ($livros as $dados){ ?>
-                                           <option value="<?php echo $dados['id_autor'] ?>"><?php echo $dados['autor'] ?></option>;
+
+                                        <?php foreach ($livros2 as $dados){ ?>
+                                           <option value="<?php echo $dados['id_autor']; ?>"><?php echo $dados['autor']; ?></option>;
 
                                        <?php } ?>
                                     </select>
@@ -67,11 +67,10 @@ $livros = $livros->recuperarTodos();
                                 <div class="form-group">
                                     <label>Editora</label>
                                     <select class="form-control select2" style="width: 100%;">
-                                        <?php
-                                        foreach ($livros as $dados){ ?>
-                                            <option value="<?php echo $dados['id_editora'] ?>"><?php echo $dados['editora'] ?></option>;
+                                        <?php foreach ($livros2 as $dados){ ?>
+                                            <option value="<?php echo $dados['id_editora']; ?>"><?php echo $dados['editora']; ?></option>;
 
-                                        <?php } ?>
+                                        <?php }?>
                                     </select>
                                 </div>
                                 <!-- /.form-group -->
