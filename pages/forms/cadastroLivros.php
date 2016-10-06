@@ -110,14 +110,11 @@ $editora = $livros->recuperarEditoras();
                             <!-- FORMULARIO -->
 
                           <form action="../../administrador/livros/processamento.php?acao=cad_autor" method="post" role="form">
+
                               <div class="form-group">
+
                                 <label>Autor:</label>
-
-                                <div class="input-group">
-                                    <input type="text" class="form-control" name="nome_autor" id="nome_autor" value="<? echo $livros->getNomeAutor(); ?>">
-                                </div>
-                                <!-- /.input group -->
-
+                                  <input type="text" class="form-control" name="nome_autor" id="nome_autor" value="<? echo $livros->getNomeAutor(); ?>">
 
                             </div>
 
@@ -152,6 +149,9 @@ $editora = $livros->recuperarEditoras();
                                     <input type="text" class="form-control" name="nome_editora" id="nome_editora" value="<? echo $livros->getNomeEditora(); ?>">
                                 </div>
                                 <!-- /.form group -->
+                                <div class="box-footer">
+                                    <button type="submit" class="btn btn-primary">Cadastrar Editora</button>
+                                </div>
                             </form>
                         </div>
 
