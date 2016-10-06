@@ -52,6 +52,7 @@ $editora = $livros->recuperarEditoras();
                                     <label for="nome">Titulo do livro</label>
                                     <input type="text" class="form-control" name="nome" id="nome"  placeholder="Titulo do livro" value="<?php echo $livros->getNome(); ?>" />
                                 </div>
+                                <div id="erroNome"></div>
                                 <!-- /.form-group -->
                                 <div class="form-group">
                                     <label>Autor</label>
@@ -116,6 +117,7 @@ $editora = $livros->recuperarEditoras();
                                   <input type="text" class="form-control" name="nome_autor" id="nome_autor" value="<? echo $livros->getNomeAutor(); ?>">
 
                             </div>
+                              <div id="erroNome_autor"></div>
 
                             <div class="box-footer">
                                 <button type="submit" class="btn btn-primary">Cadastrar Autor</button>
@@ -147,6 +149,7 @@ $editora = $livros->recuperarEditoras();
                                     <label>Nome da editora:</label>
                                     <input type="text" class="form-control" name="nome_editora" id="nome_editora" value="<? echo $livros->getNomeEditora(); ?>">
                                 </div>
+                                <div id="erroNome_editora"></div>
                                 <!-- /.form group -->
                                 <div class="box-footer">
                                     <button type="submit" class="btn btn-primary">Cadastrar Editora</button>
@@ -465,5 +468,25 @@ $editora = $livros->recuperarEditoras();
         $(".timepicker").timepicker({
             showInputs: false
         });
+    });
+</script>
+<script>
+    $(function(){
+        $('#nome').change(function(){
+            $('#erroNome').load('../../administrador/livros/validacao.php?acao=verificarLivro&nome='+ $('#nome').val());
+        });
+
+    });
+    $(function(){
+        $('#nome_autor').change(function(){
+            $('#erroNome_autor').load('../../administrador/livros/validacao.php?acao=verificarAutor&nome='+ $('#nome_autor').val());
+        });
+
+    });
+    $(function(){
+        $('#nome_editora').change(function(){
+            $('#erroNome_editora').load('../../administrador/livros/validacao.php?acao=verificarEditora&nome='+ $('#nome_editora').val());
+        });
+
     });
 </script>
