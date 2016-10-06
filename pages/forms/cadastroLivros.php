@@ -50,7 +50,7 @@ $editora = $livros->recuperarEditoras();
 
                                 <div class="form-group">
                                     <label for="nome_livro">Titulo do livro</label>
-                                    <input type="text" class="form-control" name="nome" id="nome_livro"  placeholder="Titulo do livro" value="<?php echo $livros->getNome(); ?>" />
+                                    <input type="text" class="form-control" name="nome" id="nome_livro"   value="<?php echo $livros->getNome(); ?>" />
 
                                 </div>
                                 <div id="erroNome"></div>
@@ -78,7 +78,7 @@ $editora = $livros->recuperarEditoras();
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="nome">Total de unidades:</label>
+                                    <label for="quantidade">Total de unidades:</label>
                                     <input type="number" class="form-control" name="quantidade" id="quantidade"  placeholder="1(padrao)" value="<?php echo $livros->getQuantidade(); ?>" />
                                 </div>
                                 <!-- /.form-group -->
