@@ -51,8 +51,9 @@ $editora = $livros->recuperarEditoras();
                                 <div class="form-group">
                                     <label for="nome">Titulo do livro</label>
                                     <input type="text" class="form-control" name="nome" id="nome"  placeholder="Titulo do livro" value="<?php echo $livros->getNome(); ?>" />
-                                    <div id="erroNome"></div>
+
                                 </div>
+                                <div id="erroNome"></div>
 
                                 <!-- /.form-group -->
                                 <div class="form-group">
