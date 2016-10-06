@@ -56,7 +56,7 @@ $editora = $livros->recuperarEditoras();
                                 <!-- /.form-group -->
                                 <div class="form-group">
                                     <label>Autor</label>
-                                    <select class="form-control select2" multiple="multiple" data-placeholder="Selecione um ou mais autores" style="width: 100%;">
+                                    <select class="form-control select2" multiple="multiple" name="id_autor" data-placeholder="Selecione um ou mais autores" style="width: 100%;">
 
                                         <?php foreach ($autor as $dados){ ?>
                                            <option value="<?php echo $dados['id_autor']; ?>"><?php echo $dados['id_autor']; ?></option>;
@@ -67,12 +67,17 @@ $editora = $livros->recuperarEditoras();
                                 <!-- /.form-group -->
                                 <div class="form-group">
                                     <label>Editora</label>
-                                    <select class="form-control select2" style="width: 100%;">
+                                    <select class="form-control select2" name="id_editora" style="width: 100%;">
                                         <?php foreach ($editora as $dados){ ?>
                                             <option value="<?php echo $dados['id_editora']; ?>"><?php echo $dados['id_editora']; ?></option>;
 
                                         <?php }?>
                                     </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="nome">Total de unidades:</label>
+                                    <input type="number" class="form-control" name="quantidade" id="quantidade"  placeholder="1(padrao)" value="<?php ?>" />
                                 </div>
                                 <!-- /.form-group -->
                                 <div class="box-footer">
