@@ -7,8 +7,20 @@ class Livros{
 	protected $id_livros;
 	protected $nome;
 	protected $quantidade;
-	protected $id_autor;
-	protected $id_editora;
+    protected $id_autor;
+    protected $id_editora;
+
+    public function getQuantidade()
+    {
+        return $this->quantidade;
+    }
+
+
+    public function setQuantidade($quantidade)
+    {
+        $this->quantidade = $quantidade;
+    }
+
 
 
     public function getIdEditora()
@@ -161,9 +173,9 @@ class Livros{
 		$dados = $conexao->recuperarTodos($sql);
 		$this->id_livros = $dados[0]['id_livros'];
 		$this->nome = $dados[0]['nome'];
-		$this->autor = $dados[0]['autor'];
-		$this->autor = $dados[0]['autor'];
-		$this->autor = $dados[0]['autor'];
+		$this->quantidade = $dados[0]['quant'];
+		$this->id_autor = $dados[0]['id_autor'];
+		$this->id_editora = $dados[0]['id_editora'];
 
 
 
