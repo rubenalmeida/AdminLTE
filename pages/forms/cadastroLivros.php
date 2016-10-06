@@ -49,8 +49,8 @@ $editora = $livros->recuperarEditoras();
                                 <input type="hidden" name="id_livros" id="id_livros"  value="<?php echo $livros->getIdLivros();?>" />
 
                                 <div class="form-group">
-                                    <label for="nome">Titulo do livro</label>
-                                    <input type="text" class="form-control" name="nome" id="nome"  placeholder="Titulo do livro" value="<?php echo $livros->getNome(); ?>" />
+                                    <label for="nome_livro">Titulo do livro</label>
+                                    <input type="text" class="form-control" name="nome" id="nome_livro"  placeholder="Titulo do livro" value="<?php echo $livros->getNome(); ?>" />
 
                                 </div>
                                 <div id="erroNome"></div>
@@ -474,8 +474,8 @@ $editora = $livros->recuperarEditoras();
 </script>
 <script>
     $(function(){
-        $('#nome').change(function(){
-            $('#erroNome').load('../../administrador/livros/validacao.php?acao=verificarLivro&nome='+ $('#nome').val());
+        $('#nome_livro').change(function(){
+            $('#erroNome').load('../../administrador/livros/validacao.php?acao=verificarLivro&nome='+ $('#nome_livro').val());
         });
     });
 </script>
