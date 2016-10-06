@@ -156,24 +156,24 @@
             <!-- /.search form -->
             <!-- sidebar menu: : style can be found in sidebar.less -->
             <ul class="sidebar-menu">
-                <li class="header">Navegaçãoo principal</li>
+                <li class="header">Navegação principal</li>
 
                 <li>
-                    <a href = "../pages/forms/livrosDisponiveis.php" >
+                    <a href = "../../pages/forms/livrosDisponiveis.php" >
                         <i class="glyphicon glyphicon-book" ></i > <span > Livros Disponiveis </span >
 
                     </a >
                 </li >
 
                 <li>
-                    <a href = "../pages/forms/livrosEmprestados.php" >
+                    <a href = "../../pages/forms/livrosEmprestados.php" >
                         <i class="glyphicon glyphicon-book" ></i > <span > Livros Emprestados </span >
                     </a >
                 </li >
 
 
                 <li>
-                    <a href = "../pages/forms/formCliente.php" >
+                    <a href = "../../pages/forms/formCliente.php" >
                         <i class="glyphicon glyphicon-book" ></i > <span > Cadastrar Cliente </span >
                     </a >
                 </li >
@@ -181,12 +181,12 @@
 
 
                 <li>
-                    <a href = "../pages/forms/listaClientes.php" >
+                    <a href = "../../pages/forms/listaClientes.php" >
                         <i class="glyphicon glyphicon-book" ></i > <span > Clientes cadastrados </span >
                     </a >
                 </li >
 
-                    </ul>
+
 
 
 
@@ -206,7 +206,7 @@
                } ?>
                 
                 <li>
-                    <a href="../pages/forms/cadastroLivros.php ">
+                    <a href="../../pages/forms/cadastroLivros.php ">
                         <i class="fa fa-th"></i> <span>Cadastrar novo livro</span>
                         <span class="pull-right-container">
               <small class="label pull-right bg-green">novo</small>
@@ -359,6 +359,7 @@
                 <li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>Important</span></a></li>
                 <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Warning</span></a></li>
                 <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Information</span></a></li>
+            </ul>
             </ul>
         </section>
         <!-- /.sidebar -->
