@@ -118,21 +118,39 @@ class Livros{
 		return $conexao->executar($sql);
 	}
 
-	public function recuperarTodos()
-	{
+
+
+	public function recuperarTodos(){
 		$conexao = new Conexao();
 
 		$sql = "select * from vw_livros ORDER BY livro";
 		return $conexao->recuperarTodos($sql);
 	}
-        
-        public function recuperarEmprestados()
-	{
+
+
+
+        public function recuperarEmprestados(){
 		$conexao = new Conexao();
 
 		$sql = "select * from vw_livros ORDER BY livro";
 		return $conexao->recuperarTodos($sql);
 	}
+
+
+    public function recuperarAutores(){
+        $conexao = new Conexao();
+
+        $sql = "select * from autores ";
+        return $conexao->recuperarTodos($sql);
+    }
+
+
+    public function recuperarEditoras(){
+        $conexao = new Conexao();
+
+        $sql = "select * from editoras";
+        return $conexao->recuperarTodos($sql);
+    }
 
 
 
