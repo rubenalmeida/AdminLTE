@@ -8,7 +8,6 @@
 
 include_once 'conexao.php';
 
-$livros = new Livros();
 
 if (!empty($_GET['acao']) && $_GET['acao'] == 'verificarLivro'){
 
@@ -19,7 +18,7 @@ if (!empty($_GET['acao']) && $_GET['acao'] == 'verificarLivro'){
     $livros = $conexao->recuperarTodos($sql);
 
     if(count($livros)){
-        echo '<p class="animated shake"> O Livro' .  $nome . 'ja esta cadastrado.</p>';
+        echo '<p class="animated shake"> O Livro' .  $nome . 'ja esta cadastrado</p>';
     }
     die;
 
@@ -28,13 +27,13 @@ if (!empty($_GET['acao']) && $_GET['acao'] == 'verificarLivro'){
 if (!empty($_GET['acao']) && $_GET['acao'] == 'verificarAutor'){
 
     $nome = $_GET['nome'];
-    $sql = "select nome from autor where nome = '$nome'";
+    $sql = "select * from autor where nome = '$nome'";
 
     $conexao = new Conexao();
     $autor = $conexao->recuperarTodos($sql);
 
     if(count($autor)){
-        echo '<p class="animated shake"> O Autor' .  $nome . 'ja esta cadastrado.</p>';
+        echo '<p class="animated shake"> O Autor' .  $nome . 'ja esta cadastrado</p>';
     }
     die;
 
@@ -43,13 +42,13 @@ if (!empty($_GET['acao']) && $_GET['acao'] == 'verificarAutor'){
 if (!empty($_GET['acao']) && $_GET['acao'] == 'verificarEditora'){
 
     $nome = $_GET['nome'];
-    $sql = "select nome from editora where nome = '$nome'";
+    $sql = "select * from editora where nome = '$nome'";
 
     $conexao = new Conexao();
     $editora = $conexao->recuperarTodos($sql);
 
     if(count($editora)){
-        echo '<p class="animated shake"> A editora' .  $nome . 'ja cadastrado.</p>';
+        echo '<p class="animated shake"> A editora' .  $nome . 'ja cadastrado</p>';
     }
     die;
 

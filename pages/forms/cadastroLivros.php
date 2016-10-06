@@ -23,7 +23,7 @@ $editora = $livros->recuperarEditoras();
             </h1>
             <ol class="breadcrumb">
                 <li><a href="http://soundbeats.azurewebsites.net"><i class="fa fa-dashboard"></i> Inicio</a></li>
-                <li><a href="#">Cadsstro de livros e autores</a></li>
+                <li><a href="#">Cadastro de livros e autores</a></li>
             </ol>
         </section>
 
@@ -51,8 +51,9 @@ $editora = $livros->recuperarEditoras();
                                 <div class="form-group">
                                     <label for="nome">Titulo do livro</label>
                                     <input type="text" class="form-control" name="nome" id="nome"  placeholder="Titulo do livro" value="<?php echo $livros->getNome(); ?>" />
+                                    <div id="erroNome"></div>
                                 </div>
-                                <div id="erroNome"></div>
+
                                 <!-- /.form-group -->
                                 <div class="form-group">
                                     <label>Autor</label>
@@ -475,18 +476,19 @@ $editora = $livros->recuperarEditoras();
         $('#nome').change(function(){
             $('#erroNome').load('../../administrador/livros/validacao.php?acao=verificarLivro&nome='+ $('#nome').val());
         });
-
     });
+</script>
+<script>
     $(function(){
         $('#nome_autor').change(function(){
             $('#erroNome_autor').load('../../administrador/livros/validacao.php?acao=verificarAutor&nome='+ $('#nome_autor').val());
         });
-
     });
+</script>
+<script>
     $(function(){
         $('#nome_editora').change(function(){
             $('#erroNome_editora').load('../../administrador/livros/validacao.php?acao=verificarEditora&nome='+ $('#nome_editora').val());
         });
-
     });
 </script>
