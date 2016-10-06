@@ -84,13 +84,13 @@
                         echo
                         '<li class="dropdown user user-menu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <img src="../../fotos/usuarios/'. $_SESSION['id_usuario'] . $extensao .'" class="user-image" alt="User Image">
+                            <img src="../../fotos/usuarios/'. $_SESSION['id_usuario'] . $extensao .'" class="user-image" alt="'. $usuario .'">
                             <span class="hidden-xs">' . $usuario . '</span>
                         </a>
                         <ul class="dropdown-menu">
                             <!-- User image -->
                             <li class="user-header">
-                               <img src="../../fotos/usuarios/'. $_SESSION['id_usuario'] . $_SESSION['extensao'] .'" class="img-circle" alt="User Image">
+                               <img src="../../fotos/usuarios/'. $_SESSION['id_usuario'] . $_SESSION['extensao'] .'" class="img-circle" alt="'. $usuario .'">
 
                                 <p>' . $_SESSION['nome']  .
 
