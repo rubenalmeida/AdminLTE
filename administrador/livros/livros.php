@@ -99,7 +99,29 @@ class Livros{
 	}
 
 
+    public function cad_autor($dados)
+    {
 
+        $nome_autor = $dados['nome_autor'];
+
+        $sql = "insert into autor (nome) values ('$nome_autor')";
+
+
+        $conexao = new Conexao();
+        return $conexao->executar($sql);
+    }
+
+    public function cad_editora($dados)
+    {
+
+        $nome_editora = $dados['nome_editora'];
+
+
+        $sql = "insert into editora (nome) values ('$nome_editora')";
+
+        $conexao = new Conexao();
+        return $conexao->executar($sql);
+    }
 
 
 
@@ -112,10 +134,9 @@ class Livros{
 		$quantidade = $dados['quantidade'];
 
 		$sql = "insert into livros (nome, quant,  id_autor, id_editora) values ('$nome', '$quantidade', '$id_autor', '$id_editora')";
-        
 
-                $conexao = new Conexao();
-		        return $conexao->executar($sql);
+        $conexao = new Conexao();
+		return $conexao->executar($sql);
 	}
 
 	public function alterar($dados)

@@ -34,7 +34,7 @@ $editora = $livros->recuperarEditoras();
             <!-- SELECT2 EXAMPLE -->
             <div class="box box-default">
                 <div class="box-header with-border">
-                    <h3 class="box-title">Select2</h3>
+                    <h3 class="box-title">Livros</h3>
 
                     <div class="box-tools pull-right">
                         <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
@@ -96,205 +96,67 @@ $editora = $livros->recuperarEditoras();
                     </div>
                     <!-- /.row -->
 
+            <!-- __________________________________CADASTRO DO AUTOR ______________________________________________-->
+
+
             <div class="row">
                 <div class="col-md-6">
 
-                    <div class="box box-danger">
+                    <div class="box box-danger" id="cad_autor">
                         <div class="box-header">
-                            <h3 class="box-title">Input masks</h3>
+                            <h3 class="box-title">Cadastrar autor</h3>
                         </div>
                         <div class="box-body">
-                            <!-- Date dd/mm/yyyy -->
-                            <div class="form-group">
-                                <label>Date masks:</label>
+                            <!-- FORMULARIO -->
+
+                          <form action="../../administrador/livros/processamento.php?acao=cad_autor" method="post" role="form">
+                              <div class="form-group">
+                                <label>Autor:</label>
 
                                 <div class="input-group">
-                                    <div class="input-group-addon">
-                                        <i class="fa fa-calendar"></i>
-                                    </div>
-                                    <input type="text" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask>
+                                    <input type="text" class="form-control" name="nome_autor" id="nome_autor" value="<? echo $livros->getNomeAutor(); ?>">
                                 </div>
                                 <!-- /.input group -->
+
+
                             </div>
-                            <!-- /.form group -->
 
-                            <!-- Date mm/dd/yyyy -->
-                            <div class="form-group">
-                                <div class="input-group">
-                                    <div class="input-group-addon">
-                                        <i class="fa fa-calendar"></i>
-                                    </div>
-                                    <input type="text" class="form-control" data-inputmask="'alias': 'mm/dd/yyyy'" data-mask>
-                                </div>
-                                <!-- /.input group -->
+                            <div class="box-footer">
+                                <button type="submit" class="btn btn-primary">Cadastrar Autor</button>
                             </div>
-                            <!-- /.form group -->
 
-                            <!-- phone mask -->
-                            <div class="form-group">
-                                <label>US phone mask:</label>
-
-                                <div class="input-group">
-                                    <div class="input-group-addon">
-                                        <i class="fa fa-phone"></i>
-                                    </div>
-                                    <input type="text" class="form-control" data-inputmask='"mask": "(999) 999-9999"' data-mask>
-                                </div>
-                                <!-- /.input group -->
-                            </div>
-                            <!-- /.form group -->
-
-                            <!-- phone mask -->
-                            <div class="form-group">
-                                <label>Intl US phone mask:</label>
-
-                                <div class="input-group">
-                                    <div class="input-group-addon">
-                                        <i class="fa fa-phone"></i>
-                                    </div>
-                                    <input type="text" class="form-control" data-inputmask="'mask': ['999-999-9999 [x99999]', '+099 99 99 9999[9]-9999']" data-mask>
-                                </div>
-                                <!-- /.input group -->
-                            </div>
-                            <!-- /.form group -->
-
-                            <!-- IP mask -->
-                            <div class="form-group">
-                                <label>IP mask:</label>
-
-                                <div class="input-group">
-                                    <div class="input-group-addon">
-                                        <i class="fa fa-laptop"></i>
-                                    </div>
-                                    <input type="text" class="form-control" data-inputmask="'alias': 'ip'" data-mask>
-                                </div>
-                                <!-- /.input group -->
-                            </div>
-                            <!-- /.form group -->
+                          </form>
 
                         </div>
                         <!-- /.box-body -->
                     </div>
                     <!-- /.box -->
 
-                    <div class="box box-info">
-                        <div class="box-header">
-                            <h3 class="box-title">Color & Time Picker</h3>
-                        </div>
-                        <div class="box-body">
-                            <!-- Color Picker -->
-                            <div class="form-group">
-                                <label>Color picker:</label>
-                                <input type="text" class="form-control my-colorpicker1">
-                            </div>
-                            <!-- /.form group -->
 
-                            <!-- Color Picker -->
-                            <div class="form-group">
-                                <label>Color picker with addon:</label>
-
-                                <div class="input-group my-colorpicker2">
-                                    <input type="text" class="form-control">
-
-                                    <div class="input-group-addon">
-                                        <i></i>
-                                    </div>
-                                </div>
-                                <!-- /.input group -->
-                            </div>
-                            <!-- /.form group -->
-
-                            <!-- time Picker -->
-                            <div class="bootstrap-timepicker">
-                                <div class="form-group">
-                                    <label>Time picker:</label>
-
-                                    <div class="input-group">
-                                        <input type="text" class="form-control timepicker">
-
-                                        <div class="input-group-addon">
-                                            <i class="fa fa-clock-o"></i>
-                                        </div>
-                                    </div>
-                                    <!-- /.input group -->
-                                </div>
-                                <!-- /.form group -->
-                            </div>
-                        </div>
-                        <!-- /.box-body -->
-                    </div>
-                    <!-- /.box -->
 
                 </div>
                 <!-- /.col (left) -->
                 <div class="col-md-6">
-                    <div class="box box-primary">
+
+                    <!-- ___________________CADASTRO DA EDITORA___________________________________________________________________________ -->
+
+                    <div class="box box-info" id="cad_editora">
                         <div class="box-header">
-                            <h3 class="box-title">Date picker</h3>
+                            <h3 class="box-title">Cadastrar Editora</h3>
                         </div>
                         <div class="box-body">
-                            <!-- Date -->
-                            <div class="form-group">
-                                <label>Date:</label>
-
-                                <div class="input-group date">
-                                    <div class="input-group-addon">
-                                        <i class="fa fa-calendar"></i>
-                                    </div>
-                                    <input type="text" class="form-control pull-right" id="datepicker">
+                            <!-- Color Picker -->
+                            <form action="../../administrador/livros/processamento.php?acao=cad_editora" method="post" role="form">
+                                <div class="form-group">
+                                    <label>Nome da editora:</label>
+                                    <input type="text" class="form-control" name="nome_editora" id="nome_editora" value="<? echo $livros->getNomeEditora(); ?>">
                                 </div>
-                                <!-- /.input group -->
-                            </div>
-                            <!-- /.form group -->
-
-                            <!-- Date range -->
-                            <div class="form-group">
-                                <label>Date range:</label>
-
-                                <div class="input-group">
-                                    <div class="input-group-addon">
-                                        <i class="fa fa-calendar"></i>
-                                    </div>
-                                    <input type="text" class="form-control pull-right" id="reservation">
-                                </div>
-                                <!-- /.input group -->
-                            </div>
-                            <!-- /.form group -->
-
-                            <!-- Date and time range -->
-                            <div class="form-group">
-                                <label>Date and time range:</label>
-
-                                <div class="input-group">
-                                    <div class="input-group-addon">
-                                        <i class="fa fa-clock-o"></i>
-                                    </div>
-                                    <input type="text" class="form-control pull-right" id="reservationtime">
-                                </div>
-                                <!-- /.input group -->
-                            </div>
-                            <!-- /.form group -->
-
-                            <!-- Date and time range -->
-                            <div class="form-group">
-                                <label>Date range button:</label>
-
-                                <div class="input-group">
-                                    <button type="button" class="btn btn-default pull-right" id="daterange-btn">
-                    <span>
-                      <i class="fa fa-calendar"></i> Date range picker
-                    </span>
-                                        <i class="fa fa-caret-down"></i>
-                                    </button>
-                                </div>
-                            </div>
-                            <!-- /.form group -->
-
+                                <!-- /.form group -->
+                            </form>
                         </div>
-                        <!-- /.box-body -->
+
                     </div>
                     <!-- /.box -->
-
                 </div>
                 <!-- /.box -->
             </div>
@@ -303,10 +165,9 @@ $editora = $livros->recuperarEditoras();
             <!-- /.content-wrapper -->
             <footer class="main-footer">
                 <div class="pull-right hidden-xs">
-                    <b>Version</b> 2.3.6
+                    <b>Versão</b> 2.0.0
                 </div>
-                <strong>Copyright &copy; 2014-2016 <a href="http://almsaeedstudio.com">Almsaeed Studio</a>.</strong> All rights
-                reserved.
+                <strong>Copyright &copy; 2016-2016 <a href="http://adoa.com.br">Adoa</a>.</strong>
             </footer>
 
             <!-- Control Sidebar -->

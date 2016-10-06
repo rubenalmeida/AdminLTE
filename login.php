@@ -41,7 +41,7 @@
 
     <form action="administrador/cadastros/usuarios/Logar.php" method="post">
       <div class="form-group has-feedback">
-        <input type="text" class="form-control" id="usuarioLogin" name="usuarioLogin" placeholder="Usuario" required onchange="showUser(this.value)" >
+        <input type="text" class="form-control" id="usuarioLogin" name="usuarioLogin" placeholder="Usuario" required onchange="showUser(this.value)"  autofocus>
         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
