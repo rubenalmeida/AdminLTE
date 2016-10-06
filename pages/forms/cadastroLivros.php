@@ -5,8 +5,8 @@ include_once '../../administrador/livros/livros.php';
 
 $livros = new Livros();
 
-if(!empty($_GET['id_livros'])){
-	$livros->carregarPorId($_GET['id_livros']);
+if(!empty($_GET['id_livros'] && $_GET['editora'] && $_GET['autor'])){
+	$livros->carregarPorId($_GET['id_livros'], $_GET['editora'], $_GET['autor']);
 }
 
 $autor = $livros->recuperarAutores();
@@ -59,7 +59,7 @@ $editora = $livros->recuperarEditoras();
                                     <select class="form-control select2" multiple="multiple" name="id_autor" data-placeholder="Selecione um ou mais autores" style="width: 100%;">
 
                                         <?php foreach ($autor as $dados){ ?>
-                                           <option value="<?php echo $dados['id_autor']; ?>" <?=($livros->getIdAutor() == $dados['id_autor'])?'selected':''?>><?php echo $dados['id_autor']; ?></option>;
+                                           <option value="<?php echo $dados['id_autor']; ?>" <?=($livros->getNomeAutor() == $dados['nome'])?'selected':''?>><?php echo $dados['id_autor']; ?></option>;
 
                                        <?php } ?>
                                     </select>
@@ -69,7 +69,7 @@ $editora = $livros->recuperarEditoras();
                                     <label>Editora</label>
                                     <select class="form-control select2" name="id_editora" style="width: 100%;">
                                         <?php foreach ($editora as $dados){ ?>
-                                            <option value="<?php echo $dados['id_editora']; ?>" <?=($livros->getIdEditora() == $dados['id_editora'])?'selected':''?>><?php echo $dados['id_editora']; ?></option>;
+                                            <option value="<?php echo $dados['id_editora']; ?>" <?=($livros->getNomeEditora() == $dados['nome'])?'selected':''?>><?php echo $dados['id_editora']; ?></option>;
 
                                         <?php }?>
                                     </select>
@@ -77,7 +77,7 @@ $editora = $livros->recuperarEditoras();
 
                                 <div class="form-group">
                                     <label for="nome">Total de unidades:</label>
-                                    <input type="number" class="form-control" name="quantidade" id="quantidade"  placeholder="1(padrao)" value="<?php $livros->getQuantidade() ?>" />
+                                    <input type="number" class="form-control" name="quantidade" id="quantidade"  placeholder="1(padrao)" value="<?php $livros->getQuantidade(); ?>" />
                                 </div>
                                 <!-- /.form-group -->
                                 <div class="box-footer">

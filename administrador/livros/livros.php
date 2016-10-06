@@ -9,6 +9,32 @@ class Livros{
 	protected $quantidade;
     protected $id_autor;
     protected $id_editora;
+    protected $nome_autor;
+    protected $nome_editora;
+
+
+    public function getNomeAutor()
+    {
+        return $this->nome_autor;
+    }
+
+
+    public function setNomeAutor($nome_autor)
+    {
+        $this->nome_autor = $nome_autor;
+    }
+
+
+    public function getNomeEditora()
+    {
+        return $this->nome_editora;
+    }
+
+
+    public function setNomeEditora($nome_editora)
+    {
+        $this->nome_editora = $nome_editora;
+    }
 
     public function getQuantidade()
     {
@@ -166,7 +192,7 @@ class Livros{
 
 
 
-	public function carregarPorId($id_livros){
+	public function carregarPorId($id_livros, $editora, $autor){
 
 		$sql = "select * from livros where id_livros = $id_livros";
         $conexao = new Conexao();
@@ -176,6 +202,8 @@ class Livros{
 		$this->quantidade = $dados[0]['quant'];
 		$this->id_autor = $dados[0]['id_autor'];
 		$this->id_editora = $dados[0]['id_editora'];
+		$this->nome_editora = $editora;
+		$this->nome_autor = $autor ;
 
 
 
