@@ -199,7 +199,7 @@
 
                     echo '
                         <li>
-                            <a href = "../administrador/cadastros/usuarios/registro.php" >
+                            <a href = "../../administrador/cadastros/usuarios/registro.php" >
                                 <i class="fa fa-th" ></i > <span > Cadastrar usuario </span >
                                 <span class="pull-right-container" >
                                     <small class="label pull-right bg-green" > novo</small >
