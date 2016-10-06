@@ -160,9 +160,9 @@
 
                 <li>
                     <a href = "../../pages/forms/livrosDisponiveis.php" >
-                        <i class="glyphicon glyphicons-book-open" ></i > <span > Livros Disponiveis </span >
+                        <i class="glyphicon glyphicons-book" ></i > <span > Livros Disponiveis </span >
                         <span class="pull-right-container" >
-                                    <small class="label pull-right bg-green" > novo</small >
+                                    <small class="glyphicon glyphicon-ok-sign" ></small >
                                 </span >
                     </a >
                 </li >
@@ -171,7 +171,7 @@
                     <a href = "../../pages/forms/livrosEmprestados.php" >
                         <i class="glyphicon glyphicon-book" ></i > <span > Livros Emprestados </span >
                         <span class="pull-right-container" >
-                                    <small class="label pull-right " > novo</small >
+                                    <small class="glyphicon glyphicon-remove-sign" ></small >
                                 </span >
                     </a >
                 </li >
@@ -181,7 +181,7 @@
                     <a href = "../../pages/forms/formCliente.php" >
                         <i class="glyphicon glyphicon-user" ></i > <span > Cadastrar Cliente </span >
                         <span class="pull-right-container" >
-                                    <small class="label pull-right bg-green" > novo</small >
+                                    <small class="glyphicon glyphicon-plus-sign" ></small >
                                 </span >
                     </a >
                 </li >
@@ -192,7 +192,7 @@
                     <a href = "../../pages/forms/listaClientes.php" >
                         <i class="glyphicon glyphicon-user" ></i > <span > Clientes cadastrados </span >
                         <span class="pull-right-container" >
-                                    <small class="label pull-right bg-green" > novo</small >
+                                    <small class="glyphicon glyphicon-info-sign" ></small >
                                 </span >
                     </a >
                 </li >
@@ -209,7 +209,7 @@
                             <a href = "../../administrador/cadastros/usuarios/registro.php" >
                                 <i class="glyphicon glyphicon-user" ></i > <span > Cadastrar usuario </span >
                                 <span class="pull-right-container" >
-                                    <small class="label pull-right bg-green" > novo</small >
+                                    <small class="glyphicon glyphicon-plus-sign" ></small >
                                 </span >
                     </a >
                 </li >';
@@ -220,7 +220,7 @@
                     <a href="../../pages/forms/cadastroLivros.php ">
                         <i class="fa fa-th"></i> <span>Cadastrar novo livro</span>
                         <span class="pull-right-container">
-              <small class="label pull-right bg-green">novo</small>
+              <small class="glyphicon glyphicon-plus-sign"></small>
             </span>
                     </a>
                 </li>
