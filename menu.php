@@ -160,7 +160,7 @@
 
                 <li>
                     <a href = "../../pages/forms/livrosDisponiveis.php" >
-                        <i class="glyphicon glyphicons-book" ></i > <span > Livros Disponiveis </span >
+                        <i class="glyphicon glyphicon-book" ></i > <span > Livros Disponiveis </span >
                         <span class="pull-right-container" >
                                     <small class="glyphicon glyphicon-ok-sign" ></small >
                                 </span >
