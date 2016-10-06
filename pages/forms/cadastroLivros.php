@@ -59,7 +59,7 @@ $editora = $livros->recuperarEditoras();
                                     <select class="form-control select2" multiple="multiple" data-placeholder="Selecione um ou mais autores" style="width: 100%;">
 
                                         <?php foreach ($autor as $dados){ ?>
-                                           <option value="<?php echo $dados['id_autor']; ?>"><?php echo $dados['autor']; ?></option>;
+                                           <option value="<?php echo $dados['id_autor']; ?>"><?php echo $dados['nome']; ?></option>;
 
                                        <?php } ?>
                                     </select>
@@ -69,7 +69,7 @@ $editora = $livros->recuperarEditoras();
                                     <label>Editora</label>
                                     <select class="form-control select2" style="width: 100%;">
                                         <?php foreach ($editora as $dados){ ?>
-                                            <option value="<?php echo $dados['id_editora']; ?>"><?php echo $dados['editora']; ?></option>;
+                                            <option value="<?php echo $dados['id_editora']; ?>"><?php echo $dados['nome']; ?></option>;
 
                                         <?php }?>
                                     </select>
