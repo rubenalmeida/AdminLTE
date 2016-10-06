@@ -14,6 +14,7 @@ if (!empty($_GET['acao']) && $_GET['acao'] == 'verificarLivro'){
     $nome = $_GET['nome'];
     $sql = "select nome from livros where nome = '$nome'";
 
+    print_r($nome);die;
     $conexao = new Conexao();
     $livros = $conexao->recuperarTodos($sql);
 
