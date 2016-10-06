@@ -160,14 +160,19 @@
 
                 <li>
                     <a href = "../../pages/forms/livrosDisponiveis.php" >
-                        <i class="glyphicon glyphicon-book" ></i > <span > Livros Disponiveis </span >
-
+                        <i class="glyphicon glyphicons-book-open" ></i > <span > Livros Disponiveis </span >
+                        <span class="pull-right-container" >
+                                    <small class="label pull-right bg-green" > novo</small >
+                                </span >
                     </a >
                 </li >
 
                 <li>
                     <a href = "../../pages/forms/livrosEmprestados.php" >
                         <i class="glyphicon glyphicon-book" ></i > <span > Livros Emprestados </span >
+                        <span class="pull-right-container" >
+                                    <small class="label pull-right " > novo</small >
+                                </span >
                     </a >
                 </li >
 
@@ -175,6 +180,9 @@
                 <li>
                     <a href = "../../pages/forms/formCliente.php" >
                         <i class="glyphicon glyphicon-user" ></i > <span > Cadastrar Cliente </span >
+                        <span class="pull-right-container" >
+                                    <small class="label pull-right bg-green" > novo</small >
+                                </span >
                     </a >
                 </li >
 
@@ -183,6 +191,9 @@
                 <li>
                     <a href = "../../pages/forms/listaClientes.php" >
                         <i class="glyphicon glyphicon-user" ></i > <span > Clientes cadastrados </span >
+                        <span class="pull-right-container" >
+                                    <small class="label pull-right bg-green" > novo</small >
+                                </span >
                     </a >
                 </li >
 
