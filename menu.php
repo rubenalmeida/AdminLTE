@@ -136,7 +136,7 @@
             <!-- Sidebar user panel -->
             <div class="user-panel">
                 <div class="pull-left image">
-                    <?php echo '<img src="../../fotos/usuarios/'. $_SESSION['id_usuario'] . $_SESSION['extensao'] . '" class="img-circle" alt="User Image">'; ?>
+                    <?php echo '<img src="../../fotos/usuarios/'. $_SESSION['id_usuario'] . $_SESSION['extensao'] . '" class="img-circle" alt="'. $usuario .'">'; ?>
                 </div>
                 <div class="pull-left info">
                     <p><? echo  $usuario; ?></p>
@@ -158,40 +158,36 @@
             <ul class="sidebar-menu">
                 <li class="header">Navegaçãoo principal</li>
 
-                <li class="treeview">
-                    <a href="#">
-                        <i class="fa fa-edit"></i> <span>Formulários</span>
-                        <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-                    </a>
-                    <ul class="treeview-menu">
-                        <li><a href=""><i class="fa fa-circle-o"></i> Clientes
-                                <span class="pull-right-container">
-                  <i class="fa fa-angle-left pull-right"></i>
-                </span>
-                            </a>
-                            <ul class="treeview-menu">
-                                <li><a href="../pages/forms/formCliente.php"><i class="fa fa-circle-o"></i> Cadastrar novo Cliente</a></li>
-                                <li><a href="../pages/forms/listaClientes.php"><i class="fa fa-circle-o"></i> Lista de clientes</a></li>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-circle-o"></i> Livros
-                                <span class="pull-right-container">
-                  <i class="fa fa-angle-left pull-right"></i>
-                </span>
-                            </a>
-                            <ul class="treeview-menu">
-                                <li><a href="../pages/forms/livrosEmprestados.php"><i class="fa fa-circle-o"></i> Emprestados</a></li>
-                                <li><a href="../pages/forms/livrosDisponiveis.php"><i class="fa fa-circle-o"></i> Disponiveis</a></li>
-                                </li>
-                            </ul>
-                        </li>
+                <li>
+                    <a href = "../pages/forms/livrosDisponiveis.php" >
+                        <i class="glyphicon glyphicon-book" ></i > <span > Livros Disponiveis </span >
+
+                    </a >
+                </li >
+
+                <li>
+                    <a href = "../pages/forms/livrosEmprestados.php" >
+                        <i class="glyphicon glyphicon-book" ></i > <span > Livros Emprestados </span >
+                    </a >
+                </li >
+
+
+                <li>
+                    <a href = "../pages/forms/formCliente.php" >
+                        <i class="glyphicon glyphicon-book" ></i > <span > Cadastrar Cliente </span >
+                    </a >
+                </li >
+
+
+
+                <li>
+                    <a href = "../pages/forms/listaClientes.php" >
+                        <i class="glyphicon glyphicon-book" ></i > <span > Clientes cadastrados </span >
+                    </a >
+                </li >
 
                     </ul>
-                </li>
+
 
 
                 <?php if (isset($_SESSION['usuario']) && $_SESSION['nivel'] == 1 ) {
@@ -200,7 +196,7 @@
                     echo '
                         <li>
                             <a href = "../../administrador/cadastros/usuarios/registro.php" >
-                                <i class="fa fa-th" ></i > <span > Cadastrar usuario </span >
+                                <i class="glyphicon glyphicon-user" ></i > <span > Cadastrar usuario </span >
                                 <span class="pull-right-container" >
                                     <small class="label pull-right bg-green" > novo</small >
                                 </span >
