@@ -18,13 +18,12 @@ $editora = $livros->recuperarEditoras();
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <h1>
-                Advanced Form Elements
-                <small>Preview</small>
+                Cadsstro de livros e autores
+                <small> Beta</small>
             </h1>
             <ol class="breadcrumb">
-                <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-                <li><a href="#">Forms</a></li>
-                <li class="active">Advanced Elements</li>
+                <li><a href="http://soundbeats.azurewebsites.net"><i class="fa fa-dashboard"></i> Inicio</a></li>
+                <li><a href="#">Cadsstro de livros e autores</a></li>
             </ol>
         </section>
 

@@ -42,5 +42,5 @@ if($resultado){
 
 <script>
 	alert('<?php echo $mensagem; ?>');
-	window.location.href = 'http://soundbeats.azurewebsites.net/pages/forms/cadastroLivros.php';
+	window.location.href = 'javascript:history.back()';
 </script>
