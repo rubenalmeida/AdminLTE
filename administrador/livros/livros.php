@@ -140,7 +140,7 @@ class Livros{
     public function recuperarAutores(){
         $conexao = new Conexao();
 
-        $sql = "select * from autores ";
+        $sql = "select * from autor";
         return $conexao->recuperarTodos($sql);
     }
 
@@ -148,7 +148,7 @@ class Livros{
     public function recuperarEditoras(){
         $conexao = new Conexao();
 
-        $sql = "select * from editoras";
+        $sql = "select * from editora";
         return $conexao->recuperarTodos($sql);
     }
 
