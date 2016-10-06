@@ -65,7 +65,7 @@ $livros = $livros->recuperarTodos();
 								<span class="glyphicon glyphicon-pencil"></span>
 							</a>'.
 
-							'<a class="btn btn-primary" title="Emprestar" href="../../administrador/livros/FormEmprestimo.php?id_livros= ' . $dado['codigo'] .'">
+							'<a class="btn btn-primary" title="Emprestar" href="../../administrador/livros/FormEmprestimo.php?id_livros=' . $dado['codigo'] .'">
 								<span class="glyphicon glyphicon-book"></span>
 							</a>' .
 						'</td>
