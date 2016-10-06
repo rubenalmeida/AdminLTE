@@ -7,35 +7,35 @@
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.6 -->
-    <link rel="stylesheet" href="http://soundbeats.azurewebsites.net/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css">
 
-    <link rel="stylesheet" href="http://soundbeats.azurewebsites.net/bootstrap/css/animate.css">
+    <link rel="stylesheet" href="../../bootstrap/css/animate.css">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
     <!-- Ionicons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
     <!-- Theme style -->
-    <link rel="stylesheet" href="http://soundbeats.azurewebsites.net/dist/css/AdminLTE.min.css">
+    <link rel="stylesheet" href="../../dist/css/AdminLTE.min.css">
     <!-- AdminLTE Skins. Choose a skin from the css/skins
          folder instead of downloading all of them to reduce the load. -->
-    <link rel="stylesheet" href="http://soundbeats.azurewebsites.net/dist/css/skins/_all-skins.min.css">
+    <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
     <!-- iCheck -->
-    <link rel="stylesheet" href="http://soundbeats.azurewebsites.net/plugins/iCheck/flat/blue.css">
+    <link rel="stylesheet" href="../../plugins/iCheck/flat/blue.css">
     <!-- Morris chart -->
-    <link rel="stylesheet" href="http://soundbeats.azurewebsites.net/plugins/morris/morris.css">
+    <link rel="stylesheet" href="../../plugins/morris/morris.css">
     <!-- jvectormap -->
-    <link rel="stylesheet" href="http://soundbeats.azurewebsites.net/plugins/jvectormap/jquery-jvectormap-1.2.2.css">
+    <link rel="stylesheet" href="../../plugins/jvectormap/jquery-jvectormap-1.2.2.css">
     <!-- Date Picker -->
-    <link rel="stylesheet" href="http://soundbeats.azurewebsites.net/plugins/datepicker/datepicker3.css">
+    <link rel="stylesheet" href="../../plugins/datepicker/datepicker3.css">
     <!-- Daterange picker -->
-    <link rel="stylesheet" href="http://soundbeats.azurewebsites.net/plugins/daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" href="../../plugins/daterangepicker/daterangepicker.css">
     <!-- bootstrap wysihtml5 - text editor -->
-    <link rel="stylesheet" href="http://soundbeats.azurewebsites.net/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+    <link rel="stylesheet" href="../../plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
 
-    <link rel="stylesheet" href="http://soundbeats.azurewebsites.net/plugins/datatables/dataTables.bootstrap.css">
+    <link rel="stylesheet" href="../../plugins/datatables/dataTables.bootstrap.css">
 
-    <link rel="stylesheet" href="http://soundbeats.azurewebsites.net/plugins/select2/select2.min.css">
+    <link rel="stylesheet" href="../../plugins/select2/select2.min.css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -84,13 +84,13 @@
                         echo
                         '<li class="dropdown user user-menu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <img src="http://soundbeats.azurewebsites.net/fotos/usuarios/'. $_SESSION['id_usuario'] . $extensao .'" class="user-image" alt="User Image">
+                            <img src="../../fotos/usuarios/'. $_SESSION['id_usuario'] . $extensao .'" class="user-image" alt="User Image">
                             <span class="hidden-xs">' . $usuario . '</span>
                         </a>
                         <ul class="dropdown-menu">
                             <!-- User image -->
                             <li class="user-header">
-                               <img src="http://soundbeats.azurewebsites.net/fotos/usuarios/'. $_SESSION['id_usuario'] . $_SESSION['extensao'] .'" class="img-circle" alt="User Image">
+                               <img src="../../fotos/usuarios/'. $_SESSION['id_usuario'] . $_SESSION['extensao'] .'" class="img-circle" alt="User Image">
 
                                 <p>' . $_SESSION['nome']  .
 
@@ -102,7 +102,7 @@
                             <!-- Menu Footer-->
                             <li class="user-footer">
                                 <div class="">
-                                    <a href="http://soundbeats.azurewebsites.net/administrador/cadastros/usuarios/logout.php" class="btn btn-warning">Sair</a>
+                                    <a href="../../administrador/cadastros/usuarios/logout.php" class="btn btn-warning">Sair</a>
                                 </div>
                             </li>
                         </ul>
@@ -136,7 +136,7 @@
             <!-- Sidebar user panel -->
             <div class="user-panel">
                 <div class="pull-left image">
-                    <?php echo '<img src="http://soundbeats.azurewebsites.net/fotos/usuarios/'. $_SESSION['id_usuario'] . $_SESSION['extensao'] . '" class="img-circle" alt="User Image">'; ?>
+                    <?php echo '<img src="../../fotos/usuarios/'. $_SESSION['id_usuario'] . $_SESSION['extensao'] . '" class="img-circle" alt="User Image">'; ?>
                 </div>
                 <div class="pull-left info">
                     <p><? echo  $usuario; ?></p>
@@ -172,8 +172,8 @@
                 </span>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="http://soundbeats.azurewebsites.net/pages/forms/formCliente.php"><i class="fa fa-circle-o"></i> Cadastrar novo Cliente</a></li>
-                                <li><a href="http://soundbeats.azurewebsites.net/pages/forms/listaClientes.php"><i class="fa fa-circle-o"></i> Lista de clientes</a></li>
+                                <li><a href="../pages/forms/formCliente.php"><i class="fa fa-circle-o"></i> Cadastrar novo Cliente</a></li>
+                                <li><a href="../pages/forms/listaClientes.php"><i class="fa fa-circle-o"></i> Lista de clientes</a></li>
                                 </li>
                             </ul>
                         </li>
@@ -184,8 +184,8 @@
                 </span>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="http://soundbeats.azurewebsites.net/pages/forms/livrosEmprestados.php"><i class="fa fa-circle-o"></i> Emprestados</a></li>
-                                <li><a href="http://soundbeats.azurewebsites.net/pages/forms/livrosDisponiveis.php"><i class="fa fa-circle-o"></i> Disponiveis</a></li>
+                                <li><a href="../pages/forms/livrosEmprestados.php"><i class="fa fa-circle-o"></i> Emprestados</a></li>
+                                <li><a href="../pages/forms/livrosDisponiveis.php"><i class="fa fa-circle-o"></i> Disponiveis</a></li>
                                 </li>
                             </ul>
                         </li>
@@ -199,7 +199,7 @@
 
                     echo '
                         <li>
-                            <a href = "http://soundbeats.azurewebsites.net/administrador/cadastros/usuarios/registro.php" >
+                            <a href = "../administrador/cadastros/usuarios/registro.php" >
                                 <i class="fa fa-th" ></i > <span > Cadastrar usuario </span >
                                 <span class="pull-right-container" >
                                     <small class="label pull-right bg-green" > novo</small >
@@ -210,7 +210,7 @@
                } ?>
                 
                 <li>
-                    <a href="http://soundbeats.azurewebsites.net/pages/forms/cadastroLivros.php ">
+                    <a href="../pages/forms/cadastroLivros.php ">
                         <i class="fa fa-th"></i> <span>Cadastrar novo livro</span>
                         <span class="pull-right-container">
               <small class="label pull-right bg-green">novo</small>
