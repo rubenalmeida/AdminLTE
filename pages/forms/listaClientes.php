@@ -4,9 +4,10 @@ include_once '../../administrador/livros/emprestimos/teste_emprestimos.php';
 
 $emprestimo = new Emprestar();
 $ativos = $emprestimo->recuperarClientes();
-
-//$inativos = $emprestimo->recuperarInativos();
-
+?>
+<?php
+$emprestimo = new Emprestar();
+$inativos = $emprestimo->recuperarInativos();
 ?>
 
 <div class="content-wrapper">
