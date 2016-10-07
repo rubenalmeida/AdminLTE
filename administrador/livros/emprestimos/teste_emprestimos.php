@@ -13,6 +13,134 @@
      protected $endereco;
      protected $status;
 
+     /**
+      * @return mixed
+      */
+     public function getIdCliente()
+     {
+         return $this->id_cliente;
+     }
+
+     /**
+      * @param mixed $id_cliente
+      */
+     public function setIdCliente($id_cliente)
+     {
+         $this->id_cliente = $id_cliente;
+     }
+
+     /**
+      * @return mixed
+      */
+     public function getNome()
+     {
+         return $this->nome;
+     }
+
+     /**
+      * @param mixed $nome
+      */
+     public function setNome($nome)
+     {
+         $this->nome = $nome;
+     }
+
+     /**
+      * @return mixed
+      */
+     public function getEmail()
+     {
+         return $this->email;
+     }
+
+     /**
+      * @param mixed $email
+      */
+     public function setEmail($email)
+     {
+         $this->email = $email;
+     }
+
+     /**
+      * @return mixed
+      */
+     public function getSenha()
+     {
+         return $this->senha;
+     }
+
+     /**
+      * @param mixed $senha
+      */
+     public function setSenha($senha)
+     {
+         $this->senha = $senha;
+     }
+
+     /**
+      * @return mixed
+      */
+     public function getSexo()
+     {
+         return $this->sexo;
+     }
+
+     /**
+      * @param mixed $sexo
+      */
+     public function setSexo($sexo)
+     {
+         $this->sexo = $sexo;
+     }
+
+     /**
+      * @return mixed
+      */
+     public function getTelefone()
+     {
+         return $this->telefone;
+     }
+
+     /**
+      * @param mixed $telefone
+      */
+     public function setTelefone($telefone)
+     {
+         $this->telefone = $telefone;
+     }
+
+     /**
+      * @return mixed
+      */
+     public function getEndereco()
+     {
+         return $this->endereco;
+     }
+
+     /**
+      * @param mixed $endereco
+      */
+     public function setEndereco($endereco)
+     {
+         $this->endereco = $endereco;
+     }
+
+     /**
+      * @return mixed
+      */
+     public function getStatus()
+     {
+         return $this->status;
+     }
+
+     /**
+      * @param mixed $status
+      */
+     public function setStatus($status)
+     {
+         $this->status = $status;
+     }
+
 
 
  public function emprestar($dados){
