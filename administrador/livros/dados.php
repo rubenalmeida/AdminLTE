@@ -44,7 +44,7 @@ protected $total;
         $conexao = new Conexao();
         $quant = $conexao->recuperarTodos($sql);
 
-        $this->quant = $quant['total'];
+        $this->setQuant($quant['total']);
     }
 
    public function clientes(){
@@ -53,7 +53,8 @@ protected $total;
 
         $conexao = new Conexao();
         $total = $conexao->recuperarTodos($sql);
-        $this->total = $total['ids'];
+
+        $this->setTotal($total['ids']);
     }
 
 }
