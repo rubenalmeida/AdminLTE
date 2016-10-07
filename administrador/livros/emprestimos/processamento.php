@@ -1,14 +1,17 @@
 <?php 
 
-include_once 'emprestimos.php';
+include_once 'teste_emprestimos.php';
 
-$emprestimos = new Emprestimos();
+$emprestimos = new Emprestar();
 
 switch($_GET['acao']){
 
-	case 'devolver':
+	case 'pegarId':
 		$resultado = $emprestimos->devolver($_GET['id_livros']);
 		break;
+
+
+
 }
 
 if($resultado){

@@ -31,14 +31,17 @@
                                 <th>ID</th>
                                 <th>NOME</th>
                                 <th>EMAIL</th>
-                                <th>SEXO</th>
                                 <th>TELEFONE</th>
                                 <th>ENDEREÇO</th>
-                                <th>STATUS</th>
                                 <th>Ação</th>
                             </tr>
                             </thead>
                             <tbody>
+
+
+<!-- ___________________________________TABELA DE CLIENTES ATIVOS ___________________________________________________________________________  -->
+
+
                             <tr>
                                 <td>001</td>
                                 <td>Ruben santos de almeida
@@ -50,187 +53,14 @@
                                 <td>Ativado</td>
                                 <td>
                                     <div class="btn-group">
-                                        <a type="button" class="btn btn-success" href="profile.php#emprestimos">Emprestaraaaa</a>
-                                        <a type="button" class="btn btn-success" href="profile.php#livros">Devolver</a>
+                                        <a type="button" class="btn btn-success" href="../../administrador/livros/emprestimos/processamento.php">Emprestar</a>
                                     </div>
                                 </td>
                             </tr>
-                            <tr>
-                                <td>001</td>
-                                <td>Ruben santos de almeida
-                                </td>
-                                <td>ruben@gmail.com</td>
-                                <td>Masculino</td>
-                                <td>(61)9999-9999</td>
-                                <td>QNP 26 CONJ L casa 20</td>
-                                <td>Ativado</td>
-                                <td>
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-success">Emprestar</button>
-                                        <button type="button" class="btn btn-success">Devolver</button>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>001</td>
-                                <td>Ruben santos de almeida
-                                </td>
-                                <td>ruben@gmail.com</td>
-                                <td>Masculino</td>
-                                <td>(61)9999-9999</td>
-                                <td>QNP 26 CONJ L casa 20</td>
-                                <td>Ativado</td>
-                                <td>
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-success">Emprestar</button>
-                                        <button type="button" class="btn btn-success">Devolver</button>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>001</td>
-                                <td>Ruben santos de almeida
-                                </td>
-                                <td>ruben@gmail.com</td>
-                                <td>Masculino</td>
-                                <td>(61)9999-9999</td>
-                                <td>QNP 26 CONJ L casa 20</td>
-                                <td>Ativado</td>
-                                <td>
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-success">Emprestar</button>
-                                        <button type="button" class="btn btn-success">Devolver</button>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>001</td>
-                                <td>Ruben santos de almeida
-                                </td>
-                                <td>ruben@gmail.com</td>
-                                <td>Masculino</td>
-                                <td>(61)9999-9999</td>
-                                <td>QNP 26 CONJ L casa 20</td>
-                                <td>Ativado</td>
-                                <td>
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-success">Emprestar</button>
-                                        <button type="button" class="btn btn-success">Devolver</button>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>001</td>
-                                <td>Ruben santos de almeida
-                                </td>
-                                <td>ruben@gmail.com</td>
-                                <td>Masculino</td>
-                                <td>(61)9999-9999</td>
-                                <td>QNP 26 CONJ L casa 20</td>
-                                <td>Ativado</td>
-                                <td>
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-success">Emprestar</button>
-                                        <button type="button" class="btn btn-success">Devolver</button>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>001</td>
-                                <td>Ruben santos de almeida
-                                </td>
-                                <td>ruben@gmail.com</td>
-                                <td>Masculino</td>
-                                <td>(61)9999-9999</td>
-                                <td>QNP 26 CONJ L casa 20</td>
-                                <td>Ativado</td>
-                                <td>
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-success">Emprestar</button>
-                                        <button type="button" class="btn btn-success">Devolver</button>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>001</td>
-                                <td>Ruben santos de almeida
-                                </td>
-                                <td>ruben@gmail.com</td>
-                                <td>Masculino</td>
-                                <td>(61)9999-9999</td>
-                                <td>QNP 26 CONJ L casa 20</td>
-                                <td>Ativado</td>
-                                <td>
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-success">Emprestar</button>
-                                        <button type="button" class="btn btn-success">Devolver</button>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>001</td>
-                                <td>Ruben santos de almeida
-                                </td>
-                                <td>ruben@gmail.com</td>
-                                <td>Masculino</td>
-                                <td>(61)9999-9999</td>
-                                <td>QNP 26 CONJ L casa 20</td>
-                                <td>Ativado</td>
-                                <td>
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-success">Emprestar</button>
-                                        <button type="button" class="btn btn-success">Devolver</button>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>001</td>
-                                <td>Ruben santos de almeida
-                                </td>
-                                <td>ruben@gmail.com</td>
-                                <td>Masculino</td>
-                                <td>(61)9999-9999</td>
-                                <td>QNP 26 CONJ L casa 20</td>
-                                <td>Ativado</td>
-                                <td>
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-success">Emprestar</button>
-                                        <button type="button" class="btn btn-success">Devolver</button>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>001</td>
-                                <td>Ruben santos de almeida
-                                </td>
-                                <td>ruben@gmail.com</td>
-                                <td>Masculino</td>
-                                <td>(61)9999-9999</td>
-                                <td>QNP 26 CONJ L casa 20</td>
-                                <td>Ativado</td>
-                                <td>
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-success">Emprestar</button>
-                                        <button type="button" class="btn btn-success">Devolver</button>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>001</td>
-                                <td>Ruben santos de almeida
-                                </td>
-                                <td>ruben@gmail.com</td>
-                                <td>Masculino</td>
-                                <td>(61)9999-9999</td>
-                                <td>QNP 26 CONJ L casa 20</td>
-                                <td>Ativado</td>
-                                <td>
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-success">Emprestar</button>
-                                        <button type="button" class="btn btn-success">Devolver</button>
-                                    </div>
-                                </td>
-                            </tr>
+<!-- ___________________________________FIM ___________________________________________________________________________  -->
+
+
+
 
                             </tbody>
                             <tfoot>
@@ -273,6 +103,11 @@
                             </tr>
                             </thead>
                             <tbody>
+
+
+
+                            <!-- ___________________________________TABELA DE CLIENTES INATIVOS ___________________________________________________________________________  -->
+
                             <tr>
                                 <td>001</td>
                                 <td>Ruben santos de almeida
@@ -288,171 +123,10 @@
                                     </div>
                                 </td>
                             </tr>
-                            <tr>
-                                <td>001</td>
-                                <td>Ruben santos de almeida
-                                </td>
-                                <td>ruben@gmail.com</td>
-                                <td>Masculino</td>
-                                <td>(61)9999-9999</td>
-                                <td>QNP 26 CONJ L casa 20</td>
-                                <td>Ativado</td>
-                                <td>
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-success">Ativar</button>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>001</td>
-                                <td>Ruben santos de almeida
-                                </td>
-                                <td>ruben@gmail.com</td>
-                                <td>Masculino</td>
-                                <td>(61)9999-9999</td>
-                                <td>QNP 26 CONJ L casa 20</td>
-                                <td>Ativado</td>
-                                <td>
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-success">Ativar</button>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>001</td>
-                                <td>Ruben santos de almeida
-                                </td>
-                                <td>ruben@gmail.com</td>
-                                <td>Masculino</td>
-                                <td>(61)9999-9999</td>
-                                <td>QNP 26 CONJ L casa 20</td>
-                                <td>Ativado</td>
-                                <td>
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-success">Ativar</button>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>001</td>
-                                <td>Ruben santos de almeida
-                                </td>
-                                <td>ruben@gmail.com</td>
-                                <td>Masculino</td>
-                                <td>(61)9999-9999</td>
-                                <td>QNP 26 CONJ L casa 20</td>
-                                <td>Ativado</td>
-                                <td>
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-success">Ativar</button>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>001</td>
-                                <td>Ruben santos de almeida
-                                </td>
-                                <td>ruben@gmail.com</td>
-                                <td>Masculino</td>
-                                <td>(61)9999-9999</td>
-                                <td>QNP 26 CONJ L casa 20</td>
-                                <td>Ativado</td>
-                                <td>
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-success">Ativar</button>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>001</td>
-                                <td>Ruben santos de almeida
-                                </td>
-                                <td>ruben@gmail.com</td>
-                                <td>Masculino</td>
-                                <td>(61)9999-9999</td>
-                                <td>QNP 26 CONJ L casa 20</td>
-                                <td>Ativado</td>
-                                <td>
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-success">Ativar</button>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>001</td>
-                                <td>Ruben santos de almeida
-                                </td>
-                                <td>ruben@gmail.com</td>
-                                <td>Masculino</td>
-                                <td>(61)9999-9999</td>
-                                <td>QNP 26 CONJ L casa 20</td>
-                                <td>Ativado</td>
-                                <td>
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-success">Ativar</button>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>001</td>
-                                <td>Ruben santos de almeida
-                                </td>
-                                <td>ruben@gmail.com</td>
-                                <td>Masculino</td>
-                                <td>(61)9999-9999</td>
-                                <td>QNP 26 CONJ L casa 20</td>
-                                <td>Ativado</td>
-                                <td>
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-success">Ativar</button>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>001</td>
-                                <td>Ruben santos de almeida
-                                </td>
-                                <td>ruben@gmail.com</td>
-                                <td>Masculino</td>
-                                <td>(61)9999-9999</td>
-                                <td>QNP 26 CONJ L casa 20</td>
-                                <td>Ativado</td>
-                                <td>
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-success">Ativar</button>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>001</td>
-                                <td>Ruben santos de almeida
-                                </td>
-                                <td>ruben@gmail.com</td>
-                                <td>Masculino</td>
-                                <td>(61)9999-9999</td>
-                                <td>QNP 26 CONJ L casa 20</td>
-                                <td>Ativado</td>
-                                <td>
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-success">Ativar</button>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>001</td>
-                                <td>Ruben santos de almeida
-                                </td>
-                                <td>ruben@gmail.com</td>
-                                <td>Masculino</td>
-                                <td>(61)9999-9999</td>
-                                <td>QNP 26 CONJ L casa 20</td>
-                                <td>Ativado</td>
-                                <td>
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-success">Ativar</button>
-                                    </div>
-                                </td>
-                            </tr>
+
+
+                            <!-- ___________________________________FIM___________________________________________________________________________  -->
+
 
                             </tbody>
                             <tfoot>

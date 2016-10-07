@@ -189,6 +189,7 @@ class Livros{
 
 
         public function recuperarEmprestados(){
+
 		$conexao = new Conexao();
 
 		$sql = "select * from vw_livros ORDER BY livro";
