@@ -29,8 +29,9 @@
                             $sql="select SUM(quant) as total from estoque_livros";
                             $conexao = new Conexao();
                             $quant = $conexao->executar($sql);
+
+                       echo  '<span class="info-box-number">'. $quant['total']. '<small> unidades</small></span>';
                         ?>
-                        <span class="info-box-number"><?php echo $quant['total']; ?><small> unidades</small></span>
                     </div>
                     <!-- /.info-box-content -->
                 </div>
@@ -52,8 +53,9 @@
                         $sql="select count(id_cliente) as total from cliente";
                         $conexao = new Conexao();
                         $total = $conexao->executar($sql);
+
+                       echo '<span class="info-box-number">' . $total['ids']. '</span>';
                         ?>
-                        <span class="info-box-number"><?php echo $total['ids']; ?></span>
                     </div>
                     <!-- /.info-box-content -->
                 </div>
