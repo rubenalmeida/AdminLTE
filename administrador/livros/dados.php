@@ -49,7 +49,7 @@ protected $total;
 
    public function clientes(){
 
-        $sql="select count(id_cliente) as total from cliente";
+        $sql="select count(id_cliente) as ids from cliente";
 
         $conexao = new Conexao();
         $total = $conexao->recuperarTodos($sql);

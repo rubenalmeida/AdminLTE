@@ -28,8 +28,10 @@
                         <span class="info-box-text">Total de livros cadastrados</span>
 
                       <span class="info-box-number">
-                          <?php $dados->quantidade();
-                          echo $dados->getQuant(); ?><small> unidades</small></span>
+                          <?php
+                          $dados->quantidade();
+                          echo $dados->getQuant(); ?>
+                           <small>   unidades</small></span>
 
                     </div>
                     <!-- /.info-box-content -->
@@ -62,7 +64,7 @@
 
                     <div class="info-box-content">
                         <span class="info-box-text">Total de membros</span>
-                        <span class="info-box-number"> <?php
+                        <span class="info-box-number"><?php
 
                              $dados->clientes();
                             echo  $dados->getTotal(); ?>
