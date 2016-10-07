@@ -1,5 +1,7 @@
 <?php include_once "menu.php"; ?>
-
+<?php  include_once 'administrador/livros/dados.php';
+    $dados = new Dados();
+?>
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -24,14 +26,14 @@
 
                     <div class="info-box-content">
                         <span class="info-box-text">Total de livros cadastrados</span>
-                        <?php  include_once 'administrador/cadastros/Conexao2.php';
 
-                            $sql="select SUM(quant) as total from estoque_livros";
-                            $conexao = new Conexao();
-                            $quant = $conexao->executar($sql);
+                      <span class="info-box-number">
+                          <?php
+                          $dados->quantidade();
+                          echo $dados->getQuant(); ?>
 
-                       echo  '<span class="info-box-number">'. $quant['total']. '<small> unidades</small></span>';
-                        ?>
+                          <small> unidades</small></span>
+
                     </div>
                     <!-- /.info-box-content -->
                 </div>
@@ -48,14 +50,9 @@
 
                     <div class="info-box-content">
                         <span class="info-box-text">Livros emprestados</span>
-                        <?php  include_once 'administrador/cadastros/Conexao2.php';
 
-                        $sql="select count(id_cliente) as total from cliente";
-                        $conexao = new Conexao();
-                        $total = $conexao->executar($sql);
+                       <span class="info-box-number"></span>
 
-                       echo '<span class="info-box-number">' . $total['ids']. '</span>';
-                        ?>
                     </div>
                     <!-- /.info-box-content -->
                 </div>
@@ -68,7 +65,12 @@
 
                     <div class="info-box-content">
                         <span class="info-box-text">Total de membros</span>
-                        <span class="info-box-number"><? echo '50'; ?></span>
+                        <span class="info-box-number"> <?php
+
+                             $dados->clientes();
+                            echo  $dados->getTotal(); ?>
+
+                            ?></span>
                     </div>
                     <!-- /.info-box-content -->
                 </div>
