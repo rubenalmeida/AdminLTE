@@ -2,8 +2,8 @@
 <?php
 include_once '../../administrador/livros/emprestimos/teste_emprestimos.php';
 
-//$emprestimo = new Emprestar();
-//$ativos = $emprestimo->recuperarClientes();
+$emprestimo = new Emprestar();
+$ativos = $emprestimo->recuperarClientes();
 
 //$inativos = $emprestimo->recuperarInativos();
 
@@ -54,7 +54,7 @@ include_once '../../administrador/livros/emprestimos/teste_emprestimos.php';
 
                             <tr>
                                 <td>testeeeeeeeeeeeeee</td>
-                                <?php //foreach ($ativos as $cliente){  echo
+                                <?php foreach ($ativos as $cliente){  echo
                                 '<td>'. $cliente['id_cliente'] .'</td>
                                  <td>'. $cliente['nome'] .'</td>
                                  <td>'. $cliente['email'] .'</td>
@@ -66,7 +66,7 @@ include_once '../../administrador/livros/emprestimos/teste_emprestimos.php';
                                     </div>
                                 </td>';
 
-                                //  } ?>
+                                 } ?>
 
                             </tr>
 <!-- ___________________________________FIM ___________________________________________________________________________  -->
