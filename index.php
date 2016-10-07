@@ -25,7 +25,7 @@
                     <span class="info-box-icon bg-green"><i class="ion ion-ios-pricetag-outline"></i></span>
 
                     <div class="info-box-content">
-                        <span class="info-box-text">Total de livros cadastrados</span>
+                        <span class="info-box-text">Total de livros</span>
 
                       <span class="info-box-number">
                           <?php
