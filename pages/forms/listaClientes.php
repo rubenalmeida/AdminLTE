@@ -2,12 +2,12 @@
 <?php
 include_once '../../administrador/livros/emprestimos/teste_emprestimos.php';
 
-$emprestimo = new Emprestar();
-$ativos = $emprestimo->recuperarClientes();
+$emprestimo2 = new Emprestar();
+$emprestimo2 = $emprestimo->recuperarClientes();
 ?>
 <?php
 $emprestimo = new Emprestar();
-$inativos = $emprestimo->recuperarInativos();
+$emprestimo = $emprestimo->recuperarInativos();
 ?>
 
 <div class="content-wrapper">
