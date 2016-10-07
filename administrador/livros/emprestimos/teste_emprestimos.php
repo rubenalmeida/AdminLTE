@@ -143,7 +143,7 @@
 
 
 
- public function emprestar($dados){
+ public function cadastrar($dados){
 
   $id_cliente = $dados['id_cliente'];
   $id_livros = $dados['id_livros'];

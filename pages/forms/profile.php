@@ -3,7 +3,8 @@
 include_once '../../administrador/livros/emprestimos/teste_emprestimos.php';
 
 $livros = new Emprestar();
-$livros = $livros->listarEmprestados();
+$livros = $livros->listarEmprestados($id_cliente);
+
 
 ?>
 <!-- Content Wrapper. Contains page content -->
@@ -179,7 +180,9 @@ $livros = $livros->listarEmprestados();
                       </tfoot>
                       <tbody>
 
-                      <?php foreach($livros as $dado) {
+                      <?php
+
+                      foreach($livros as $dado) {
 
                         echo  '<tr>
 					

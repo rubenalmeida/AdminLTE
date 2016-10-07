@@ -2,10 +2,10 @@
 <?php
 include_once '../../administrador/livros/emprestimos/teste_emprestimos.php';
 
-$clientes = new Emprestar();
-$ativos = $clientes->recuperarClientes();
+$emprestimo = new Emprestar();
+$ativos = $emprestimo->recuperarClientes();
 
-$inativos = $clientes->recuperarInativos();
+$inativos = $emprestimo->recuperarInativos();
 
 ?>
 
@@ -53,6 +53,7 @@ $inativos = $clientes->recuperarInativos();
 
 
                             <tr>
+                                <td>testeeeeeeeeeeeeee</td>
                                 <?php foreach ($ativos as $cliente){  echo
                                 '<td>'. $cliente['id_cliente'] .'</td>
                                  <td>'. $cliente['nome'] .'</td>
@@ -88,8 +89,7 @@ $inativos = $clientes->recuperarInativos();
                         </table>
                     </div>
                     <!-- /.box-body -->
-                </div>
-                <!-- /.box -->
+
 
 
                 <div id="desativados" class="box box-primary">
@@ -116,13 +116,14 @@ $inativos = $clientes->recuperarInativos();
                             <!-- ___________________________________TABELA DE CLIENTES INATIVOS ___________________________________________________________________________  -->
 
                             <tr>
+                                <td>testeeeeeeeeeeeeee</td>
                                 <?php foreach ($inativos as $cliente){  echo
 
-                                    '<td>'. $cliente['id_cliente'] .'</td>
-                                 <td>'. $cliente['nome'] .'</td>
-                                 <td>'. $cliente['email'] .'</td>
-                                 <td>'. $cliente['telefone'] .'</td>
-                                 <td>'. $cliente['endereco'] .'</td>
+                                    '<td>'.  $cliente['id_cliente'] .'</td>
+                                 <td>'.  $cliente['nome'] .'</td>
+                                 <td>'.  $cliente['email'] .'</td>
+                                 <td>'.  $cliente['telefone'] .'</td>
+                                 <td>'.  $cliente['endereco'] .'</td>
                                  <td>'.
                                     '<div class="btn-group">
                                         <a type="button" class="btn btn-success" href="../../administrador/livros/emprestimos/processamento.php?acao=ativar&id_cliente='. $cliente['id_cliente'] .'">Ativar</a>
@@ -157,6 +158,8 @@ $inativos = $clientes->recuperarInativos();
             <!-- /.col -->
         </div>
         <!-- /.row -->
+        </div>
+        <!-- /.box -->
     </section>
     <!-- /.content -->
 </div>
