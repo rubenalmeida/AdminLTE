@@ -24,7 +24,13 @@
 
                     <div class="info-box-content">
                         <span class="info-box-text">Total de livros cadastrados</span>
-                        <span class="info-box-number"><? echo '200'; ?><small> unidades</small></span>
+                        <?php  include_once 'administrador/cadastros/Conexao2.php';
+
+                            $sql="select SUM(quant) as total from estoque_livros";
+                            $conexao = new Conexao();
+                            $quant = $conexao->executar($sql);
+                        ?>
+                        <span class="info-box-number"><? echo $quant; ?><small> unidades</small></span>
                     </div>
                     <!-- /.info-box-content -->
                 </div>
@@ -41,7 +47,13 @@
 
                     <div class="info-box-content">
                         <span class="info-box-text">Livros emprestados</span>
-                        <span class="info-box-number"><? echo '20'; ?></span>
+                        <?php  include_once 'administrador/cadastros/Conexao2.php';
+
+                        $sql="select count(id_cliente) as total from cliente";
+                        $conexao = new Conexao();
+                        $total = $conexao->executar($sql);
+                        ?>
+                        <span class="info-box-number"><? echo $total; ?></span>
                     </div>
                     <!-- /.info-box-content -->
                 </div>
