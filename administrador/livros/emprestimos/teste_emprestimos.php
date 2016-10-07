@@ -45,6 +45,29 @@
 
  }
 
+     public function recuperarClientes(){
+
+         $sql = "select * from clientes where status = '1'";
+         $conexao = new conexao();
+         return $conexao->recuperarTodos($sql);
+
+     }
+
+     public function recuperarInativos(){
+
+         $sql = "select * from clientes where status = '0'";
+         $conexao = new conexao();
+         return $conexao->recuperarTodos($sql);
+
+     }
+
+     public function ativar($id_cliente){
+
+         $sql = "update cliente set status = '1' where id_cliente = '$id_cliente' ";
+         $conexao = new conexao();
+         return $conexao->executar2($sql);
+
+     }
 
 
      public function carregarPorId($id_cliente)

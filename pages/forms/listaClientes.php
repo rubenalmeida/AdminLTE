@@ -1,4 +1,13 @@
 <?php include_once "../../menu.php"?>
+<?php
+include_once '../../administrador/livros/emprestimos/teste_emprestimos.php';
+
+$clientes = new Emprestar();
+$ativos = $clientes->recuperarClientes();
+
+$inativos = $clientes->recuperarInativos();
+
+?>
 
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -42,20 +51,22 @@
 <!-- ___________________________________TABELA DE CLIENTES ATIVOS ___________________________________________________________________________  -->
 
 
+
                             <tr>
-                                <td>001</td>
-                                <td>Ruben santos de almeida
-                                </td>
-                                <td>ruben@gmail.com</td>
-                                <td>Masculino</td>
-                                <td>(61)9999-9999</td>
-                                <td>QNP 26 CONJ L casa 20</td>
-                                <td>Ativado</td>
-                                <td>
-                                    <div class="btn-group">
-                                        <a type="button" class="btn btn-success" href="../../administrador/livros/emprestimos/processamento.php">Emprestar</a>
+                                <?php foreach ($ativos as $cliente){  echo
+                                '<td>'. $cliente['id_cliente'] .'</td>
+                                 <td>'. $cliente['nome'] .'</td>
+                                 <td>'. $cliente['email'] .'</td>
+                                 <td>'. $cliente['telefone'] .'</td>
+                                 <td>'. $cliente['endereco'] .'</td>
+                                 <td>'.
+                                '<div class="btn-group">
+                                        <a type="button" class="btn btn-success" href="../../administrador/livros/emprestimos/processamento.php?acao=pegarId&id_cliente='. $cliente['id_cliente'] .'">Emprestar</a>
                                     </div>
-                                </td>
+                                </td>';
+
+                                  } ?>
+
                             </tr>
 <!-- ___________________________________FIM ___________________________________________________________________________  -->
 
@@ -109,19 +120,21 @@
                             <!-- ___________________________________TABELA DE CLIENTES INATIVOS ___________________________________________________________________________  -->
 
                             <tr>
-                                <td>001</td>
-                                <td>Ruben santos de almeida
-                                </td>
-                                <td>ruben@gmail.com</td>
-                                <td>Masculino</td>
-                                <td>(61)9999-9999</td>
-                                <td>QNP 26 CONJ L casa 20</td>
-                                <td>Ativado</td>
-                                <td>
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-success">Ativar</button>
+                                <?php foreach ($inativos as $cliente){  echo
+
+                                    '<td>'. $cliente['id_cliente'] .'</td>
+                                 <td>'. $cliente['nome'] .'</td>
+                                 <td>'. $cliente['email'] .'</td>
+                                 <td>'. $cliente['telefone'] .'</td>
+                                 <td>'. $cliente['endereco'] .'</td>
+                                 <td>'.
+                                    '<div class="btn-group">
+                                        <a type="button" class="btn btn-success" href="../../administrador/livros/emprestimos/processamento.php?acao=ativar&id_cliente='. $cliente['id_cliente'] .'">Ativar</a>
                                     </div>
-                                </td>
+                                </td>';
+
+                                } ?>
+
                             </tr>
 
 

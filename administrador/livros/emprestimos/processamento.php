@@ -7,9 +7,12 @@ $emprestimos = new Emprestar();
 switch($_GET['acao']){
 
 	case 'pegarId':
-		$resultado = $emprestimos->devolver($_GET['id_livros']);
+		$resultado = $emprestimos->carregarPorId($_GET['id_cliente']);
 		break;
 
+	case 'ativar':
+		$resultado = $emprestimos->ativar($_GET['id_cliente']);
+		break;
 
 
 }
