@@ -70,7 +70,7 @@
                              $dados->clientes();
                             echo  $dados->getTotal(); ?>
 
-                            ?></span>
+                            </span>
                     </div>
                     <!-- /.info-box-content -->
                 </div>

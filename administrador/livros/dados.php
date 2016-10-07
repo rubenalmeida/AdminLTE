@@ -44,7 +44,6 @@ protected $total;
         $conexao = new Conexao();
         $quant = $conexao->recuperarTodos($sql);
 
-        print_r($quant);
         $this->quant = $quant['total'];
     }
 
