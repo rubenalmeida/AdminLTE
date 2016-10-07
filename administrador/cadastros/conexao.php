@@ -34,7 +34,18 @@ class Conexao {
 
         return $id;
 
-	}	
+	}
+
+	public function executar2($sql)
+	{
+		 $this->conectar();
+         $this->resultado = mysqli_query($this->conexao, $sql);
+
+        $this->desconectar();
+
+        return $this->resultado;
+
+	}		
 	
 	public function recuperarTodos($sql)
 	{
