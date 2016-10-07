@@ -42,10 +42,10 @@ protected $total;
 
         $sql="select SUM(quant) as total from estoque_livros";
         $conexao = new Conexao();
-        $quant = $conexao->executar($sql);
+        $quant = $conexao->recuperarTodos($sql);
 
         print_r($quant);
-        $this->quant = $quant;
+        $this->quant = $quant['total'];
     }
 
    public function clientes(){
@@ -53,8 +53,8 @@ protected $total;
         $sql="select count(id_cliente) as total from cliente";
 
         $conexao = new Conexao();
-        $total = $conexao->executar($sql);
-        $this->total = $total;
+        $total = $conexao->recuperarTodos($sql);
+        $this->total = $total['ids'];
     }
 
 }
