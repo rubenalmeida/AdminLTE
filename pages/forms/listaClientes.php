@@ -79,10 +79,8 @@ $inativos = $clientes->recuperarInativos();
                                 <th>ID</th>
                                 <th>NOME</th>
                                 <th>EMAIL</th>
-                                <th>SEXO</th>
                                 <th>TELEFONE</th>
                                 <th>ENDEREÇO</th>
-                                <th>STATUS</th>
                                 <th>Ação</th>
 
                             </tr>
@@ -106,10 +104,8 @@ $inativos = $clientes->recuperarInativos();
                                 <th>ID</th>
                                 <th>NOME</th>
                                 <th>EMAIL</th>
-                                <th>SEXO</th>
                                 <th>TELEFONE</th>
                                 <th>ENDEREÇO</th>
-                                <th>STATUS</th>
                                 <th>Ação</th>
                             </tr>
                             </thead>
@@ -147,10 +143,8 @@ $inativos = $clientes->recuperarInativos();
                                 <th>ID</th>
                                 <th>NOME</th>
                                 <th>EMAIL</th>
-                                <th>SEXO</th>
                                 <th>TELEFONE</th>
                                 <th>ENDEREÇO</th>
-                                <th>STATUS</th>
                                 <th>Ação</th>
 
                             </tr>
