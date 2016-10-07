@@ -30,7 +30,7 @@
                             $conexao = new Conexao();
                             $quant = $conexao->executar($sql);
                         ?>
-                        <span class="info-box-number"><?php echo $quant; ?><small> unidades</small></span>
+                        <span class="info-box-number"><?php echo $quant['total']; ?><small> unidades</small></span>
                     </div>
                     <!-- /.info-box-content -->
                 </div>
@@ -53,7 +53,7 @@
                         $conexao = new Conexao();
                         $total = $conexao->executar($sql);
                         ?>
-                        <span class="info-box-number"><?php echo $total; ?></span>
+                        <span class="info-box-number"><?php echo $total['ids']; ?></span>
                     </div>
                     <!-- /.info-box-content -->
                 </div>
