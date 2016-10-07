@@ -30,7 +30,7 @@
                       <span class="info-box-number">
                           <?php
                           $dados->quantidade();
-                          echo $dados->getQuant(); ?>
+                          echo $quant['total']; ?>
 
                           <small> unidades</small></span>
 
@@ -68,7 +68,7 @@
                         <span class="info-box-number"> <?php
 
                              $dados->clientes();
-                            echo  $dados->getTotal(); ?>
+                            echo  $total['ids']; ?>
 
                             </span>
                     </div>
