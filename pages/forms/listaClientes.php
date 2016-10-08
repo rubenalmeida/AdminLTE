@@ -1,11 +1,11 @@
 <?php include_once "../../menu.php"?>
 <?php
-//include_once '../../administrador/livros/emprestimos/teste_emprestimos.php';
+include_once '../../administrador/livros/emprestimos/teste_emprestimos.php';
 
-//$emprestimo = new Emprestar();
-//$ativos = $emprestimo->recuperarClientes();
+$emprestimo = new Emprestar();
+$ativos = $emprestimo->recuperarClientes();
 
-//$inativos = $emprestimo->recuperarInativos();
+$inativos = $emprestimo->recuperarInativos();
 
 ini_set('display_errors',1);
 ini_set('display_startup_erros',1);
