@@ -132,7 +132,10 @@ class Livros{
 		$id_autor = $dados['id_autor'];
 		$id_editora = $dados['id_editora'];
 		$quantidade = $dados['quantidade'];
-                print_r($id_autor);die;
+                
+                print_r($dados);die;
+                
+                
                 foreach ($id_autor as $autor){
 		$sql = "insert into livros (nome, quant,  id_autor, id_editora) values ('$nome', '$quantidade', '$autor', '$id_editora')";
 
