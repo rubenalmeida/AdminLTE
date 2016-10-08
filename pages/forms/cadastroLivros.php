@@ -475,21 +475,21 @@ $editora = $livros->recuperarEditoras();
 <script>
     $(function(){
         $('#nome_livro').change(function(){
-            $('#erroNome').load('../../administrador/livros/validacao.php?acao=verificarLivro&nome='+ $('#nome_livro').val());
+            $('#erroNome').load('../../administrador/livros/validacao.php?acao=verificarLivro&'+ $('#nome_livro').serialize());
         });
     });
 </script>
 <script>
     $(function(){
         $('#nome_autor').change(function(){
-            $('#erroNome_autor').load('../../administrador/livros/validacao.php?acao=verificarAutor&nome='+ $('#nome_autor').val());
+            $('#erroNome_autor').load('../../administrador/livros/validacao.php?acao=verificarAutor&'+ $('#nome_autor').serialize());
         });
     });
 </script>
 <script>
     $(function(){
         $('#nome_editora').change(function(){
-            $('#erroNome_editora').load('../../administrador/livros/validacao.php?acao=verificarEditora&nome='+ $('#nome_editora').val());
+            $('#erroNome_editora').load('../../administrador/livros/validacao.php?acao=verificarEditora&'+ $('#nome_editora').serialize());
         });
     });
 </script>

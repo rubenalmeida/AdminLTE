@@ -118,7 +118,7 @@ class Usuarios{
             
             
             move_uploaded_file($origem, $destino);
-            print_r($destino);die;
+            
 
         }
 
