@@ -1,13 +1,14 @@
 <?php include_once "../../menu.php"?>
 <?php
+
 include_once '../../administrador/livros/emprestimos/teste_emprestimos.php';
 
-//$livros = new Emprestar();
-//$livros = $livros->listarEmprestados($id_cliente);
+$livros = new Emprestar();
+$livros = $livros->listarEmprestados($id_cliente);
 
-//ini_set('display_errors',1);
-//ini_set('display_startup_erros',1);
-//error_reporting(E_ALL);
+ini_set('display_errors',1);
+ini_set('display_startup_erros',1);
+error_reporting(E_ALL);
 
 
 ?>
