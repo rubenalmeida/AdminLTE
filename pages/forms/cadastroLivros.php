@@ -58,7 +58,7 @@ $editora = $livros->recuperarEditoras();
                                 <!-- /.form-group -->
                                 <div class="form-group">
                                     <label>Autor</label>
-                                    <select class="form-control select2" multiple="multiple" name="id_autor" data-placeholder="Selecione um ou mais autores" style="width: 100%;">
+                                    <select class="form-control select2" multiple="multiple" name="id_autor[]" data-placeholder="Selecione um ou mais autores" style="width: 100%;">
 
                                         <?php foreach ($autor as $dados){ ?>
                                            <option value="<?php echo $dados['id_autor']; ?>" <?=($livros->getNomeAutor() == $dados['nome'])?'selected':''?>><?php echo $dados['nome']; ?></option>;
