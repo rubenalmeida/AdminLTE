@@ -3,9 +3,9 @@
 include_once '../../administrador/livros/emprestimos/teste_emprestimos.php';
 
 $emprestimo = new Emprestar();
-$emprestimo1 = $emprestimo->recuperarClientes();
+$ativos = $emprestimo->recuperarClientes();
 
-$emprestimo2 = $emprestimo->recuperarInativos();
+$inativos = $emprestimo->recuperarInativos();
 
 ini_set('display_errors',1);
 ini_set('display_startup_erros',1);
