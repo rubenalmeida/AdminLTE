@@ -140,9 +140,9 @@ class Livros{
 		$sql = "insert into livros (nome, quant,  id_autor, id_editora) values ('$nome', '$quantidade', '$autor', '$id_editora')";
 
                 $conexao = new Conexao();
-		$conexao->executar($sql);
+                    $resultado = $conexao->executar($sql);
                 }
-                return TRUE;
+                return $resultado;
 	}
 
 	public function alterar($dados)
