@@ -1,7 +1,7 @@
 <?php include_once "../../menu.php"?>
 <?php
 
-include_once '../../administrador/livros/emprestimos/teste_emprestimos.php';
+include_once 'http://soundbeats.azurewebsites.net/administrador/livros/emprestimos/teste_emprestimos.php';
 
 $oLivros = new Emprestar();
 $livros = $oLivros->listarEmprestados($id_cliente);

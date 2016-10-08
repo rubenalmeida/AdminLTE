@@ -1,6 +1,6 @@
 <?php include_once "../../menu.php"?>
 <?php
-include_once '../../administrador/livros/emprestimos/teste_emprestimos.php';
+include_once 'http://soundbeats.azurewebsites.net/administrador/livros/emprestimos/teste_emprestimos.php';
 
 $emprestimo = new Emprestar();
 $ativos = $emprestimo->recuperarClientes();
