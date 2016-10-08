@@ -167,7 +167,7 @@
 
      public function listarEmprestados($id_cliente){
 
-     $sql = "select * from view_emprestimos where id_cliente = '$id_cliente'";
+     $sql = "select * from view_emprestimos where id_cliente = '1'";
      $conexao = new conexao();
      
      print_r($sql);die;
@@ -195,7 +195,7 @@
 
      public function ativar($id_cliente){
 
-         $sql = "update cliente set status = '1' where id_cliente = '$id_cliente' ";
+         $sql = "update cliente set status = '1' where id_cliente = '1' ";
          $conexao = new conexao();
          return $conexao->executar2($sql);
 
@@ -204,7 +204,7 @@
 
      public function carregarPorId($id_cliente)
      {
-         $sql = "select * from cliente where id_cliente = $id_cliente";
+         $sql = "select * from cliente where id_cliente = '1'";
          $conexao = new Conexao();
          $dados = $conexao->recuperarTodos($sql);
          $this->id_cliente = $dados[0]['id_cliente'];
