@@ -3,8 +3,8 @@
 
 include_once '../../administrador/livros/emprestimos/teste_emprestimos.php';
 
-$livros = new Emprestar();
-$livros = $livros->listarEmprestados($id_cliente);
+$oLivros = new Emprestar();
+$livros = $oLivros->listarEmprestados($id_cliente);
 
 ini_set('display_errors',1);
 ini_set('display_startup_erros',1);

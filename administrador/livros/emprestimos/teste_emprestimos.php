@@ -169,6 +169,10 @@
 
      $sql = "select * from view_emprestimos where id_cliente = '$id_cliente'";
      $conexao = new conexao();
+     
+     print_r($sql);die;
+     print_r($conexao->recuperarTodos($sql));
+     
      return $conexao->recuperarTodos($sql);
 
  }
