@@ -1,18 +1,29 @@
 <?php include_once "../../menu.php"?>
 <?php
 
-include_once 'http://soundbeats.azurewebsites.net/administrador/livros/emprestimos/teste_emprestimos.php';
+include_once '../../administrador/livros/emprestimos/Emprestar.php';
+?>
 
-$oLivros = new Emprestar();
-$livros = $oLivros->listarEmprestados($id_cliente);
+<?php
 
-ini_set('display_errors',1);
-ini_set('display_startup_erros',1);
-error_reporting(E_ALL);
+
+if(!empty($_GET['id_cliente'])){
+
+  $profile = new Emprestar();
+
+  $id_cliente = $_GET['id_cliente'];
+
+  $emprestados = $profile->listarEmprestados($id_cliente);
+  $profile->carregarPorId($id_cliente);
+  $livros = $profile->listarLivros(); 
+  $Hoje = date('d/m/y');
+
+}
 
 
 ?>
-<!-- Content Wrapper. Contains page content -->
+
+
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
@@ -35,14 +46,14 @@ error_reporting(E_ALL);
           <!-- Profile Image -->
           <div class="box box-primary">
             <div class="box-body box-profile">
-              <img class="profile-user-img img-responsive img-circle" src="http://soundbeats.azurewebsites.net/dist/img/avatar5.png" alt="Foto padrao de clientes">
+              <img class="profile-user-img img-responsive img-circle" src="http://localhost/biblioteca/dist/img/avatar5.png" alt="Foto padrao de clientes">
 
-              <h3 class="profile-username text-center">Cliente</h3>
+              <h3 class="profile-username text-center"><? echo $profile->getNome(); ?></h3>
 
 
               <ul class="list-group list-group-unbordered">
                 <li class="list-group-item">
-                  <b>Livros Emprestados</b> <a class="pull-right"><?php ?></a>
+                  <b>Livros Emprestados</b> <a class="pull-right">10</a>
                 </li>
               </ul>
 
@@ -104,16 +115,19 @@ error_reporting(E_ALL);
             <div  class="tab-content">
                 
               <div class="active tab-pane" id="emprestimos">
-                  <form  class="form-horizontal">
+                  <form  class="form-horizontal" action="../../administrador/livros/emprestimos/processamento.php?acao=emprestar" method="post">
+
+                      <input hidden="hidden" type="text" name="id_cliente" value="<? echo $_GET['id_cliente']; ?>" >
 
                     <div class="form-group">
                       <label>Livros</label>
                       <select class="form-control select2" multiple="multiple" name="id_livros[]" data-placeholder="Selecione um ou mais livros" style="width: 100%;">
 
                         <?php foreach ($livros as $dados){ ?>
-                          <option value="<?php echo $dados['id_livros']; ?>"><?php echo $dados['nome']; ?></option>;
+                          <option value="<?php echo $dados['id_livros']; ?>"><b><?php echo $dados['nome']; ?></b></option>;
 
                         <?php } ?>
+                        
                       </select>
                     </div>
 
@@ -124,7 +138,7 @@ error_reporting(E_ALL);
                         <div class="input-group-addon">
                           <i class="fa fa-calendar"></i>
                         </div>
-                        <input type="text" class="form-control pull-right" id="datepicker" value="<? echo  date(); ?>" readonly>
+                        <input type="text" class="form-control pull-right" id="datepicker" value="<? echo $Hoje ?>" readonly>
                       </div>
                       <!-- /.input group -->
                     </div>
@@ -137,7 +151,7 @@ error_reporting(E_ALL);
                         <div class="input-group-addon">
                           <i class="fa fa-calendar"></i>
                         </div>
-                        <input type="text" class="form-control pull-right" name="devolucao" id="devolucao" >
+                        <input type="date" class="form-control pull-right" name="devolucao" id="devolucao" >
                       </div>
                       <!-- /.input group -->
                     </div>
@@ -154,7 +168,7 @@ error_reporting(E_ALL);
 
 
 
-              <!-- __________________________________________________LIVROS______________________________________________________ -->
+              
 
 
               <div class="tab-pane" id="livros">
@@ -171,34 +185,47 @@ error_reporting(E_ALL);
                       <tr>
                         <td>Código</td>
                         <td>Nome</td>
-                        <td>Autor</td>
-                        <td>Editora</td>
+                        <td>Dia do emprestimo</td>
+                        <td>Dia da devolução</td>
                       </tr>
                       </thead>
                       <tfoot>
                       <tr>
                         <td>Código</td>
                         <td>Nome do livro</td>
-                        <td>Autor</td>
-                        <td>Editora</td>
+                        <td>Dia do emprestimo</td>
+                        <td>Dia da devolução</td>
                       </tr>
                       </tfoot>
                       <tbody>
 
-                      <?php
+                      <?php foreach ($emprestados as $dados){ 
+                         if(date('d/m/Y', strtotime($dados['dia_devolucao'])) == $Hoje){
+                           echo 
+                        '<tr>
 
-                      foreach($livros as $dado) {
+                          <td>' . $dados['id_livros'] . '</td>
+                          <td>' . $dados['livro'] . '</td>
+                          <td>' .  date('d/m/Y', strtotime($dados['dia_emprestimo'])) . '</td>
+                          <td>' . date('d/m/Y', strtotime($dados['dia_devolucao'])) . '  <span class="label label-danger"> Hoje </span></td>
+                        </tr>';
+                             
+                        }else{
 
-                        echo  '<tr>
-					
-						<td>' . $dado['codigo'] . '</td>
-						<td>' . $dado['livro'] . '</td>
-						<td>' . $dado['autor'] . '</td>
-						<td>' . $dado['editora'] . '</td>
-					    </tr>';
+                            echo 
+                        '<tr>
 
+                          <td>' . $dados['id_livros'] . '</td>
+                          <td>' . $dados['livro'] . '</td>
+                          <td>' .  date('d/m/Y', strtotime($dados['dia_emprestimo'])) . '</td>
+                          <td>' . date('d/m/Y', strtotime($dados['dia_devolucao'])) . '</td>
+                        </tr>';
+                        }
+                    
+                    
 
-                        ?>
+                       } ?>
+                        
                       </tbody>
 
                     </table>
@@ -210,16 +237,12 @@ error_reporting(E_ALL);
 
               </div>
 
-              <!-- __________________________________________________FIM______________________________________________________ -->
-
-
-
-
-              <!-- __________________________________________________DEVOLVER______________________________________________________ -->
+             
 
 
               <div class="tab-pane" id="devolver">
                 <form class="form-horizontal">
+
 
 
 
@@ -235,8 +258,7 @@ error_reporting(E_ALL);
 
               </div>
 
-              <!-- __________________________________________________FIM_____________________________________________________ -->
-
+            
               <!-- /.tab-pane -->
             </div>
             <!-- /.tab-content -->
@@ -258,12 +280,6 @@ error_reporting(E_ALL);
     <strong>Copyright &copy; 2016-2016 <a href="http://adoa.com.br">Adoa</a>.</strong>
   </footer>
 
-  <!-- /.control-sidebar -->
-  <!-- Add the sidebar's background. This div must be placed
-       immediately after the control sidebar -->
-  <div class="control-sidebar-bg"></div>
-</div>
-<!-- ./wrapper -->
 
 <!-- jQuery 2.2.3 -->
 <script src="../../plugins/jQuery/jquery-2.2.3.min.js"></script>
@@ -275,6 +291,8 @@ error_reporting(E_ALL);
 <script src="../../dist/js/app.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="../../dist/js/demo.js"></script>
+
+<script src="../../plugins/select2/select2.full.min.js"></script>
 
 <script src="../../plugins/datepicker/bootstrap-datepicker.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script>

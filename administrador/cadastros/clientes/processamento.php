@@ -18,6 +18,14 @@ switch($_GET['acao']){
     case 'excluir':
         $resultado = $cliente->excluir($_GET['id_cliente']);
         break;
+
+    case 'desativar':
+        $resultado = $cliente->desativar($_GET['id_cliente']);
+        break;
+
+     case 'ativar':
+        $resultado = $cliente->ativar($_GET['id_cliente']);
+        break;
 }
 
 if($resultado){
@@ -30,5 +38,5 @@ if($resultado){
 
 <script>
     alert('<?php echo $mensagem; ?>');
-    window.location.href = 'index.php';
+    window.location.href = 'javascript:history.back()';
 </script>

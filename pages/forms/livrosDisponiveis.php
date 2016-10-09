@@ -35,7 +35,7 @@ $livros = $livros->recuperarTodos();
 					<td>Ações</td>
 					<td>Código</td>
 					<td>Nome</td>
-					<td>Autor</td>
+					<td>Autores</td>
                     <td>Quantidade</td>
                     <td>Editora</td>
 				</tr>
@@ -45,7 +45,7 @@ $livros = $livros->recuperarTodos();
 					<td>Ações</td>
 					<td>Código</td>
 					<td>Nome do livro</td>
-					<td>Autor</td>
+					<td>Autores</td>
 					<td>Quantidade</td>
 					<td>Editora</td>
 
@@ -64,10 +64,6 @@ $livros = $livros->recuperarTodos();
 							'<a class="btn btn-success" title="Alterar" href="cadastroLivros.php?id_livros='.$dado['codigo'] .'&editora='. $dado['editora'].'&autor=' .$dado['autor'].'">
 								<span class="glyphicon glyphicon-pencil"></span>
 							</a>'.
-
-							'<a class="btn btn-primary" title="Emprestar" href="../../administrador/livros/FormEmprestimo.php?id_livros=' . $dado['codigo'] .'">
-								<span class="glyphicon glyphicon-book"></span>
-							</a>' .
 						'</td>
 						<td>' . $dado['codigo'] . '</td>
 						<td>' . $dado['livro'] . '</td>

@@ -22,7 +22,7 @@ $editora = $livros->recuperarEditoras();
                 <small> Beta</small>
             </h1>
             <ol class="breadcrumb">
-                <li><a href="http://soundbeats.azurewebsites.net"><i class="fa fa-dashboard"></i> Inicio</a></li>
+                <li><a href="http://localhost/biblioteca"><i class="fa fa-dashboard"></i> Inicio</a></li>
                 <li><a href="#">Cadastro de livros e autores</a></li>
             </ol>
         </section>
@@ -58,7 +58,7 @@ $editora = $livros->recuperarEditoras();
                                 <!-- /.form-group -->
                                 <div class="form-group">
                                     <label>Autor</label>
-                                    <select class="form-control select2" multiple="multiple" name="id_autor[]" data-placeholder="Selecione um ou mais autores" style="width: 100%;">
+                                    <select class="form-control select2"  name="id_autor" data-placeholder="Selecione um ou mais autores" style="width: 100%;">
 
                                         <?php foreach ($autor as $dados){ ?>
                                            <option value="<?php echo $dados['id_autor']; ?>" <?=($livros->getNomeAutor() == $dados['nome'])?'selected':''?>><?php echo $dados['nome']; ?></option>;

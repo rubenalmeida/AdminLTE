@@ -4,7 +4,7 @@ include_once 'usuarios/cadastro.php';
 $usuarios = new Usuarios();
 $usuarios = $usuarios->recuperarTodos();
 ?>
-<?php  include_once '../../cabecalho.php'; ?>
+<?php  include_once '../../menu.php'; ?>
 
 <?php
 //include 'permissoes.php';

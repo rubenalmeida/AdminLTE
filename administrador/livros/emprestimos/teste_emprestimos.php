@@ -165,7 +165,7 @@
  }
 
 
-     public function listarEmprestados($id_cliente){
+     public function listarEmprestados(){
 
      $sql = "select * from view_emprestimos where id_cliente = '1'";
      $conexao = new conexao();

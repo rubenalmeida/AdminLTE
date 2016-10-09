@@ -133,16 +133,16 @@ class Livros{
 		$id_editora = $dados['id_editora'];
 		$quantidade = $dados['quantidade'];
                 
-                print_r($dados);die;
                 
-                
-                foreach ($id_autor as $autor){
-		$sql = "insert into livros (nome, quant,  id_autor, id_editora) values ('$nome', '$quantidade', '$autor', '$id_editora')";
+		              $sql = "insert into livros (nome, quant,  id_autor, id_editora) values ('$nome', '$quantidade', '$id_autor', '$id_editora')";
 
-                $conexao = new Conexao();
-                    $resultado = $conexao->executar($sql);
-                }
-                return $resultado;
+                   
+                   $conexao = new Conexao();
+                   return  $resultado = $conexao->executar($sql);
+                
+
+
+                
 	}
 
 	public function alterar($dados)

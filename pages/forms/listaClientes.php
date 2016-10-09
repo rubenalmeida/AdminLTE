@@ -1,15 +1,12 @@
 <?php include_once "../../menu.php"?>
 <?php
-include_once 'http://soundbeats.azurewebsites.net/administrador/livros/emprestimos/teste_emprestimos.php';
+include_once '../../administrador/livros/emprestimos/emprestar.php';
 
 $emprestimo = new Emprestar();
 $ativos = $emprestimo->recuperarClientes();
-
 $inativos = $emprestimo->recuperarInativos();
+                               
 
-ini_set('display_errors',1);
-ini_set('display_startup_erros',1);
-error_reporting(E_ALL);
 ?>
 
 <div class="content-wrapper">
@@ -48,36 +45,6 @@ error_reporting(E_ALL);
                                 <th>Ação</th>
                             </tr>
                             </thead>
-                            <tbody>
-
-
-<!-- ___________________________________TABELA DE CLIENTES ATIVOS ___________________________________________________________________________  -->
-
-
-
-                            <tr>
-                                <td>testeeeeeeeeeeeeee</td>
-                                <?php foreach ($ativos as $cliente){  echo
-                                '<td>'. $cliente['id_cliente'] .'</td>
-                                 <td>'. $cliente['nome'] .'</td>
-                                 <td>'. $cliente['email'] .'</td>
-                                 <td>'. $cliente['telefone'] .'</td>
-                                 <td>'. $cliente['endereco'] .'</td>
-                                 <td>'.
-                                '<div class="btn-group">
-                                        <a type="button" class="btn btn-success" href="../../administrador/livros/emprestimos/processamento.php?acao=pegarId&id_cliente='. $cliente['id_cliente'] .'">Emprestar</a>
-                                    </div>
-                                </td>';
-
-                                 } ?>
-
-                            </tr>
-<!-- ___________________________________FIM ___________________________________________________________________________  -->
-
-
-
-
-                            </tbody>
                             <tfoot>
                             <tr>
                                 <th>ID</th>
@@ -89,13 +56,48 @@ error_reporting(E_ALL);
 
                             </tr>
                             </tfoot>
+                            <tbody>
+
+
+<!-- ___________________________________TABELA DE CLIENTES ATIVOS ___________________________________________________________________________  -->
+
+
+
+                            
+                                
+                                <?php 
+                                  foreach ($ativos as $cliente){  echo
+                                '<tr>
+                                <td>'. $cliente['id_cliente'] .'</td>
+                                 <td>'. $cliente['nome'] .'</td>
+                                 <td>'. $cliente['email'] .'</td>
+                                 <td>'. $cliente['telefone'] .'</td>
+                                 <td>'. $cliente['endereco'] .'</td>
+                                 <td>'.
+                                '<div class="btn-group">
+                                        <a type="button" class="btn btn-success" href="profile.php?id_cliente='. $cliente['id_cliente'] .'">Emprestar</a>
+                                    </div>' .
+                                    '<div class="btn-group">
+                                        <a type="button" class="btn btn-warning" href="../../administrador/cadastros/clientes/processamento.php?acao=desativar&id_cliente='. $cliente['id_cliente'] .'">Desativar</a>
+                                    </div>
+                                </td></tr>';
+
+                                 } ?>
+
+                            
+<!-- ___________________________________FIM ___________________________________________________________________________  -->
+
+
+
+
+                            </tbody>
+                            
                         </table>
                     </div>
                     <!-- /.box-body -->
-
-
-
-                <div id="desativados" class="box box-primary">
+            </div>
+            <!-- /.col -->
+              <div id="desativados" class="box box-primary">
                     <div class="box-header with-border">
                         <h3 class="box-title"><b>Clientes desativados</b></h3>
                     </div>
@@ -118,24 +120,25 @@ error_reporting(E_ALL);
 
                             <!-- ___________________________________TABELA DE CLIENTES INATIVOS ___________________________________________________________________________  -->
 
-                            <tr>
-                                <td>testeeeeeeeeeeeeee</td>
-                                <?php foreach ($inativos as $cliente){  echo
+                           
+                            
+                                <?php   foreach ($inativos as $cliente){  echo
 
-                                    '<td>'.  $cliente['id_cliente'] .'</td>
+                                    ' <tr>
+                                <td>'.  $cliente['id_cliente'] .'</td>
                                  <td>'.  $cliente['nome'] .'</td>
                                  <td>'.  $cliente['email'] .'</td>
                                  <td>'.  $cliente['telefone'] .'</td>
                                  <td>'.  $cliente['endereco'] .'</td>
                                  <td>'.
                                     '<div class="btn-group">
-                                        <a type="button" class="btn btn-success" href="../../administrador/livros/emprestimos/processamento.php?acao=ativar&id_cliente='. $cliente['id_cliente'] .'">Ativar</a>
+                                        <a type="button" class="btn btn-success" href="../../administrador/cadastros/clientes/processamento.php?acao=ativar&id_cliente='. $cliente['id_cliente'] .'">Ativar</a>
                                     </div>
-                                </td>';
+                                </td></tr>';
 
                                 } ?>
 
-                            </tr>
+                            
 
 
                             <!-- ___________________________________FIM___________________________________________________________________________  -->
@@ -157,8 +160,6 @@ error_reporting(E_ALL);
                     </div>
                     <!-- /.box-body -->
                 </div>
-            </div>
-            <!-- /.col -->
         </div>
         <!-- /.row -->
         </div>
@@ -402,5 +403,3 @@ error_reporting(E_ALL);
 </script>
 </body>
 </html>
-
-

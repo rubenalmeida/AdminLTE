@@ -27,7 +27,7 @@ if (count($query)) {
 
 
     if($_SESSION['status'] == 1){
-        header("Location: http://soundbeats.azurewebsites.net");
+        header("Location: http://localhost/biblioteca/index.php");
     }
 
 }else{
@@ -43,7 +43,7 @@ if (count($query)) {
 
 <script>
     alert('<?php echo $mensagem; ?>');
-    window.location.href = 'http://soundbeats.azurewebsites.net/login.php';
+    window.location.href = 'http://localhost/biblioteca/login.php';
 </script>
 
 

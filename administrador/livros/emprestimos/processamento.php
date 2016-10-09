@@ -1,6 +1,6 @@
 <?php 
 
-include_once 'teste_emprestimos.php';
+include_once 'emprestar.php';
 
 $emprestimos = new Emprestar();
 
@@ -8,10 +8,15 @@ switch($_GET['acao']){
 
 	case 'pegarId':
 		$resultado = $emprestimos->carregarPorId($_GET['id_cliente']);
+	
 		break;
 
 	case 'ativar':
 		$resultado = $emprestimos->ativar($_GET['id_cliente']);
+		break;
+
+		case 'emprestar':
+		$resultado = $emprestimos->cadastrar($_POST);
 		break;
 
 
@@ -27,7 +32,7 @@ if($resultado){
 ?>
 
 <script>
-	///document.getElementById("").innerHTML = "Concluido";
+	
 	alert('<?php echo $mensagem; ?>');
 	window.location.href = 'javascript:history.back()';
 </script>

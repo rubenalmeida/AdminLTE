@@ -1,6 +1,6 @@
 <?php
 
-include_once "../Conexao2.php";
+include_once "../conexao.php";
 
 class Clientes{
 
@@ -125,7 +125,7 @@ class Clientes{
         $sql  = "INSERT INTO cliente (nome , email, senha, sexo, telefone, endereco, status) VALUES('$nome','$email','$senha', '$sexo', '$telefone', '$endereco', '$status')";
 
         $conexao = new Conexao();
-        return $conexao->executar($sql);
+        return $conexao->executar2($sql);
     }
 
 
@@ -145,7 +145,7 @@ class Clientes{
         print_r($sql);
 
         $conexao = new Conexao();
-        return $conexao->executar($sql);
+        return $conexao->executar2($sql);
     }
 
 
@@ -153,7 +153,7 @@ class Clientes{
 
         $sql = "DELETE FROM cliente WHERE id_cliente = '$id_cliente'";
         $conexao = new Conexao();
-        return $conexao->executar($sql);
+        return $conexao->executar2($sql);
     }
 
     function recuperarTodos(){
@@ -169,6 +169,22 @@ class Clientes{
         $conexao = new Conexao();
         return $conexao->recuperarTodos($sql);
     }
+
+    public function ativar($id_cliente){
+
+         $sql = "update cliente set status = '1' where id_cliente = '$id_cliente' ";
+         $conexao = new Conexao();
+         return $conexao->executar2($sql);
+
+     }
+
+     public function desativar($id_cliente){
+
+         $sql = "update cliente set status = '0' where id_cliente = '$id_cliente' ";
+         $conexao = new Conexao();
+         return $conexao->executar2($sql);
+
+     }
 
     function carregarPorId($id_cliente){
 

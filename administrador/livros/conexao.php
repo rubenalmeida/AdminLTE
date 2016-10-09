@@ -1,6 +1,6 @@
 <?php
 
-class Conexao{
+class Conexao {
 
     private $host 	  = '186.202.152.41:3306';
     private $user 	  = 'enfol_ruben';
@@ -31,6 +31,19 @@ class Conexao{
         $this->desconectar();
 
         return $this->resultado;
+
+    }
+
+    public function executar2($sql)
+    {
+        $this->conectar();
+        $this->resultado = mysqli_query($this->conexao, $sql);
+
+
+        $id = mysqli_insert_id($this->conexao);
+        $this->desconectar();
+
+        return $id;
 
     }
 
