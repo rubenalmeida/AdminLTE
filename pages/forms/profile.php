@@ -16,7 +16,8 @@ if(!empty($_GET['id_cliente'])){
   $emprestados = $profile->listarEmprestados($id_cliente);
   $profile->carregarPorId($id_cliente);
   $livros = $profile->listarLivros();
-  $Hoje = date('d/m/y');
+  $quant = $profile->quantidade($id_cliente);
+  $Hoje = date('d/m/Y');
 
 }
 
@@ -46,14 +47,14 @@ if(!empty($_GET['id_cliente'])){
         <!-- Profile Image -->
         <div class="box box-primary">
           <div class="box-body box-profile">
-            <img class="profile-user-img img-responsive img-circle" src="http://soundbeats.azurewebsites.net/dist/img/avatar5.png" alt="Foto padrao de clientes">
+            <img class="profile-user-img img-responsive img-circle" src="http://localhost/biblioteca/dist/img/avatar5.png" alt="Foto padrao de clientes">
 
             <h3 class="profile-username text-center"><? echo $profile->getNome(); ?></h3>
 
 
             <ul class="list-group list-group-unbordered">
               <li class="list-group-item">
-                <b>Livros Emprestados</b> <a class="pull-right">10</a>
+                <b>Livros Emprestados</b> <a class="pull-right"><?php echo $quant[0]['quantidade']; ?></a>
               </li>
             </ul>
 
@@ -108,13 +109,13 @@ if(!empty($_GET['id_cliente'])){
       <div class="col-md-9">
         <div class="nav-tabs-custom">
           <ul class="nav nav-tabs">
-            <li class="active"><a href="#emprestimos" data-toggle="tab">Emprestimos</a></li>
-            <li><a href="#livros" data-toggle="tab">Livros</a></li>
-            <li><a href="#devolver" data-toggle="tab">Devolver</a></li>
+            <li><a href="#emprestimos" data-toggle="tab">Emprestimos</a></li>
+            <li class="active"><a href="#livros" data-toggle="tab">Livros</a></li>
+
           </ul>
           <div  class="tab-content">
 
-            <div class="active tab-pane" id="emprestimos">
+            <div class="tab-pane" id="emprestimos">
               <form  class="form-horizontal" action="../../administrador/livros/emprestimos/processamento.php?acao=emprestar" method="post">
 
                 <input hidden="hidden" type="text" name="id_cliente" value="<? echo $_GET['id_cliente']; ?>" >
@@ -171,7 +172,7 @@ if(!empty($_GET['id_cliente'])){
 
 
 
-            <div class="tab-pane" id="livros">
+            <div class="active tab-pane" id="livros">
 
 
               <div class="box">
@@ -183,10 +184,11 @@ if(!empty($_GET['id_cliente'])){
                   <table id="example1" class="table table-bordered table-striped">
                     <thead>
                     <tr>
-                      <td>Código</td>
+                      <td>Código<? echo $Hoje; ?></td>
                       <td>Nome</td>
                       <td>Dia do emprestimo</td>
                       <td>Dia da devolução</td>
+                      <th>Ação</th>
                     </tr>
                     </thead>
                     <tfoot>
@@ -195,6 +197,7 @@ if(!empty($_GET['id_cliente'])){
                       <td>Nome do livro</td>
                       <td>Dia do emprestimo</td>
                       <td>Dia da devolução</td>
+                      <th>Ação</th>
                     </tr>
                     </tfoot>
                     <tbody>
@@ -207,7 +210,10 @@ if(!empty($_GET['id_cliente'])){
                           <td>' . $dados['id_livros'] . '</td>
                           <td>' . $dados['livro'] . '</td>
                           <td>' .  date('d/m/Y', strtotime($dados['dia_emprestimo'])) . '</td>
-                          <td>' . date('d/m/Y', strtotime($dados['dia_devolucao'])) . '  <span class="label label-danger"> Hoje </span></td>
+                          <td>' . date('d/m/Y', strtotime($dados['dia_devolucao'])) . '  <span class="label label-danger"> Hoje </span></td> '.
+                            '<td><div class="btn-group">
+                                        <a type="button" class="btn btn-success" href="../../administrador/livros/emprestimos/processamento.php?acao=devolver&id_livros='. $dados['id_livros'] .'&id_emprestimos='. $dados['id_emprestimos'] .'"> Devolver </a>
+                                    </div></td>
                         </tr>';
 
                       }else{
@@ -218,7 +224,10 @@ if(!empty($_GET['id_cliente'])){
                           <td>' . $dados['id_livros'] . '</td>
                           <td>' . $dados['livro'] . '</td>
                           <td>' .  date('d/m/Y', strtotime($dados['dia_emprestimo'])) . '</td>
-                          <td>' . date('d/m/Y', strtotime($dados['dia_devolucao'])) . '</td>
+                          <td>' . date('d/m/Y', strtotime($dados['dia_devolucao'])) . '</td> '.
+                            '<td><div class="btn-group">
+                                        <a type="button" class="btn btn-success" href="../../administrador/livros/emprestimos/processamento.php?acao=devolver&id_livros='. $dados['id_livros'] .'&id_emprestimos='. $dados['id_emprestimos'] .'"> Devolver </a>
+                                    </div></td>
                         </tr>';
                       }
 
@@ -238,25 +247,6 @@ if(!empty($_GET['id_cliente'])){
             </div>
 
 
-
-
-            <div class="tab-pane" id="devolver">
-              <form class="form-horizontal">
-
-
-
-
-
-
-                <div class="form-group">
-                  <div class="col-sm-offset-2 col-sm-10">
-                    <button type="submit" class="btn btn-danger">Submit</button>
-                  </div>
-                </div>
-
-              </form>
-
-            </div>
 
 
             <!-- /.tab-pane -->
