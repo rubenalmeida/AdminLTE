@@ -15,7 +15,7 @@ if(!empty($_GET['id_cliente'])){
 
   $emprestados = $profile->listarEmprestados($id_cliente);
   $profile->carregarPorId($id_cliente);
-  $livros = $profile->listarLivros(); 
+  $livros = $profile->listarLivros();
   $Hoje = date('d/m/y');
 
 }
@@ -24,261 +24,261 @@ if(!empty($_GET['id_cliente'])){
 ?>
 
 
-  <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <section class="content-header">
-      <h1>
-        Página do cliente
-      </h1>
-      <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Inicio</a></li>
-        <li><a href="#">Clientes</a></li>
-        <li class="active">Página do cliente</li>
-      </ol>
-    </section>
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <section class="content-header">
+    <h1>
+      Página do cliente
+    </h1>
+    <ol class="breadcrumb">
+      <li><a href="#"><i class="fa fa-dashboard"></i> Inicio</a></li>
+      <li><a href="#">Clientes</a></li>
+      <li class="active">Página do cliente</li>
+    </ol>
+  </section>
 
-    <!-- Main content -->
-    <section class="content">
+  <!-- Main content -->
+  <section class="content">
 
-      <div class="row">
-        <div class="col-md-3">
+    <div class="row">
+      <div class="col-md-3">
 
-          <!-- Profile Image -->
-          <div class="box box-primary">
-            <div class="box-body box-profile">
-              <img class="profile-user-img img-responsive img-circle" src="http://localhost/biblioteca/dist/img/avatar5.png" alt="Foto padrao de clientes">
+        <!-- Profile Image -->
+        <div class="box box-primary">
+          <div class="box-body box-profile">
+            <img class="profile-user-img img-responsive img-circle" src="http://localhost/biblioteca/dist/img/avatar5.png" alt="Foto padrao de clientes">
 
-              <h3 class="profile-username text-center"><? echo $profile->getNome(); ?></h3>
-
-
-              <ul class="list-group list-group-unbordered">
-                <li class="list-group-item">
-                  <b>Livros Emprestados</b> <a class="pull-right">10</a>
-                </li>
-              </ul>
+            <h3 class="profile-username text-center"><? echo $profile->getNome(); ?></h3>
 
 
-            </div>
-            <!-- /.box-body -->
-          </div>
-          <!-- /.box -->
-
-          <!-- About Me Box -->
-          <div class="box box-primary">
-            <div class="box-header with-border">
-              <h3 class="box-title">Informações</h3>
-            </div>
-            <!-- /.box-header -->
-            <div class="box-body">
-              <strong><i class="fa fa-book margin-r-5"></i> Education</strong>
-
-              <p class="text-muted">
-                B.S. in Computer Science from the University of Tennessee at Knoxville
-              </p>
-
-              <hr>
-
-              <strong><i class="fa fa-map-marker margin-r-5"></i> Location</strong>
-
-              <p class="text-muted">Malibu, California</p>
-
-              <hr>
-
-              <strong><i class="fa fa-pencil margin-r-5"></i> Skills</strong>
-
-              <p>
-                <span class="label label-danger">UI Design</span>
-                <span class="label label-success">Coding</span>
-                <span class="label label-info">Javascript</span>
-                <span class="label label-warning">PHP</span>
-                <span class="label label-primary">Node.js</span>
-              </p>
-
-              <hr>
-
-              <strong><i class="fa fa-file-text-o margin-r-5"></i> Notes</strong>
-
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum enim neque.</p>
-            </div>
-            <!-- /.box-body -->
-          </div>
-          <!-- /.box -->
-        </div>
-        <!-- /.col -->
-        <div class="col-md-9">
-          <div class="nav-tabs-custom">
-            <ul class="nav nav-tabs">
-              <li class="active"><a href="#emprestimos" data-toggle="tab">Emprestimos</a></li>
-              <li><a href="#livros" data-toggle="tab">Livros</a></li>
-              <li><a href="#devolver" data-toggle="tab">Devolver</a></li>
+            <ul class="list-group list-group-unbordered">
+              <li class="list-group-item">
+                <b>Livros Emprestados</b> <a class="pull-right">10</a>
+              </li>
             </ul>
-            <div  class="tab-content">
-                
-              <div class="active tab-pane" id="emprestimos">
-                  <form  class="form-horizontal" action="../../administrador/livros/emprestimos/processamento.php?acao=emprestar" method="post">
 
-                      <input hidden="hidden" type="text" name="id_cliente" value="<? echo $_GET['id_cliente']; ?>" >
 
-                    <div class="form-group">
-                      <label>Livros</label>
-                      <select class="form-control select2" multiple="multiple" name="id_livros[]" data-placeholder="Selecione um ou mais livros" style="width: 100%;">
+          </div>
+          <!-- /.box-body -->
+        </div>
+        <!-- /.box -->
 
-                        <?php foreach ($livros as $dados){ ?>
-                          <option value="<?php echo $dados['id_livros']; ?>"><b><?php echo $dados['nome']; ?></b></option>;
+        <!-- About Me Box -->
+        <div class="box box-primary">
+          <div class="box-header with-border">
+            <h3 class="box-title">Informações</h3>
+          </div>
+          <!-- /.box-header -->
+          <div class="box-body">
+            <strong><i class="fa fa-book margin-r-5"></i> Education</strong>
 
-                        <?php } ?>
-                        
-                      </select>
+            <p class="text-muted">
+              B.S. in Computer Science from the University of Tennessee at Knoxville
+            </p>
+
+            <hr>
+
+            <strong><i class="fa fa-map-marker margin-r-5"></i> Location</strong>
+
+            <p class="text-muted">Malibu, California</p>
+
+            <hr>
+
+            <strong><i class="fa fa-pencil margin-r-5"></i> Skills</strong>
+
+            <p>
+              <span class="label label-danger">UI Design</span>
+              <span class="label label-success">Coding</span>
+              <span class="label label-info">Javascript</span>
+              <span class="label label-warning">PHP</span>
+              <span class="label label-primary">Node.js</span>
+            </p>
+
+            <hr>
+
+            <strong><i class="fa fa-file-text-o margin-r-5"></i> Notes</strong>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum enim neque.</p>
+          </div>
+          <!-- /.box-body -->
+        </div>
+        <!-- /.box -->
+      </div>
+      <!-- /.col -->
+      <div class="col-md-9">
+        <div class="nav-tabs-custom">
+          <ul class="nav nav-tabs">
+            <li class="active"><a href="#emprestimos" data-toggle="tab">Emprestimos</a></li>
+            <li><a href="#livros" data-toggle="tab">Livros</a></li>
+            <li><a href="#devolver" data-toggle="tab">Devolver</a></li>
+          </ul>
+          <div  class="tab-content">
+
+            <div class="active tab-pane" id="emprestimos">
+              <form  class="form-horizontal" action="../../administrador/livros/emprestimos/processamento.php?acao=emprestar" method="post">
+
+                <input hidden="hidden" type="text" name="id_cliente" value="<? echo $_GET['id_cliente']; ?>" >
+
+                <div class="form-group">
+                  <label>Livros</label>
+                  <select class="form-control select2" multiple="multiple" name="id_livros[]" data-placeholder="Selecione um ou mais livros" style="width: 100%;">
+
+                    <?php foreach ($livros as $dados){ ?>
+                      <option value="<?php echo $dados['id_livros']; ?>"><b><?php echo $dados['nome']; ?></b></option>;
+
+                    <?php } ?>
+
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label>Data do emprestimo:</label>
+
+                  <div class="input-group date">
+                    <div class="input-group-addon">
+                      <i class="fa fa-calendar"></i>
                     </div>
-
-                    <div class="form-group">
-                      <label>Data do emprestimo:</label>
-
-                      <div class="input-group date">
-                        <div class="input-group-addon">
-                          <i class="fa fa-calendar"></i>
-                        </div>
-                        <input type="text" class="form-control pull-right" id="datepicker" value="<? echo $Hoje ?>" readonly>
-                      </div>
-                      <!-- /.input group -->
-                    </div>
-
-
-                    <div class="form-group">
-                      <label>Data da devolução:</label>
-
-                      <div class="input-group date">
-                        <div class="input-group-addon">
-                          <i class="fa fa-calendar"></i>
-                        </div>
-                        <input type="date" class="form-control pull-right" name="devolucao" id="devolucao" >
-                      </div>
-                      <!-- /.input group -->
-                    </div>
-
-
-                      <div class="form-group">
-                          <div class="col-sm-offset-2 col-sm-10">
-                              <button type="submit" class="btn btn-danger">Enviar</button>
-                          </div>
-                      </div>
-                  </form>
-              </div>
-              <!-- /.tab-pane -->
-
-
-
-              
-
-
-              <div class="tab-pane" id="livros">
-
-
-                <div class="box">
-                  <div class="box-header">
-                    <h3 class="box-title"><b>Livros Emprestados</b></h3>
+                    <input type="text" class="form-control pull-right" id="datepicker" value="<? echo $Hoje ?>" readonly>
                   </div>
-                  <!-- /.box-header -->
-                  <div class="box-body">
-                    <table id="example1" class="table table-bordered table-striped">
-                      <thead>
-                      <tr>
-                        <td>Código</td>
-                        <td>Nome</td>
-                        <td>Dia do emprestimo</td>
-                        <td>Dia da devolução</td>
-                      </tr>
-                      </thead>
-                      <tfoot>
-                      <tr>
-                        <td>Código</td>
-                        <td>Nome do livro</td>
-                        <td>Dia do emprestimo</td>
-                        <td>Dia da devolução</td>
-                      </tr>
-                      </tfoot>
-                      <tbody>
+                  <!-- /.input group -->
+                </div>
 
-                      <?php foreach ($emprestados as $dados){ 
-                         if(date('d/m/Y', strtotime($dados['dia_devolucao'])) == $Hoje){
-                           echo 
-                        '<tr>
+
+                <div class="form-group">
+                  <label>Data da devolução:</label>
+
+                  <div class="input-group date">
+                    <div class="input-group-addon">
+                      <i class="fa fa-calendar"></i>
+                    </div>
+                    <input type="date" class="form-control pull-right" name="devolucao" id="devolucao" >
+                  </div>
+                  <!-- /.input group -->
+                </div>
+
+
+                <div class="form-group">
+                  <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-danger">Enviar</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <!-- /.tab-pane -->
+
+
+
+
+
+
+            <div class="tab-pane" id="livros">
+
+
+              <div class="box">
+                <div class="box-header">
+                  <h3 class="box-title"><b>Livros Emprestados</b></h3>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                  <table id="example1" class="table table-bordered table-striped">
+                    <thead>
+                    <tr>
+                      <td>Código</td>
+                      <td>Nome</td>
+                      <td>Dia do emprestimo</td>
+                      <td>Dia da devolução</td>
+                    </tr>
+                    </thead>
+                    <tfoot>
+                    <tr>
+                      <td>Código</td>
+                      <td>Nome do livro</td>
+                      <td>Dia do emprestimo</td>
+                      <td>Dia da devolução</td>
+                    </tr>
+                    </tfoot>
+                    <tbody>
+
+                    <?php foreach ($emprestados as $dados){
+                      if(date('d/m/Y', strtotime($dados['dia_devolucao'])) == $Hoje){
+                        echo
+                            '<tr>
 
                           <td>' . $dados['id_livros'] . '</td>
                           <td>' . $dados['livro'] . '</td>
                           <td>' .  date('d/m/Y', strtotime($dados['dia_emprestimo'])) . '</td>
                           <td>' . date('d/m/Y', strtotime($dados['dia_devolucao'])) . '  <span class="label label-danger"> Hoje </span></td>
                         </tr>';
-                             
-                        }else{
 
-                            echo 
-                        '<tr>
+                      }else{
+
+                        echo
+                            '<tr>
 
                           <td>' . $dados['id_livros'] . '</td>
                           <td>' . $dados['livro'] . '</td>
                           <td>' .  date('d/m/Y', strtotime($dados['dia_emprestimo'])) . '</td>
                           <td>' . date('d/m/Y', strtotime($dados['dia_devolucao'])) . '</td>
                         </tr>';
-                        }
-                    
-                    
+                      }
 
-                       } ?>
-                        
-                      </tbody>
 
-                    </table>
+
+                    } ?>
+
+                    </tbody>
+
+                  </table>
+                </div>
+                <!-- /.box-body -->
+              </div>
+
+
+
+            </div>
+
+
+
+
+            <div class="tab-pane" id="devolver">
+              <form class="form-horizontal">
+
+
+
+
+
+
+                <div class="form-group">
+                  <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-danger">Submit</button>
                   </div>
-                  <!-- /.box-body -->
                 </div>
 
+              </form>
 
-
-              </div>
-
-             
-
-
-              <div class="tab-pane" id="devolver">
-                <form class="form-horizontal">
-
-
-
-
-
-
-                  <div class="form-group">
-                    <div class="col-sm-offset-2 col-sm-10">
-                      <button type="submit" class="btn btn-danger">Submit</button>
-                    </div>
-                  </div>
-
-                </form>
-
-              </div>
-
-            
-              <!-- /.tab-pane -->
             </div>
-            <!-- /.tab-content -->
-          </div>
-          <!-- /.nav-tabs-custom -->
-        </div>
-        <!-- /.col -->
-      </div>
-      <!-- /.row -->
 
-    </section>
-    <!-- /.content -->
-  </div>
-  <!-- /.content-wrapper -->
-  <footer class="main-footer">
-    <div class="pull-right hidden-xs">
-      <b>Versão</b> 2.0.0
+
+            <!-- /.tab-pane -->
+          </div>
+          <!-- /.tab-content -->
+        </div>
+        <!-- /.nav-tabs-custom -->
+      </div>
+      <!-- /.col -->
     </div>
-    <strong>Copyright &copy; 2016-2016 <a href="http://adoa.com.br">Adoa</a>.</strong>
-  </footer>
+    <!-- /.row -->
+
+  </section>
+  <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
+<footer class="main-footer">
+  <div class="pull-right hidden-xs">
+    <b>Versão</b> 2.0.0
+  </div>
+  <strong>Copyright &copy; 2016-2016 <a href="http://adoa.com.br">Adoa</a>.</strong>
+</footer>
 
 
 <!-- jQuery 2.2.3 -->

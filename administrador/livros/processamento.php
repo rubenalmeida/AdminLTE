@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 include_once 'livros.php';
 
@@ -6,17 +6,17 @@ $livros = new Livros();
 
 switch($_GET['acao']){
 	case 'salvar':
-		
+
 		if(empty($_POST['id_livros'])){
 			$resultado = $livros->inserir($_POST);
 		} else {
 			$resultado = $livros->alterar($_POST);
 		}
-		
+
 		break;
 
 	case 'emprestar':
-			$resultado = $livros->emprestar($_POST);
+		$resultado = $livros->emprestar($_POST);
 		break;
 
 	case 'excluir':
