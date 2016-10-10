@@ -46,7 +46,7 @@ if(!empty($_GET['id_cliente'])){
         <!-- Profile Image -->
         <div class="box box-primary">
           <div class="box-body box-profile">
-            <img class="profile-user-img img-responsive img-circle" src="http://localhost/biblioteca/dist/img/avatar5.png" alt="Foto padrao de clientes">
+            <img class="profile-user-img img-responsive img-circle" src="http://soundbeats.azurewebsites.net/dist/img/avatar5.png" alt="Foto padrao de clientes">
 
             <h3 class="profile-username text-center"><? echo $profile->getNome(); ?></h3>
 
