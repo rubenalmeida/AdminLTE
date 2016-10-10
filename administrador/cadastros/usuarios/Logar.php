@@ -43,7 +43,7 @@ if (count($query)) {
 
 <script>
     alert('<?php echo $mensagem; ?>');
-    window.location.href = 'soundbeats.azurewebsites.net/login.php';
+    window.location.href = 'https://soundbeats.azurewebsites.net/login.php';
 </script>
 
 
