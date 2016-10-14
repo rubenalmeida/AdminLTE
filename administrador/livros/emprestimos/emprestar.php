@@ -175,12 +175,13 @@
       $conexao = new Conexao();
       $conexao->executar($sql);
 
-      $sql2 = "UPDATE livros SET quant = quant + 1 WHERE id_livros = '$id_livros''";
+      $sql2 = "UPDATE livros SET quant = quant + 1 WHERE id_livros = $id_livros";
       return $conexao->executar($sql2);
 
 
 
  }
+
 
 
      public function listarEmprestados($id_cliente){

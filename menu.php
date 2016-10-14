@@ -190,7 +190,7 @@
 
                 <li>
                     <a href = "../../pages/forms/listaClientes.php" >
-                        <i class="glyphicon glyphicon-user" ></i > <span > Clientes cadastrados </span >
+                        <i class="glyphicon glyphicon-user" ></i > <span > Emprestar </span >
                         <span class="pull-right-container" >
                                     <small class="glyphicon glyphicon-info-sign" ></small >
                                 </span >
