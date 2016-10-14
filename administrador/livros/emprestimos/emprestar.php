@@ -175,9 +175,9 @@
       $conexao = new Conexao();
       $conexao->executar($sql);
 
-      $sql2 = "UPDATE livros SET quant = quant + 1 WHERE id_livros = $id_livros";
-       $conexao->executar($sql2);
-     print_r($sql);die;
+      $sql2 = "UPDATE livros SET quant = quant + 1 WHERE id_livros = '$id_livros''";
+      return $conexao->executar($sql2);
+
 
 
  }
