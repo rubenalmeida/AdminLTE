@@ -15,9 +15,14 @@ switch($_GET['acao']){
 		$resultado = $emprestimos->ativar($_GET['id_cliente']);
 		break;
 
-		case 'emprestar':
+	case 'emprestar':
 		$resultado = $emprestimos->cadastrar($_POST);
 		break;
+
+	case 'devolver':
+		$resultado = $emprestimos->devolver($_GET['id_livros'], $_GET['id_emprestimos']);
+		break;
+
 
 
 }

@@ -47,14 +47,22 @@ if(!empty($_GET['id_cliente'])){
         <!-- Profile Image -->
         <div class="box box-primary">
           <div class="box-body box-profile">
-            <img class="profile-user-img img-responsive img-circle" src="http://localhost/biblioteca/dist/img/avatar5.png" alt="Foto padrao de clientes">
+            <?   $sexo = $profile->getSexo();
+            if($sexo == 'M'){
+              echo    '<img class="profile-user-img img-responsive img-circle" src="http://soundbeats.azurewebsites.net/dist/img/avatar5.png" alt="Foto padrao de clientes">';
+            }else{
+              echo  '<img class="profile-user-img img-responsive img-circle" src="http://soundbeats.azurewebsites.net/dist/img/avatar3.png" alt="Foto padrao de clientes">';
+            }
+
+            ?>
+
 
             <h3 class="profile-username text-center"><? echo $profile->getNome(); ?></h3>
 
 
             <ul class="list-group list-group-unbordered">
               <li class="list-group-item">
-                <b>Livros Emprestados</b> <a class="pull-right"><?php echo $quant[0]['quantidade']; ?></a>
+                <b>Livros Emprestados</b> <a class="pull-right"><b><?php echo $quant[0]['quantidade']; ?></b></a>
               </li>
             </ul>
 
@@ -71,29 +79,23 @@ if(!empty($_GET['id_cliente'])){
           </div>
           <!-- /.box-header -->
           <div class="box-body">
-            <strong><i class="fa fa-book margin-r-5"></i> Education</strong>
+            <strong><i class="fa fa-book margin-r-5"> E-mail</i></strong>
 
-            <p class="text-muted">
-              B.S. in Computer Science from the University of Tennessee at Knoxville
+            <p class="text">
+              <? echo $profile->getEmail(); ?>
             </p>
 
             <hr>
 
-            <strong><i class="fa fa-map-marker margin-r-5"></i> Location</strong>
+            <strong><i class="fa fa-phone margin-r-5"></i> Telefone</strong>
 
-            <p class="text-muted">Malibu, California</p>
+            <p class="text"><? echo $profile->getTelefone(); ?></p>
 
             <hr>
 
-            <strong><i class="fa fa-pencil margin-r-5"></i> Skills</strong>
+            <strong><i class="fa fa-map-marker margin-r-5"></i> Emdereço</strong>
 
-            <p>
-              <span class="label label-danger">UI Design</span>
-              <span class="label label-success">Coding</span>
-              <span class="label label-info">Javascript</span>
-              <span class="label label-warning">PHP</span>
-              <span class="label label-primary">Node.js</span>
-            </p>
+            <p class="text"><? echo $profile->getEndereco(); ?></p>
 
             <hr>
 
@@ -130,12 +132,13 @@ if(!empty($_GET['id_cliente'])){
                     <?php } ?>
 
                   </select>
+
                 </div>
 
                 <div class="form-group">
                   <label>Data do emprestimo:</label>
 
-                  <div class="input-group date">
+                  <div class="input-group date col-sm-3">
                     <div class="input-group-addon">
                       <i class="fa fa-calendar"></i>
                     </div>
@@ -148,11 +151,11 @@ if(!empty($_GET['id_cliente'])){
                 <div class="form-group">
                   <label>Data da devolução:</label>
 
-                  <div class="input-group date">
+                  <div class="input-group date  col-sm-3">
                     <div class="input-group-addon">
                       <i class="fa fa-calendar"></i>
                     </div>
-                    <input type="date" class="form-control pull-right" name="devolucao" id="devolucao" >
+                    <input type="date" class="form-control pull-right " name="devolucao" id="devolucao" >
                   </div>
                   <!-- /.input group -->
                 </div>
@@ -184,7 +187,7 @@ if(!empty($_GET['id_cliente'])){
                   <table id="example1" class="table table-bordered table-striped">
                     <thead>
                     <tr>
-                      <td>Código<? echo $Hoje; ?></td>
+                      <td>Código</td>
                       <td>Nome</td>
                       <td>Dia do emprestimo</td>
                       <td>Dia da devolução</td>
